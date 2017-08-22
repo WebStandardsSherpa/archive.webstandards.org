@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/valign2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:03 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>Web Standards Project: CSS: Bugs in Opera: Problems With 'vertical-align'</TITLE>
+
+<STYLE type="text/css">
+    .example        { font-size: 14pt; }
+    BIG             { font-size: 16pt; }
+    SMALL           { font-size: 12pt; }
+
+    .basealign  IMG { vertical-align: baseline; }
+    .topalign  SPAN,
+    .topalign   IMG { vertical-align: top; }
+    .ttopalign  IMG { vertical-align: text-top; }
+    .midalign   IMG { vertical-align: middle; }
+
+    .botalign   IMG { vertical-align: bottom; }
+    .tbotalign SPAN,
+    .tbotalign  IMG { vertical-align: text-bottom; }
+
+    .subalign  SPAN { vertical-align: sub; color: green; }
+    .supalign  SPAN { vertical-align: super; color: green; }
+
+</STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Problems With <CODE>vertical-align: text-top</CODE></H1>
+
+<P> (Note. You will need images enabled to see the problems depicted
+below).</P>
+
+<P>In the following paragraph, all images should be aligned with the
+top of the 14-point text, which is identical to the first section of
+text, whereas any size text should be aligned with the text baseline
+(which is the default value).</P>
+
+<P class="example ttopalign">
+  This paragraph
+
+  <IMG SRC="vblank.gif" ALT="" height="30">
+
+  <SPAN style="font-size: 250%;">contains many images</SPAN>
+
+  <IMG SRC="vblank.gif" ALT="" height="50">
+
+  <BIG>of varying heights</BIG>
+
+  <IMG SRC="vblank.gif" ALT="" height="10">
+
+  <SMALL>all of which</SMALL>
+
+  <IMG SRC="vblank.gif" ALT="" height="65">
+
+  <SPAN style="font-size: 2em;">should be aligned</SPAN>
+
+  <IMG SRC="vblank.gif" ALT="" height="35">
+
+  with the top of
+
+  <IMG SRC="vblank.gif" ALT="" height="30">
+
+  <SPAN style="font-size: 150%;">a <SPAN style="font-size: 250%;">14-point</SPAN> text element</SPAN>
+
+  <IMG SRC="vblank.gif" ALT="" height="50">
+
+  <SMALL>regardless of the line in which</SMALL>
+
+  <IMG SRC="vblank.gif" ALT="" height="15">
+
+  <BIG>the images appear.</BIG>
+
+  <IMG SRC="vblank.gif" ALT="" height="90">
+</P>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/opera/valign2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:03 GMT -->
+</HTML>

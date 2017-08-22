@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" --"http://www.w3.org/TR/REC-html40/loose.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/margindemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:38 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Margin problems</TITLE>
+  <STYLE type="text/css">
+
+     DIV { height: 2em; border: 2px purple solid; }
+     .centerhalfwidth { width: 50%; margin-left: auto; margin-right: auto; }
+     .righthalfwidth { width: 50%; margin-left: auto; margin-right: 0; }
+     .rightautowidth { width: auto; margin-left: auto; margin-right: 0; }
+     img.rightautowidth { display: block; }
+
+/* Could also test this, but I think it probably works:
+     .left       { margin-left: 0; margin-right: auto; }
+ */
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Margin problems (2)</H1>
+
+<P>The following is the stylesheet for this document.</P>
+
+<PRE>
+     DIV         { height: 2em; border: 2px purple solid; }
+     .centerhalfwidth { width: 50%; margin-left: auto; margin-right: auto; }
+     .righthalfwidth { width: 50%; margin-left: auto; margin-right: 0; }
+     .rightautowidth { width: auto; margin-left: auto; margin-right: 0; }
+     img.rightautowidth { display: block; }
+</PRE>
+
+<P>Note that because MacIE does not support multiple keywords for
+classes, the above contains a lot of redundancy.</P>
+
+<H2>Centering</H2>
+
+<P>The following <code>DIV</code> is of classes
+<code>centerhalfwidth</code> and should therefore span half the width
+of the page, and be centered.</P>
+
+<DIV class="centerhalfwidth"></DIV>
+
+<H2>Right Alignment</H2>
+
+<P>The following <code>DIV</code> is of classes
+<code>righthalfwidth</code> and should therefore span half the width
+of the page, and be right aligned.</P>
+
+<DIV class="righthalfwidth"></DIV>
+
+<H2>Full Width</H2>
+
+<P>The following <code>DIV</code> is of classes
+<code>rightautowidth</code> and should therefore span the whole width
+of the page. (The margin-left would be set to 0 and the width would be
+set so as to fit the element in the containing block.)</P>
+
+<DIV class="rightautowidth"></DIV>
+
+<H2>Intrinsic Width</H2>
+
+<P>The following is an <code>IMG</code> element with intrinsic width.
+It is of classes <code>rightautowidth</code> and should therefore be
+right-aligned. (The width would be set to the intrinsic width of the
+element and margin-left would be set so as to fit the element in the
+containing block.)  [Note:  This testcase originally had an error, but
+was corrected on 2000-03-09.  The image must have <code>display:
+block</code>.]</P>
+
+<IMG class="rightautowidth" alt="" src="meowmeow.gif">
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/margindemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+</HTML>

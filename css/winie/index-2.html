@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<html lang=en>
+
+
+<!-- Mirrored from archive.webstandards.org/css/winie/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:31 GMT -->
+<HEAD>
+
+  <META name="author" content="Web Standards Project CSS Action Committee (Samurai)">
+  <META name="copyright" content="&copy; copyright 1998 by the Web Standards Project CSS Action Committee (Samurai)">
+  <META name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+
+  <LINK title="Hive Mind" rel="stylesheet" type="text/css" href="../wasp_a.css">
+  <LINK title="Acid Bath" rel="alternate stylesheet" type="text/css" href="../inside.css">
+  <LINK title="Shogun" rel="alternate stylesheet" type="text/css" href="../samurai.css">
+
+  <TITLE>Web Standards Project: IE's Top 10 CSS Problems</TITLE>
+
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<div id="body"> <!-- this is a hack -->
+
+<H1><ACRONYM TITLE="Microsoft Internet Explorer">IE</ACRONYM>'s Top 10 <ACRONYM TITLE="Cascading Style Sheets">CSS</ACRONYM> Problems</H1>
+
+<p>
+
+ This is the first of <a href="../index.html">a series of
+ <ACRONYM TITLE="Web Standards Project">WSP</ACRONYM>
+ standards-compliance reviews</a>.
+
+ The <ACRONYM TITLE="Web Standards Project">WSP</ACRONYM> will as a
+ matter of policy provide thorough coverage of and
+ feedback on interim releases of major browsers, starting November 1st, 1998.
+</p>
+
+<!--index-->
+<ul class="stb">
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#The_Top_5_Bugs">The Top 5 Bugs</a>
+<ol>
+        <li><a href="#The_box_model">The box model</a></li>
+        <li><a href="#floatclear"><code>float</code> and <code>clear</code></a></li>
+        <li><a href="#Incorrect_Error_Handling">Error handling</a></li>
+        <li><a href="#Inheritance_breakdown_within_tables">Inheritance within tables</a></li>
+        <li><a href="#Tiled_backgrounds_behave_incorrectly">Tiled backgrounds</a></li>
+        </ol>
+        </li>
+        <li><a href="#The_Top_5_MIAs">The Top 5 <ACRONYM TITLE="Missing In Action">MIA</ACRONYM>s</a>
+        <ol><li><a href="#Displayprops">Display properties</a></li>
+        <li><a href="#Pseudo-elements">Pseudo-elements</a></li>
+        <li><a href="#Alternate_stylesheet_UI">Alternate stylesheet UI</a></li>
+        <li><a href="#white-space"><code>white-space</code></a></li>
+        <li><a href="#vertical-align"><code>vertical-align</code></a></li></ol></li>
+        <li><a href="#Addendum">Addendum: improvements noted in IE5b2</a></li>
+</ul>
+<!--/index-->
+
+<DIV ID="introduction" TITLE="Introduction">
+ <H2><a name="Introduction">Introduction</a></H2>
+ <P>
+  Microsoft led the way in implementing Cascading Style Sheets,
+  first in Internet Explorer&nbsp;3.0, then improving
+  that support significantly in Internet Explorer&nbsp;4.0. While Microsoft's implementation of <ACRONYM TITLE="Cascading Style Sheets, Level 1">CSS1</ACRONYM> has thus far always been the best available, it has also failed in completeness and quality to offer a viable alternative to HTML-based layout and formatting techniques. In fact, several of the most critical features of CSS1 remain 
+  either incorrectly implemented, implemented for only an undocumented selection of 
+  eligible HTML elements, or entirely neglected in Internet Explorer. This document presents the most glaring 
+  of these problems.
+ </P>
+ <P>The uneven deployment of <ACRONYM 
+  TITLE="Cascading Style Sheets, Level 1">CSS1</ACRONYM> in major 
+  Web browsers over the last two years has caused Web authors great 
+  frustration and expense, and won <ACRONYM>CSS</ACRONYM> an undeservedly obscure and difficult reputation. As unfortunate as this failure has been for HTML in the recent past, the implications for XML in the near future are even more disturbing: lacking adequately mature CSS implementations, XML will generally be converted first to nonreusable HTML for display. This will retard the deployment of distributed XML applications, as the richest data will tend to remain on servers or decay quickly on clients. 
+
+</p><p>Now that Netscape and Opera promise to release competitive CSS1 implementations in the near future, the WaSP calls upon Microsoft to finish the work it began, letting Web designers, authors, application developers, and users build upon a single, robust foundation for Web presentation: <ACRONYM>CSS1</ACRONYM>.
+ </P>
+
+</DIV>
+
+<DIV ID="top5bugs" TITLE="Top 5 Bugs">
+ <H2><a name="The_Top_5_Bugs">The Top 5 Bugs</a></H2>
+
+ <DIV ID="boxModel" TITLE="Make the box model work">
+  <H3><a name="The_box_model">1. The box model</a></H3>
+      <P> Of all the problems CSS authors face, most vexing by far is the incomplete 
+        implementation of the box model. The box model governs the margin, padding, 
+        and border properties of elements, and is essential for achieving alignments, 
+        hierarchies, rhythms, and other important visual relationships. Equally important is support for the allied <CODE>width</CODE> and 
+   <CODE>height</CODE> properties for all elements with
+   <CODE>block</CODE> display. It will 
+        require complete and quirk-free support for the box model on all elements 
+        in order to retire tedious workarounds like tables for layout, or the 
+        pernicious replacement of structurally appropriate elements with the generic 
+        <code>DIV</code> merely to avoid box-model implementation snares. </p>
+      <p>This document, for instance, contains a <code>DIV</code> whose <code>ID</code> 
+        is "body". It is entirely redundant with the <code>BODY</code> element, 
+        yet made expedient because the box model is not supported on the <code>BODY</code> 
+        element in IE. Such quirks encourage spurious, browser-specific markup 
+        and stylesheet tricks, and are an impediment 
+        to the widespread adoption of CSS1.</p>
+
+  <OL>
+   <LI>Box model <A HREF="box_horiz.html" TITLE="Box model horizontal formatting">horizontal formatting</A></LI>
+   <LI>Box model <A HREF="box_vert.html" TITLE="Box model vertical formatting">vertical formatting</A></LI>
+   <LI>Using <A HREF="inline_background.html" TITLE="Using background properties on inline elements">background properties on inline elements</A>
+   <LI><A HREF="inline.html" TITLE="Padding, border and margin on inline elements">Padding, border and margin on inline elements</A></LI>
+  </OL>
+ </DIV>
+
+ <DIV ID="floatClear" TITLE="float / clear">
+  <H3><a name="floatclear">2. <CODE>float</CODE> and <CODE>clear</CODE></a></H3>
+  <P>
+   Though technically part of the box model described above, incorrect support for 
+   the <CODE>float</CODE> and <CODE>clear</CODE> properties is important 
+   enough to merit a separate point. Most pages on the Web rely on tables 
+   for their visual structure, confusing their logical structure beyond repair. <CODE>float</CODE> and <CODE>clear</CODE> are the CSS alternatives to HTML tables for placing elements side-by-side. By retiring the need for presentational tables in HTML, correct support for <CODE>float</CODE> and <CODE>clear</CODE> can make richly-formatted Web documents dramatically faster, simpler, more reusable, and more accessible.
+  </P>
+  <OL>
+   <LI>Supposedly <A HREF="shame2/floatclear.html">simple use of <CODE>float</CODE> and <CODE>clear</CODE></A> to display sidebars.</LI>
+   <LI><A HREF="w3c-floater.html">An HTML 4.0 strict version of the W3C home page</A>.  This page attempts to use both the <CODE>float</CODE> and <CODE>clear</CODE> properties to achieve a layout similar to that of the <A HREF="http://www.w3.org/">W3C's current home page</A>.  If <CODE>float</CODE> and <CODE>clear</CODE> were properly supported, the differences would be minor or nonexistent.  (<A HREF="w3c-floater-2.html">Reference Image</A>)</LI>
+   <LI>Floated elements <A HREF="float_and_borders.html" TITLE="The effect of floaters on the padding and border of the containing element">violate and disrupt</A> the borders and padding of the box that contains them.
+ (<A HREF="float_and_borders-2.html">Reference Image</A>) 
+   <LI> Floated elements <A HREF="float_and_background.html" TITLE="The effect of floaters on the containing element background">interfere with the background</A> of their containing box.
+ (<A HREF="float_and_background-2.html">Reference Image</A>) 
+   <LI><A HREF="http://style.metrius.com/boxacidtest/" TITLE="A composite box-model/float/clear test">A composite box-model/float/clear layout test</A>. <strong class="warning"><em>Caution:</em></strong> this test has been known to crash Netscape Navigator&nbsp;4.<var>x</var>. See the <A HREF="http://style.metrius.com/boxacidtest/layout.gif" TITLE="A composite box-model/float/clear test">reference rendering</a> to see how this test page should look in a CSS1 browser. 
+  </OL>
+ </DIV>
+
+ <DIV ID="errorHandling" TITLE="Incorrect Error Handling">
+  <H3><a name="Incorrect_Error_Handling">3. Error handling</a></H3>
+  <P>
+   The error-handling in IE's CSS parser is often in error.
+   The CSS1 specification explains very clearly how things should be
+   handled (i.e., what to ignore), but IE does not follow this part of
+   the standard. This causes documents designed
+   for levels of the CSS specification not yet supported by the browser to
+   render incorrectly.
+  </P>
+  <OL>
+   <LI><A HREF="errorhandlingdemo.html">Demonstration of Problems with Error Handling</A> which appear <em>now</em>.</LI>
+   <LI><A HREF="errorhandlingdemo2.html">Demonstration of Problems with Error Handling</A> which will appear in the future.</LI>
+  </OL>
+ </DIV>
+
+ <DIV ID="tableGack" TITLE="Inheritance breakdown within tables">
+  <H3><a name="Inheritance_breakdown_within_tables">4. Inheritance within tables</a></H3>
+      <P> Another bug engineered into IE is that style inheritance (whereby container 
+        objects pass their style on to their children) breaks down upon entering 
+        a table element. </P>
+      <P> For example, if a rule applied to the <code>BODY</code> element declares 
+        a <code>small</code> font size, then all text within tables will look 
+        oddly large. Redundant selectors and spurious markup are required to repair 
+        the failure of inheritance. Unable to use CSS1's layout facilities, authors 
+        turn to HTML tables instead, where the rest of CSS1 breaks down into still 
+        more redundant hackery, no more elegant than the old single-pixel-GIFs 
+        and overstuffed <code>FONT</code> tags. </P>
+  <P>
+   The reason given for this behavior is to maintain "bugwards compatibility" 
+   with a similar quirk introduced by Netscape Navigator, in its initial implementation
+   of HTML tables. This perpetuates the legacy of broken document parsing and obligates authors to
+   compensate in their work. We believe authors would much rather see this historical curiosity
+   dropped, in favor of a more consistent CSS system.
+  </P>
+      <P> A better way to fix this would be to provide it as an option such 
+        as &quot;Enable Legacy Table Parsing,&quot; rather than compel it as a 
+        default. </P>
+
+  <OL>
+   <LI><A HREF="tablegackdemo1.html">Inheritance breakdown within tables</A>.</LI>
+  </OL>
+ </DIV>
+
+ <DIV ID="background" TITLE="Make tiled backgrounds work correctly">
+  <H3><a name="Tiled_backgrounds_behave_incorrectly">5. Tiled backgrounds</a></H3>
+      <P> IE's support for<CODE> background-repeat</CODE> and <CODE>background-position</CODE>, 
+        is incomplete. Explorer repeats tiled background images down and 
+        to the right, no matter where the initial image is positioned. If an author 
+        positions an image in the center of an element and then sets it to repeat, 
+        it will fill only the lower right corner of the element. The specification, 
+        however, requires that the image be tiled in all four directions: up, 
+        down, right, and left. A similar problem occurs with <CODE>repeat-x</CODE> 
+        and <CODE>repeat-y</CODE>, which should repeat in both directions either 
+        horizontally or vertically. </P>
+  <OL>
+   <LI><A HREF="tiledbackgroundsdemo.html">Tiled Backgrounds Demo</A>.</LI>
+  </OL>
+ </DIV>
+
+</DIV>
+
+<DIV ID="top5mia" TITLE="Top 5 Missing features">
+ <H2><a name="The_Top_5_MIAs">The Top 5 <ACRONYM TITLE="Missing In Action">MIA</ACRONYM>s</a></H2>
+
+ <DIV ID="display" TITLE="Display: block, inline, list-item, and none everywhere">
+  <H3><a name="Displayprops">1. Display properties</a></H3>
+  <P>
+
+   When this was first written, IE did not support the <code>display</code> 
+        property, apart from the <code>none</code> value. 
+   We are happy to note that Microsoft appears to have addressed this in a 5.0b release,
+   supporting both <code>block</code> and <code>inline</code>.
+   Support for <code>list-item</code> is still missing, however. </p><p>This document, for instance, 
+   has manually numbered <code>H3</code> elements. If the list-item display type were supported for <code>H3</code>, 
+   the UA might generate the numbering as with any other list, resetting the counter at each occurrence of <code>H2</code>.</p><p>
+   CSS2 introduces a number
+   of new values for the display property; and as nice as it would be to
+   see those implemented, we believe designers would rather see them
+   postponed in favor of complete support for
+   the CSS1 values.
+  </P>
+  <OL>
+   <LI><A HREF="displaypropertydemo1.html">Display Property Demos</A>.</LI>
+  </OL>
+ </DIV>
+
+ <DIV ID="pseudos" TITLE="Pseudo-elements: first-letter and first-line">
+  <H3><a name="Pseudo-elements">2. Pseudo-elements</a></H3>
+  <P>
+   The <code>first-letter</code> and <code>first-line</code> pseudo-elements are still
+   <ACRONYM TITLE="Missing in Action">MIA</ACRONYM>.
+   This is a shame, since they are nice effects, and
+   commonly used in the print world.
+  </P>
+  <OL>
+   <LI><A HREF="pseudosdemo.html">Demos for <CODE>first-letter</CODE> and <CODE>first-line</CODE></A>.</LI>
+  </OL>
+ </DIV>
+
+ <DIV ID="altStyle" TITLE="Alternate stylesheet UI">
+
+  <H3><a name="Alternate_stylesheet_UI">3. Alternate stylesheet UI</a></H3>
+  <P>
+   CSS1 provides for authors to associate multiple stylesheets with a
+   document, allowing users to choose the most appropriate or pleasing.
+  </P>
+
+  <P>
+   For example, a designer could create a default "public" stylesheet for a body of documents, a second sheet suitable for intra-organizational or -departmental access to the same documents, and a third suitable for users who are visually impaired (using high-contrast colors, for instance). The mechanism is extensible to include transparent application of media-specific stylesheets: one for print, one for WebTV, another for hand-held device browsers - all without content redundancy. This document, for instance, written in HTML 4.0 Strict, is associated with three distinct stylesheets. Unfortunately, due to lack of support for this CSS1 feature, you are unlikely to have any choice but the default.
+  </P>
+
+      <P> Among the primary design goals of CSS is to restore balance among the 
+        responsibilities the author, the user, and the user agent (UA; i.e., the 
+        browser) must share when negotiating the presentation of Web content under 
+        varying conditions. These goals require the exposure of alternate author 
+        style sheets, the ability to turn off author stylesheets conveniently 
+        per document, the ability to apply user stylesheets, and the exposure 
+        of a UA default stylesheet for each media type. Internet Explorer supports 
+        one of these requirements - user stylesheets - but it is hidden in a dialog 
+        available from a dialog, not terribly usable on a per-document basis. 
+      </P>
+     <P>By not implementing a more extensive user interface for alternate and user CSS, Microsoft turns CSS from a language designed to balance user and author needs into a fundamentally user-hostile instrument. With users unable to interact with author CSS easily, authors are entertained not only with the promise of reckless authority in all matters of style, but with the temptation to create documents that are meaningless with any stylesheets other than their own.
+      </P>
+  <P class=note>
+   <strong>Note.</strong> It is possible to <em>simulate</em> support for alternate stylesheets in the Windows version of IE4, using a 'plugin' developed by Microsoft engineer
+   <A HREF="http://www.geocities.com/Area51/4708/">Chris Wilson</A>.
+   This plugin is available from <CODE><A
+   HREF="http://www.geocities.com/Area51/4708/ssselect.zip">http://www.geocities.com/Area51/4708/ssselect.zip</A></CODE>.
+   A plugin doesn't 
+        fix the problem, however; it only provides a workaround. This functionality 
+        should be available out-of-the-box, so all users can benefit from this 
+        feature, and authors may begin to expect support for the same. </P>
+
+  <OL>
+   <LI><A HREF="altstyledemo.html">Simulation of Alternate Stylesheets</A>.</LI>
+  </OL>
+
+ 
+ </DIV>
+
+ <DIV ID="whiteSpace" TITLE="white-space">
+  <H3><a name="white-space">4. <CODE>white-space</CODE></a></H3>
+  <P>
+   Support for CSS1's <CODE>nowrap</CODE> property would permit retirement of the nonstandard <CODE>NOBR</CODE> extension and the deprecated <code>NOWRAP</code> markup attribute, as required by HTML 4.0.
+    Control over whitespace preservation with the
+   <CODE>pre</CODE> value would help further abstract presentational considerations from markup.
+  </P>
+  <OL>
+   <LI><A HREF="whitespacedemo.html">Demonstration of <code>white-space</code></A>.</LI>
+  </OL>
+ </DIV>
+
+ <DIV ID="vHold" TITLE="vertical-align">
+  <H3><a name="vertical-align">5. <CODE>vertical-align</CODE></a></H3>
+  <P>
+   Vertical alignment of elements is an essential layout facility provided for in CSS1. In fact,
+   the lack of support for this feature in CSS implementations is a major reason authors continue to rely on tables to style
+   their pages. Explorer supports
+   the superscript and subscript values of this property (albeit quirkily:
+   the font-size should not change when this value is applied).
+   This leaves <EM>six</EM> unsupported values.
+
+  </P>
+  <OL>
+   <LI><A HREF="valign.html">Aligning images of varying heights with text</A>
+  </OL>
+ </DIV>
+ 
+</DIV>
+ <DIV ID="Addendum" TITLE="Addendum">
+  <H2><a name="Addendum">Addendum: Improvements noted in IE5b2</a></H2>
+
+  <P>Beta release 2 of Internet Explorer&nbsp;5.0 fixes a few bugs in the tests
+given above, but it also adds a few new bugs.</P>
+
+<div ID="Addendum-BM" TITLE="Box model addendum">
+<H3><A HREF="#The_box_model">Box Model Tests</A></H3>
+
+<P>IE 5.0 beta 2 adds a new twist to <A HREF="box_vert.html">the box model
+vertical formatting test</A>.  Due to the presence
+of the CSS <CODE>height</CODE> property, IE adds 22 pixels or so at the
+top margin.  It also interprets the value of the height, but it takes
+that value to define the area that includes the border and padding (but
+not margin), rather than the content area alone.</P>
+
+<P>The <A HREF="box_horiz.html">box model horizontal formatting
+test</A> shows the same extra top margin as does the vertical
+formatting test, between the top ruler and the paragraph.</P>
+
+<P>There are also a few display problems in these two tests at the
+pixel level. The borders are 1 pixel too short on the top (<A
+HREF="box_horiz.html">horizontal test</A>) or left (<A
+HREF="box_vert.html">vertical</A>) side, and there is 1 pixel missing
+in the <A HREF="box_vert.html">vertical test</A> where at the top right
+corner of the bottom border (it is white instead of gray).</P>
+</div>
+<div ID="Addendum-EH" TITLE="Error handling addendum">
+<H3><A HREF="#Incorrect_Error_Handling">Error Handling Test</A></H3>
+
+<P>IE 5.0 beta 2 interprets correctly the <code><img src="../../images/at-600-white-10x10.gif" width="10" height="10" alt="at">media tty</code> section of <A
+HREF="errorhandlingdemo.html">the demonstration of error handling
+problems which appear now</A>. That is, the text is black. IE still
+indents everything, however.</P>
+</div>
+<div ID="Addendum-DP" TITLE="Display property demo addendum">
+<H3><A HREF="#Displayprops">Display Property Demos</A></H3>
+
+<P>IE 5.0 beta 2 shows example 1 in <A
+HREF="displaypropertydemo1.html">the display properties demonstrations</A>
+correctly.</P>
+
+</div>  
+  
+ </DIV>
+
+<!-- FOOTER FOLLOWS  -->
+ <div class="mtb" id=footer>
+  <hr id="enddivider" title="footer">
+  <P CLASS="maintainer">
+
+   This document was prepared by the <a href="../members.html">members</a>
+   of the <A HREF="../../../www.webstandards.org/index.html">Web Standards
+   Project</A> <acronym title="Cascading Style Sheets">CSS</acronym>
+   <a href="../../../www.webstandards.org/ac.html#technical">Action
+   Committee</a> (The <a href="../index.html"><acronym title="Cascading Style Sheets">CSS</acronym> Samurai</a>).
+
+  </P>
+  <P CLASS="updated">
+   Last updated 1998-11-13.  <!-- ISO 8601 Date Standard -->
+  </P>
+ </div> <!-- id=footer -->
+
+</div>
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/winie/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:31 GMT -->
+</HTML>

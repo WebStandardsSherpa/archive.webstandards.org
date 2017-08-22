@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/winie/valign.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:27 GMT -->
+<HEAD>
+<TITLE>Web Standards Project: CSS: Bugs in Internet Explorer: Problems With 'vertical-align'</TITLE>
+<STYLE type="text/css">
+P.example {font-size: 14pt;}
+P {font: 12pt sans-serif;}
+BIG {font-size: 16pt;}
+SMALL {font-size: 12pt;}
+.ttopalign {vertical-align: text-top;}
+.topalign {vertical-align: top;}
+.midalign {vertical-align: middle;}
+DIV.footer P {font: 10pt sans-serif;}
+</STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Problems With '<CODE>vertical-align</CODE>'</H1>
+<HR>
+<H3>Example 1.</H3>
+<P>
+In the following paragraph, all images should be aligned with the top of the 14-point text, which is identical to the first section of text, whereas any size text should be aligned with the text baseline (which is the default value). (Note. You will need images enabled to see the problems depicted below).
+</P>
+<P class="example">
+This paragraph
+<IMG SRC="vblank.html" ALT="" height="30" class="ttopalign">
+<SPAN style="font-size: 250%;">contains many images</SPAN>
+<IMG SRC="vblank.html" ALT="" height="50" class="ttopalign">
+<BIG>of varying heights</BIG>
+<IMG SRC="vblank.html" ALT="" height="10" class="ttopalign">
+<SMALL>and widths</SMALL>
+<IMG SRC="vblank.html" ALT="" height="20" class="ttopalign">
+all of which
+<IMG SRC="vblank.html" ALT="" height="65" class="ttopalign">
+<SPAN style="font-size: 2em;">should be aligned</SPAN>
+<IMG SRC="vblank.html" ALT="" height="35" class="ttopalign">
+with the top of
+<IMG SRC="vblank.html" ALT="" height="30" class="ttopalign">
+<SPAN style="font-size: 150%;">a <SPAN style="font-size: 250%;">14-point</SPAN> text element</SPAN>
+<IMG SRC="vblank.html" ALT="" height="50" class="ttopalign">
+<SMALL>regardless of the line in which</SMALL>
+<IMG SRC="vblank.html" ALT="" height="15" class="ttopalign">
+<BIG>the images appear.</BIG>
+<IMG SRC="vblank.html" ALT="" height="90" class="ttopalign">
+</P>
+<HR>
+<H3>Example 2.</H3>
+<P>
+In the following paragraph, all images should be aligned with the middle of the default text, whereas any text should be aligned with the text baseline (which is the default value).
+</P>
+<P class="example">
+This paragraph
+<IMG SRC="vblank.html" ALT="" height="30" class="midalign">
+<SPAN style="font-size: 250%;">contains many images</SPAN>
+<IMG SRC="vblank.html" ALT="" height="50" class="midalign">
+of varying heights
+<IMG SRC="vblank.html" ALT="" height="10" class="midalign">
+<SMALL>and widths</SMALL>
+<IMG SRC="vblank.html" ALT="" height="20" class="midalign">
+all of which
+<IMG SRC="vblank.html" ALT="" height="65" class="midalign">
+should be aligned
+<IMG SRC="vblank.html" ALT="" height="35" class="midalign">
+<SPAN style="font-size: 2em;">with the middle of</SPAN>
+<IMG SRC="vblank.html" ALT="" height="50" class="midalign">
+<SPAN style="font-size: 150%;">a <SPAN style="font-size: 250%;">14-point</SPAN> text element</SPAN>
+<IMG SRC="vblank.html" ALT="" height="50" class="midalign">
+<SMALL>regardless of the line in which</SMALL>
+<IMG SRC="vblank.html" ALT="" height="15" class="midalign">
+<BIG>the images appear.</BIG>
+<IMG SRC="vblank.html" ALT="" height="90" class="midalign">
+</P>
+<HR>
+<H3>Example 3.</H3>
+<P class="explain">
+In the following paragraph, all elements should be aligned with the top of the tallest element on the line, whether that element is an image or not.  Each fragment of text has been SPANned appropriately in order to cause this to happen.
+</P>
+<P>
+<SPAN class="topalign">This paragraph</SPAN>
+<IMG SRC="vblank.html" ALT="" height="10" class="topalign">
+<SPAN style="font-size: 250%;" class="topalign">contains many images</SPAN>
+<IMG SRC="vblank.html" ALT="" height="10" class="topalign">
+<SPAN class="topalign">and some text</SPAN>
+<IMG SRC="vblank.html" ALT="" height="10" class="topalign">
+<SPAN class="topalign">of varying heights</SPAN>
+<IMG SRC="vblank.html" ALT="" height="10" class="topalign">
+<BIG class="topalign">and widths</BIG>
+<IMG SRC="vblank.html" ALT="" height="20" class="topalign">
+<SPAN class="topalign">all of which</SPAN>
+<IMG SRC="vblank.html" ALT="" height="65" class="topalign">
+<SPAN class="topalign">should be aligned</SPAN>
+<IMG SRC="vblank.html" ALT="" height="35" class="topalign">
+<SPAN style="font-size: 2em;" class="topalign">with the top of</SPAN>
+<IMG SRC="vblank.html" ALT="" height="50" class="topalign">
+<SPAN class="topalign">the tallest element in</SPAN>
+<IMG SRC="vblank.html" ALT="" height="15" class="topalign">
+<BIG class="topalign">whichever line the elements appear.</BIG>
+<IMG SRC="vblank.html" ALT="" height="90" class="topalign">
+</P>
+
+<!-- FOOTER FOLLOWS    [removed for consistency]
+ <div class="footer">
+  <hr title="Footer" id=enddivider>
+  <p class=links>Up to the <a href="index.html#vHold"><cite>IE Top Five</cite></a>.</p>
+  <p class=maintainer>This page is maintained by the members of the <A HREF="http://www.webstandards.org/">Web Standards Project</A> CSS Action Committee (The CSS Samurai Seven).</p>
+  <p class=updated>Last updated in October 1998.</p>
+ </div>-->
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/winie/valign.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:28 GMT -->
+</HTML>

@@ -1,0 +1,68 @@
+FOR IMMEDIATE RELEASE:
+  
+Contact:
+Chris Carrico                                        George Olsen
+Urge Public Relations                                2-Lane Media
+chris@urgepr.com                                     golsen@2lm.com 
+213-848-8743                                         310-473-3706 x2225
+
+
+
+WSP RELEASES LIST OF OPERA TOP 10 PROBLEMS WITH KEY WEB STANDARD
+
+February 3, 1999 -- Despite a late, but ambitious first attempt
+at implementing the Cascading Style Sheet (CSS-1) standard, Opera
+Software's Opera 3.51 browsers still needs to fix some major
+problems, according to a report
+<http://www.webstandards.org/css/opera/> released today by the
+Web Standards Project.
+
+The report is the second in a series of browser reviews by WSP,
+an international coalition of Web developers who are urging
+browser makers to fully support standards developed by the World
+Wide Web Consortium.
+
+"Cascading Style Sheets give developers precise control over the
+appearance of a page that we've been waiting for," said George
+Olsen, WSP Project Leader and Design Director at 2-Lane Media
+<http://www.2lm.com> in Los Angeles.
+
+"Unfortunately, Web browsers' uneven support for Cascading Style
+Sheets over the past two years has made it impractical for many
+developers to actually use it," Olsen said. "While Opera offers
+better support for this standard than the 4.0 browsers from
+Netscape and Microsoft, there are still some serious problems. We
+hope Opera will make it a priority to fix the problems so that
+they fully support this standard and make it usable for
+developers."
+
+Many of the specific problems that Opera needs to address involve
+issues with laying out elements of a Web page and handling
+typographic styles correctly.
+
+While Opera Software did fix a few of the most glaring problems
+between in its Opera 3.51 update, some major bugs remain.
+
+WSP also believes this illustrates the danger of releasing a
+browser without complete testing - since many users will likely
+continue to use the older version and consequently developers may
+need to support an additional set of workarounds.
+
+
+About The Web Standards Project: WSP is an international
+coalition of Web developers and Web experts who are urging
+browser makers to fully support Cascading Style Sheet Level 1
+(CSS-1), the Document Object Model (DOM) and XML in their
+browsers. Its effort to bring attention to the existing and
+potential problems involved with browser incompatibility does not
+mean that WSP is opposed to innovations by browser manufacturers.
+The coalition merely urges browser manufacturers to use open
+standards for enhancements and support existing ones before
+adding new features
+
+
+George Olsen                                    
+mailto:golsen@2lm.com Design Director                            
+        http://www.2lm.com 2-Lane Media                          
+        tel: 310/473-3706 x2225
+

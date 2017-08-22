@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/winie/errorhandlingdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:19 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="Ian Hickson">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998 by Ian Hickson">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <LINK title="Ian Hickson's e-mail Address" rev="made" href="mailto:py8ieh%40bath.ac.uk">
+  <TITLE>Web Standards Project: CSS: Bugs in Internet Explorer: Incorrect Error Handling II</TITLE>
+  <STYLE type="text/css">
+  <!--
+     BODY { background: white none; color: black; }
+     @three-dee {             /* Block should be ignored by CSS1 and CSS2 browsers */
+       H1 { color: red; background: white none; }
+       P  { color: red; background: white none; }
+     }
+     A { text-decoration: underline overline line-through diagonal; font: bold highlighted 100% sans-serif; }
+     EM, P ! EM, STRONG { font-size: 200%; }
+  -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1><A NAME="top">Incorrect Error Handling</A></H1>
+
+<P>The error-handling in IE's CSS parser is <em>in direct violation of the specification</em>.
+The <a href="http://www.w3.org/TR/REC-CSS1">CSS1 specification</a>
+explains in detail how things should be
+handled (i.e., what to ignore), but IE fails to follow important
+guidelines in this
+<a href="http://www.w3.org/TR/REC-CSS1#forward-compatible-parsing">part of
+the standard</a>.</P>
+
+<P>To demonstrate this <em>graphically</em>, this page has the following stylesheet:</P>
+<PRE>
+     BODY { background: white none; color: black; }
+     @three-dee {
+       H1 { color: red; background: white none; }
+       P  { color: red; background: white none; }
+     }
+     A { text-decoration: underline overline line-through diagonal; font: bold highlighted 100% sans-serif; }
+     EM, P ! EM, STRONG { font-size: 200%; }
+</PRE>
+
+<p> All text on this page should be black on white, there should be no
+large text except for the headers, and there should be no underline,
+overline or strike-through text. IE generates a different result.</p>
+
+<H2>Example 1</H2>
+
+<P>The first rule which we'll focus on is the following:</P>
+
+<PRE>
+     @three-dee {
+       H1 { color: red; background: white none; }
+       P  { color: red; background: white none; }
+     }
+</PRE>
+
+<P>
+IE should ignore this completely, since the <img src="../../images/at-600-white-10x10.gif" width="10" height="10" alt="at">-rule "three-dee" does
+not exist in either CSS1 or CSS2, nor is it a Microsoft extension.
+This rule should <em>do <strong>nothing</strong></em>. While the
+paragraphs should be displayed in <em>black</em> text, IE displays
+them in red.
+</P>
+
+<H2>Example 2</H2>
+
+<P>
+The next problem is just as serious. Examine this next rule:
+</P><PRE>
+     A { text-decoration: underline overline line-through diagonal; font: bold highlighted 100% sans-serif; }
+</PRE>
+
+<P>This should <em>not</em> effect <A NAME="anchor">the links and anchors
+on this page</A>.
+Since the links are stricken out and in bold, IE is in
+violation of the spec. This is because the
+<code>text-decoration</code> property does not take the
+<code>diagonal</code> keyword, and thus that part of the rule should
+be ignored. The same thing should happen with the <code>font</code>
+property, since <code>highlighted</code> is not a valid keyword for
+fonts either!</P>
+
+<H2>Example 3</H2>
+
+<P>
+The last problem is similar:
+</P><PRE>
+     EM, P ! EM, STRONG { font-size: 200%; }
+</PRE>
+
+<P>This <em>should</em>, once again, have no effect -- the <code>!</code>
+symbol means <em>nothing</em> in CSS1 and CSS2 and <strong>should be
+causing the <em>entire rule</em> to be ignored</strong>. Since this
+page is littered with <em>large</em> emphasis, MSIE is not behaving according to the spec.</P>
+
+<H2>Conclusion</H2>
+
+<P>Stylesheet authors cannot be expected to have to deal with
+<em>buggy error handling</em> in older browsers. In four years, when
+CSS4 is released and it does define things like
+<CODE><img src="../../images/at-600-white-10x10.gif" width="10" height="10" alt="at">three-dee</code>, <code>highlighted</code> and <code>!</code>,
+authors will be <strong>severely limited</strong> because
+of IE4's poor error-handling.
+</P>
+
+<!-- FOOTER FOLLOWS    [removed for consistency]
+ <div class=footer>
+  <hr title="Footer" id=enddivider>
+  <p class=links>Up to the <a href="index.html#errorHandling"><cite>IE Top Five</cite></a>.</p>
+  <p class=maintainer>This page is maintained by the members of the <A HREF="http://www.webstandards.org/">Web Standards Project</A> CSS Action Committee (The CSS Samurai Seven).</p>
+  <p class=updated>Last updated in October 1998.</p>
+ </div>-->
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/winie/errorhandlingdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:19 GMT -->
+</HTML>

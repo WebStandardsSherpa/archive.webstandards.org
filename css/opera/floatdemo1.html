@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Line Breaking around Floating Elements</TITLE>
+  <STYLE TYPE="text/css">
+   <!--
+.marg {
+	float: right;
+	width: 126px;
+	}
+   -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Demonstration of Line Breaking Around Floating Elements</H1>
+
+<DIV>
+ Opera doesn't properly support one of the simplest uses of floating
+ elements, floating an image into the margin in the middle of a paragraph.
+ Suppose I were writing about a physics problem involving a bunch of
+ pulleys.  This is known as an Atwood's Machine.  So say there is a mass
+ m<SUB>3</SUB> supported by a system of two pulleys.  The pulley closest
+ to the mass is fixed by a rope to the ceiling, so it can only rotate.
+ It has inertia I<SUB>2</SUB>.  The other pulley is free to move up and
+ down, and it is being held up on its two ends by a rope that is connected
+ on one end to the first pulley and on the other end to the ceiling.
+ This is getting complicated, isn't it?  So wouldn't I want to include
+ a figure, right <em>here</em><DIV CLASS="marg"><IMG SRC="pulleys.gif"
+ ALT="An Atwood's Machine"><BR>Figure 1: An Atwood's Machine</DIV> in
+ the text, contained in a <code>DIV</code> that is floated to the right,
+ so I can give it a caption?  This makes it much easier to understand
+ the problem.  But Opera doesn't display this correctly.  It puts a
+ line break in the middle of the text where the figure is floated.
+ This should <em>not</em> happen.  It is a serious bug, since it is in
+ one of the most basic uses of floating elements.
+</DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:47 GMT -->
+</HTML>
+

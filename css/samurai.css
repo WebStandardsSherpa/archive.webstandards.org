@@ -1,0 +1,45 @@
+/* SAMURAI STYLE SHEET */
+
+BODY      { background: #555555 none;
+            font-family: "Trebuchet MS", sans-serif;
+            color: #FFCC00;
+            padding: 0px 60px 8px 60px; margin: 0px;
+          }
+
+.NOTAGIF  { font: bold 80% "Verdana", "Helvetica", "Arial", "Helv", sans-serif;
+            vertical-align: super;
+            background: #119911 none;
+            color: #FFFF00;
+          }
+
+H1        { background: #222222 url(logo.html) no-repeat 100% 0% fixed;
+            font: bold italic 46px "Trebuchet MS", "Verdana", sans-serif;
+            text-align: right;
+            color: #FF8811;
+            border-bottom: thick #FF8811 solid;
+            padding: 0px 80px 8px 0px;
+            margin: -8px -60px 30px -60px;
+          }
+
+H2        { font: bold italic 200% "Trebuchet MS", "Verdana", sans-serif;
+            text-align: left;
+            background: #555555 none;
+            color: #FFFFFF;
+            border-bottom: thin #EEEE00 solid;
+            padding: 0px 0px 0px 0px;
+            margin: 10px 0px 0px -40px;
+          }
+
+A:hover, A:hover CITE  { color: #00FF66; background: #555555; }
+A:visited, A:visited CITE { color: #00BBCC; background: #555555; }
+A:link, A:link CITE    { color: #00CCFF; background: #555555; }
+A:active, A:active CITE  { color: #00FF66; background: #555555; }
+
+.footer   { font-style: italic;
+            padding: 7px 0px 8px 0px;
+            margin: 0px -60px 0px -60px; }
+.footer p { margin: 0px 60px 0px 60px; }
+
+.note    { font-style: italic; }
+
+/* END */

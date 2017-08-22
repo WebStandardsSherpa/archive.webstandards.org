@@ -1,0 +1,76 @@
+
+
+    LOS ANGELES--(BUSINESS WIRE)--Sept. 11, 1998--
+
+               AIP Board Member Appointed As Liaison to
+                       WSP www.association.org
+
+    The Association of Internet Professionals (AIP), the largest
+global association of Internet Professionals, today announced its
+endorsement of the Web Standards Project (WSP).
+    WSP (http://www.webstandards.org) is a coalition of Web builders
+and users committed to convincing the developers of Web browsers, such
+as Netscape and Microsoft, to adopt and promote industry standards.
+    WSP co-founder Glenn Davis of Project Cool initiated the project
+to remedy the fact that Web builders spend at least 25% of their time
+dealing with differences between how Netscape's Navigator and
+Communicator browsers and Microsoft's Internet Explorer display Web
+content. (Netscape and Microsoft control more than 90% of the total
+browsers market.) The WSP is devoted to promoting standards that will
+enable Web developers to eliminate these differences and create
+content that will work with all browsers.
+    With more than 8,000 members internationally, AIP is the leading
+professional association for Internet Professionals. Founded in 1994,
+AIP is the largest and fastest growing professional association in the
+industry, dedicated to unifying, supporting and representing Internet
+professionals worldwide.
+    In endorsing the work of WSP, the AIP Board of Directors
+appointed its Secretary and Vice Chair of Technology, Dan Shafer of
+CNET Builder.com, as its liaison to WSP. Shafer also serves on the
+14-member WSP steering committee and has long been an advocate of the
+adoption of industry standards to make life easier for both Web
+designers and surfers.
+    "AIP firmly believes that it is imperative for standards adopted
+by organizations such as the World Wide Web Consortium (W3C) to be
+incorporated completely and correctly into browsers as swiftly as
+possible," Shafer said. "Without standards, neither users nor
+developers can rely on the universality of access to the content of
+the Web."
+    Davis agreed. "AIP joins the WSP as an important global
+association of Web developers and designers with no particular axe to
+grind other than the overwhelming sense that standards are essential
+to the continued growth and use of the Web."
+    WSP's intent is to convince Netscape, Microsoft, and other
+browser manufacturers, to adopt a basic set of standards consisting of
+HyperText Markup Language (HTML) 4.0, Extensible Markup Language (XML)
+1.0, Cascading Style Sheets (CSS-1 and CSS-2), and the core HTML and
+XML Document Object Model (DOM) specifications of the W3C. It also
+includes ECMAScript (the official name for the browser scripting
+language called JavaScript by Netscape and JScript by Microsoft).
+Finally, it wants these browser manufacturers to agree to support
+Extensible Style Sheets (XSL) as soon as that specification is
+approved by the W3C.
+
+About the Association of Internet Professionals
+
+    The Association of Internet Professionals (AIP) is the premier
+professional association for Internet professionals worldwide. AIP,
+founded in 1994, is the largest and fastest growing professional
+association in the industry. In order to unify, support and represent
+the global community of Internet professionals, AIP provides the
+benefits and programs that allow both its individual and corporate
+members to succeed in today's Internet/Intranet/Extranet marketplace.
+The organization also serves as the voice of Internet professionals
+and industry corporations before the public, press, and within the
+online community on issues shaping the future of the Internet. AIP's
+web site can be found at www.association.org.
+
+
+    CONTACT: Association of Internet Professionals
+             Andrew Q. Kraft, Executive Director
+             732/744-1374
+             akraft@association.org
+
+
+
+Copyright 1998, Business Wire

@@ -1,0 +1,123 @@
+For Immediate Release
+
+
+Contact:
+Stauch, Vetromile & Mitchell PR
+(401) 438-0614
+scarroll@svmmarcom.com / martha@svmmarcom.com
+PR contact for The Open Group
+
+Mr. Shane McCarron
+Program Manager for Network Computing
+The Open Group
+(612) 434-4431
+Shane@themacs.com
+
+Chris Carrico
+Urge Public Relations
+213-848-8743
+chris@urgepr.com
+PR contact for the Web Standards Project
+
+
+THE OPEN GROUP AND WEB STANDARDS PROJECT COLLABORATE TO ENSURE SUPPORT FOR
+STANDARDS ON THE WORLD WIDE WEB
+
+Development of test suite enhances effort to develop web browser standards
+
+New York, New York - October 7, 1998 - The Open Group and the Web Standards
+Project (WSP), today participated in a joint announcement to endorse the
+WSP's goals and to announce a variety of new activities targeted at helping
+the industry realize their many common goals.
+
+During the course of this event, The Open Group and the Web Standards
+Project announced the following:
+
+* The public availability of an unrestricted access test suite to evaluate
+web browsers against the W3C's HTML 3.2 recommendation
+(http://www.opengroup.org/browsertest).  The Web Standards Project will use
+the test suite to check web browsers for conformance to standards, and to
+publicize the results of this testing.
+
+* The development of tests for the W3C's HTML 4.0 recommendation and to
+extend the W3C's tests for their Cascading Style Sheets (issue 1)
+specification. The Open Group is inviting the industry to help by reviewing
+the tests as they are developed. This open process will help ensure that
+these tests are as comprehensive and accurate as possible, and ultimately,
+that browsers support the standards correctly. The WSP will evaluate the
+test tools against various implementations and share those results with The
+Open Group and the industry.
+
+* The launch of a formal effort within The Open Group to work with web
+content providers, determining their requirements for the evolution of
+browser support for standards. The WSP and its members are a key part of
+this requirements and specification development effort. The Open Group
+expects to make a major announcement about a broad program to deliver on
+these requirements for end users, content developers, tool developers, and
+browser vendors in the very near future.
+
+
+James DeRaeve, Director of Testing for The Open Group, said "The promise of
+the web is that through the use of agreed industry standards, web content
+can be accessed by users from any browser on any platform. The Web
+Standards Project and The Open Group have recognized that the lack of
+consistent support for these essential standards across all browsers
+creates unnecessary cost and usability barriers. While we encourage and
+support the efforts of the browser vendors to deliver leading edge
+functionality to their customers, both web content developers and users
+suffer if browsers don't support the basic web standards in similar ways.
+
+George Olsen, Project Leader for The Web Standards Project, says that the
+collaborative effort builds on each group's strengths. "The Open Group
+reaches a broad range of top IT professionals, while The Web Standards
+Project has been a grassroots effort among leading web developers and Web
+experts," he said. "Now we can work together toward getting browser makers
+to eliminate incompatibilities that add an extra 25 percent to the cost of
+web development and threaten to fragment the Web. As The Open Group has
+pointed out, unless browsers fully support web standards, these problems
+will worsen as browser move beyond the desktop into televisions, PDAs and
+device we haven't thought of yet."
+
+"The Open Group is pleased to be able to work with the Web Standards
+Project and the industry to drive toward agreement on how web standards
+should be implemented and relied upon to make web content portability and
+Open Systems a reality," said Shane P. McCarron, Program Manager for
+Network Computing at The Open Group.
+
+The detailed information collected by The Open Group's test suites
+complements an effort announced today by The Web Standards Project to
+gather case studies about the extra development costs that result from web
+developers having to deal with browser incompatibilities.
+
+About The Open Group:
+The Open Group is a vendor-neutral, international consortium of over 200
+members with combined IT budgets in excess of $55 billion annually. It has
+been the technology industry's flagship specifications, testing and
+branding organization for over a decade and established many of the open
+technologies on which billions of dollars of IT systems rely today. The
+Open Group is working with suppliers and users establishing
+interoperability requirements across existing multiple platforms, today's
+new Internet-based technologies, and looking to tomorrow's investment
+decisions. Its mission is to facilitate a potential IT DialTone
+infrastructure - working with standards organizations and suppliers on open
+Internet and existing legacy infrastructure specifications.
+
+Formed in February 1996 by merging X/Open Company Ltd. and the Open
+Software Foundation, the company's eight sponsors are Compaq Computer
+Corporation, Hewlett-Packard Company, Siemens-Nixdorf Informationssysteme
+AG, Fujitsu Ltd, Hitachi Ltd, International Business Machines Corporation,
+NCR Corporation, and Sun Microsystems Inc. The Open Group can be reached at
+www.opengroup.org.
+Note: UNIX and the X Device are registered trademarks, and IT DialTone and
+The Open Group are trademarks of The Open Group in the United States and
+other countries.
+
+About the WSP:
+The Web Standards Project is an international coalition of leader Web
+developers and Web experts, who are urging browser makers to fully support
+standards created by the World Wide Web Consortium. Since its launch in
+August 1998, WSP has gained more than 4,800 members-developers large and
+smaller-as well as endorsements from several leading professional
+organizations for Web developers, including the Association for Internet
+Professionals and the HTML Writers Guild.
+

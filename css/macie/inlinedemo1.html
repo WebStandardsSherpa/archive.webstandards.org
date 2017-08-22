@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/inlinedemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Margin and Padding on Inline Elements</TITLE>
+  <STYLE type="text/css">
+
+    .testmargin, .testpadding {
+        margin-left: 4em;
+	padding-left: 1em;
+	background: #ddd;
+	color: black;
+	border-left: double 4px black;
+	}
+    .testpadding { line-height: 2; }
+    .testmargin span, .testpadding span {
+        background: #9f9;
+	color: #000000;
+	}
+    .testmargin span { margin: 3em; }
+    .testpadding span { padding: 0.4em 3em; }
+    .testpadding span.yellow {
+        padding: 1em;
+	background: yellow;
+	color: black;
+	}
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Margins and Padding on Inline Elements</H1>
+
+<H2>1. Margin on Inline Elements</H2>
+
+<p class="testmargin">This is a normal testing paragraph, for reference.</p>
+
+<p class="testmargin">This is a normal testing paragraph, for reference.</p>
+
+<P class="testmargin"><span>This is an inline box with a 3em margin.
+The margin should not have any effects on the top and bottom, since line
+spacing is determined by <code>font-size</code>, <code>line-height</code>,
+and <code>vertical-align</code>.  On the sides, it should cause a gray
+space before and after the inline box, which ends after this sentence.
+Instead of doing this, MacIE applies the margins for the inline box to
+the block level element in which the inline box is contained.  The top
+margins are only applied when the inline box begins the block box and
+the side margins are only applied when the inline box begins every line
+of the block box.  The bottom margins seem to be applied only when the
+inline element ends the block box.</span></p>
+
+<P class="testmargin">When the inline box does not begin the block box,
+different things happen.  <span>While the behavior should be the same,
+a simple gray space before and after the box, MacIE indents the inline
+box at the beginning and end of every line on which it is continued (but
+not the one where it starts).</span>  It doesn't put the gray space at
+the beginning and end, like it should.</p>
+
+<H2>2. Padding on Inline Elements</H2>
+
+<p class="testpadding">This is a normal testing paragraph, for reference.  It
+is double spaced so that the padding looks reasonable when rendered
+correctly.</p>
+
+<p class="testpadding"><span>This paragraph is entirely an inline
+element with padding.  The padding is 3em on the sides and 0.4em on
+the top and bottom.  The side padding should create a green space at
+the beginning and end of the text.  The top and bottom padding should
+make the background of the inline element almost fill the gaps between
+the lines.  Instead, MacIE ignores the top and bottom padding and uses
+the side padding to increase the <em>margins</em> of the contaning
+block-level element.</span></p>
+
+<p class="testpadding">MacIE treats padding in the middle of the paragraph
+just like it treats margins.  What should happen is just like what should
+happen in the previous case:  the side padding creates additional
+space with the background color of the inline element, and the top and bottom
+padding make the background of the inline element expand into the spacing
+between the lines.  <span>However, this is not what happens.  Instead,
+the only thing MacIE does is indent both the beginning and end of any
+line that is begun by the inline element with padding.</span>  This is not
+the correct behavior, and causes very strange display for a reasonable
+style suggestion.</p>
+
+<p class="testpadding">
+When the padding is large enough to extend outside of the half-leading
+of the inline element (the leading is the difference between line-height
+and font-size - half of it is placed on each side of the font), it should
+<em>not</em> make the lines separate more.  Allowing it to do so
+removes some of the power of CSS and misleads authors into thinking that
+lines increase to allow for large padding.  MacIE not only increases the
+line spacing, but it does <em>not</em> actually draw the padding that this
+increase made room for.  The height of the lines should
+<strong>not</strong> be affected by the <span class="yellow">yellow padding</span>
+in any way.</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/inlinedemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+</HTML>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML>
+  
+<!-- Mirrored from archive.webstandards.org/css/opera/linkdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:54 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: text-decoration on Links</TITLE>
+  <STYLE TYPE="text/css">
+    OL A:link, OL A:visited { text-decoration: none; color: red; }
+    UL A:link, UL A:visited { text-decoration: underline; color: green; }
+  </STYLE>
+</HEAD>
+
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1><code>text-decoration</code> test</H1>
+
+<P>The styles applied here are:</P>
+<PRE>
+   OL A:link, OL A:visited { text-decoration: none; color: red; }
+   UL A:link, UL A:visited { text-decoration: underline; color: green; }
+</PRE>
+
+<P>There is a setting in Opera 3.5 that is supposed to set whether
+links are, <em>by default</em>, underlined or not. That is, there is
+an option in the UI (user interface) to change part of the UA
+stylesheet between either of the following: </P>
+
+<PRE>
+   /* links underlined by default */
+   A:link, A:visited { text-decoration: underline; }
+   
+   /* links not underlined by default */
+   A:link, A:visited { text-decoration: none; }
+</PRE>
+
+<P>For some reason best known to itself, when the first of the two
+options above is selected, Opera's UA stylesheet overrides the author
+stylesheets and prevents <em>any</em> links from <em>not</em> being
+underlined.</P>
+
+<P>To see this, turn on link underlining (it is off by default) and
+look at the following:</P>
+
+<OL>
+<LI><A HREF="../../../www.webstandards.org/index.html">This link</A>
+<strong>should not</strong> be underlined, regardless of UA stylesheet
+settings.</LI>
+</OL>
+
+<UL>
+<LI><A HREF="../../../www.webstandards.org/index.html">This link</A> should be
+underlined, regardless of UA stylesheet settings.</LI>
+</UL>
+
+<P><A HREF="../../../www.webstandards.org/index.html">This link</A> should be in
+the style set by the UA stylesheet.</P>
+
+<P>For some strange reason, there is a related problem with the
+<samp>Framed</samp> setting for links in Opera. When links are set to
+<samp>Framed</samp>, the colours get overridden. You can see this by
+turning the setting on and off and looking at the colour of the two
+links above. The first one should be red, the second should be
+green.</P>
+
+<P>Note. To turn on link underlining by default from within Opera,
+select <SAMP>Preferences</SAMP>, <SAMP>Link Presentation</SAMP> and
+then <em>check</em> the two checkboxes labeled <samp>Underline</samp>
+at the top of the left and right panels (<samp>Visited</samp> and
+<samp>Unvisited</samp> respectively). The <samp>Framed</samp> setting
+is on the same dialog box.</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/linkdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:54 GMT -->
+</HTML>
+

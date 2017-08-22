@@ -1,0 +1,78 @@
+FOR IMMEDIATE RELEASE:
+  
+Contact:
+Chris Carrico                                         George Olsen
+Urge Public Relations                             2-Lane Media
+chris@urgepr.com                                  golsen@2lm.com 
+213-848-8743                                         310-473-3706 x2225
+  
+
+WEB STANDARDS PROJECT FORMS "ACTION COMMITTEES" 
+ TO FOCUS THE IMPACT OF THEIR INITIATIVES
+
+LOS ANGELES, September 9, 1998 -- The Web Standards Project (WSP)
+http://www.webstandards.org/, an international coalition of leading Web
+developers, announced today the formation of a host of Action Committees to
+further its goal of getting browser makers to fully support standards
+created by the World Wide Web Consortium (W3C). Broken down into Outreach,
+Publicity and Technical Action Committees, the groups will focus on
+different areas while putting forth a concerted effort to move the
+WSP&rsquo;s objectives forward. 
+
+Currently, compensating for the lack of consistent support for standards
+adds about 25% to the cost of building a web site, which translates into
+millions of dollars wasted every year, according to the WSP. The Outreach
+Action Committee will develop messages aimed at groups affected by this
+increased cost, including academic organizations, corporate IT departments,
+and even Internet service providers, and will enlighten them as to why they
+should help and what they can do.
+
+The Publicity Action Committee will work with the Outreach Committee to get
+those messages to print and electronic publications, as well as electronic
+forums and trade organizations. They will also organize meetings at
+industry trade shows - one is currently planned for Web98 in Boston - and
+help with grassroots campaigning aimed at consumers.
+
+In order to create the most accurate and effective messages possible, the
+WSP Technical Action Committee will test currently available browsers and
+development tools to determine their level of support for the W3C
+recommendations. The major browser manufacturers have already claimed some
+level of support for many of these standards, many of which they also
+helped to create; the testing will determine how close they've actually
+come, and will highlight inconsistencies or lack of support.
+
+The committees will also concentrate on garnering broad support for
+standards not yet widely implemented but with a potentially profound effect
+on the future of web development, including Extensible Stylesheet Language
+(XSL), as soon as that specification is approved by the W3C, and Extensible
+Markup Language (XML) 1.0, which has already been approved.
+
+The committees will not limit their activities to merely pointing out
+problems, however. They will also work closely with the browser
+manufacturers to move the browsers closer to compliance. As one of the
+first activities to accomplish this goal, they will join other developers
+and users in testing Netscape's NGlayout rendering engine. NGlayout will,
+according to Netscape, be 100% compliant with Cascading Style Sheets 1
+(CSS-1) and the Document Object Model (DOM) level 1, two standards vital to
+the de-fragmentation of the web. Netscape has not yet decided, however,
+whether it will include NGlayout in the next release of its popular
+browser, Navigator.
+
+Encouraging standards-compliant browsers does not mean stifling innovation,
+the WSP emphasizes. Rather, consistent support for standards will provide
+the solid base upon which innovators can build. If the Web continues to
+fragment, the WSP contends, the future of the browser market and all its
+innovations is as uncertain as the future of the medium itself. As stated
+in the WSP mission statement, "We recognize the necessity of innovation in
+a fast-paced market. However, basic support of existing W3C standards has
+been sacrificed in the name of such innovation, needlessly fragmenting the
+Web and helping no one." 
+ 
+
+
+Christopher Carrico 
+Urge Public Relations, Inc. 
+mailto:chris@urgepr.com 
+http://www.urgepr.com 
+213.848.8743 
+  

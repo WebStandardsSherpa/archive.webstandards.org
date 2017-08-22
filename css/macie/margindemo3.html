@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/margindemo3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Margin problems</TITLE>
+  <STYLE type="text/css">
+
+    BODY { background: white none; color: black; }
+
+    DIV { border: 10px solid; }
+    DIV { color: teal }
+    DIV DIV { color: green }
+    DIV DIV DIV { color: maroon }
+
+    .a  { padding: 10px;
+          margin: 10px; }
+
+    .b  { padding: 10px 5px;
+          margin: 10px 5px; }
+
+    .c  { padding: 10px 5px 20px;
+          margin: 10px 5px 20px; }
+
+    .d  { padding: 10px 5px 20px 2px;
+          margin: 10px 5px 20px 2px; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Margin problems (3)</H1>
+
+<P>The following is the stylesheet for this document.</P>
+
+<PRE>
+
+    DIV { border: 10px solid teal; }
+
+    .a  { padding: 10px;
+          margin: 10px; }
+
+    .b  { padding: 10px 5px;
+          margin: 10px 5px; }
+
+    .c  { padding: 10px 5px 20px;
+          margin: 10px 5px 20px; }
+
+    .d  { padding: 10px 5px 20px 2px;
+          margin: 10px 5px 20px 2px; }
+
+</PRE>
+
+<H2>Shorthand all the way around</H2>
+
+<P>There should now follow three boxes with borders 10 pixels wide.
+The gap between the outer and middle and middle and inner should be 10
+pixels wide too, all the way around.</P>
+
+<DIV><DIV class=a><DIV>a</DIV></DIV></DIV>
+
+<H2>Shorthand for top/bottom and left/right together</H2>
+
+<P>The following three boxes should have a similar layout, but the gap
+between the boxes should be 10 pixels above and below and 5 pixels on
+the sides.</P>
+
+<DIV><DIV class=b><DIV>b</DIV></DIV></DIV>
+
+<H2>Shorthand for top, bottom, and left/right together</H2>
+
+<P>The following three boxes should have a similar layout, but the gap
+between the boxes should be 10 pixels at the top, 5 pixels on
+the sides, and 20 pixels on the bottom.</P>
+
+<DIV><DIV class=c><DIV>c</DIV></DIV></DIV>
+
+<H2>Shorthand for top, bottom, left, and right</H2>
+
+<P>The following three boxes should have a similar layout once again,
+but the gap between the boxes should be 10 pixels above, 5 pixels on
+the right, 20 pixels below, and 2 pixels to the left.</P>
+
+<DIV><DIV class=d><DIV>d</DIV></DIV></DIV>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/margindemo3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+</HTML>

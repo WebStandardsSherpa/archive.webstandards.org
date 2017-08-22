@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<TITLE>Box model vertical formatting</TITLE>
+<STYLE TYPE="text/css">
+HTML {
+	background-color: white;
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+}
+BODY {
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+}
+DIV, IMG {
+	padding: 0px;
+	margin: 0px;
+	border-width: 0px;
+}
+#ruler {
+	float: left;
+}
+#description {
+	float: right;
+}
+P {
+	background-color: gray;
+	color: black;
+	height: 240px;
+	border-style: solid;
+	border-color: silver;
+	border-top-width: 40px;
+	border-bottom-width: 40px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+</STYLE>
+
+<DIV>
+
+<IMG ID="ruler" SRC="images/vert_pixel_ruler.html" ALT="" WIDTH="20" HEIGHT="481"><IMG ID="description" SRC="images/vert_description.html" ALT="" WIDTH="64" HEIGHT="480">
+
+<P>The border, padding, and margins for this paragraph should line up with the boundaries denoted in the image on the right. There should be no left or right margin; the images to the left and right should both be flush with the respective edges of this paragraph's box. Internet Explorer&nbsp;4.0 inserts some space between the images and this paragraph, and it appears to ignore the <CODE>height</CODE>.
+
+</DIV>
+

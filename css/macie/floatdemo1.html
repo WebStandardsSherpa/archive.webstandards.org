@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang=en>
+  
+<!-- Mirrored from archive.webstandards.org/css/macie/floatdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:31 GMT -->
+<HEAD>
+
+    <META http-equiv="Content-Style-Type" content="text/css">
+    <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <TITLE>Problems with 'float' in IE 4.5 for Macintosh</TITLE>
+
+    <STYLE type="text/css">
+
+      DIV { border: 3px solid purple; padding: 0; margin: 0.125em; }
+
+      P.left, P.right { width: 10em; padding: 1em; margin: 0;
+         border: 3px solid lime; background-color: silver; }
+
+      IMG.left, IMG.right { margin: 0; border: 3px solid black; }
+
+      .left  { float: left; }
+      .right { float: right; }
+
+    </STYLE>
+
+</HEAD>
+
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<h1>Problems with 'float' in Internet Explorer 4.5 for Macintosh</h1>
+
+<p>The following examples of incorrectly
+supported floating elements are taken from <a
+href="http://www.w3.org/Style/CSS/Test/current/sec414.htm">section
+4.1.4</a> of the World Wide Web Consortium's <a
+href="http://www.w3.org/Style/CSS/Test/">CSS1 Test Suite</a>. </p>
+
+<P>IE 4.5 does not fail all of the tests on the W3C test page, in
+particular it supports floating of images better than it does floating
+of block elements.</P>
+
+<div style="width: 640px; border: 1px solid red;">Note that your
+window must be at least 640 pixels wide to see this problem! This DIV
+should be 640 pixels wide - make sure that your window is wider than
+this DIV to see the problems depicted below!</div>
+
+<h2>1. Floating Paragraphs in a DIV</h2>
+
+<h3>1.1 Left - Right</h3>
+
+<DIV>
+  <P class="left">This is a left-floating paragraph (first in source).</P>
+  <P class="right">This is a right-floating paragraph (second in source).</P>
+  MacIE incorrectly puts a space above the floating paragraph that
+  occurs first.  (The margin is explicitly set to 0.)  The left floating
+  paragraph should touch the top of the purple <code>div</code> just as
+  the right floating one does.  The right floating
+  paragraph should stay entirely within the top and side borders of
+  the <code>div</code>, but it does not.  For some reason, it sticks out
+  of the right side of the <code>div</code>.
+</DIV>
+
+<h3>1.2 Right - Left</h3>
+
+<DIV>
+  <P class="right">This is a right-floating paragraph (first in source).</P>
+  <P class="left">This is a left-floating paragraph (second in source).</P>
+  This example is similar to the previous one, except the right float
+  comes first.  This shows that the extra space on top accompanies the
+  first float, but the additional movement to the right occurs on
+  right-floating paragraphs.
+</DIV>
+
+<h2>2. Floating elements inside fixed width DIVs</h2>
+
+<h3>2.1 Paragraphs</h3>
+
+<DIV style="width: 19em;">
+  <P class="left">This is a left-floating paragraph (first in source).</P>
+  <P class="right">This is a right-floating paragraph (second in source).</P>
+  In this example, MacIE shows a very serious problem with floats.
+  Floating should be a safe technique - when implemented correctly, floats
+  can never overlap, and authors do not need to worry about overlap in
+  unusual situations.  However, MacIE does not displace a right-floating
+  element down when this displacement is needed to separate it from a
+  left-floating element.  Instead, these elements overlap.  Furthermore,
+  MacIE begins the text in the normal flow where there is no room for
+  it, putting one word per line until the floats are complete.
+</DIV>
+
+<h3>2.2 Images</h3>
+
+<DIV style="width: 400px;">
+  <IMG SRC="images/hblank1.gif" class="left" width="250" height="30" alt="[This image should float to the left of the paragraph]"> 
+  <IMG SRC="images/hblank2.gif" class="right" width="250" height="30" alt="[This image should float to the right of the paragraph]"> 
+  This example demonstrates the same problem with overlap, except with
+  images.  The images overlap in the same way the paragraphs do, and the
+  text has the same problem flowing in the midst of the images.
+</DIV>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/floatdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:33 GMT -->
+</HTML>

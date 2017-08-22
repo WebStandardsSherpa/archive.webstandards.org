@@ -1,0 +1,83 @@
+BROWSER INCOMPATIBILITIES INCREASE WEB SITE COSTS
+AND THREATEN TO FRAGMENT THE WEB,
+ACCORDING TO LEADING WEB DEVELOPERS
+
+Los Angeles, August 10, 1998 - Resolving incompatibilities among browsers
+adds at least 25 percent to the cost of building Web sites, according to
+The Web Standards Project (WSP), a newly-formed international coalition of
+leading Web developers dedicated to promoting a worldwide standard for Web
+and browser design.  Calling on browser makers to live up to promises made
+in July 1997, the WSP
+( http://www.webstandards.org ) is urging browser makers to fully support
+the standards created by the Worldwide Web Consortium (W3C) in the upcoming
+round of browser releases, as well as support emerging standards that are
+being developed.  Otherwise, contends the WSP, millions of dollars will
+continue to be wasted each year on Web development.
+
+"The time for proprietary innovation in Web browsers is past," says Glenn
+Davis, Chief Technology Officer of Project Cool, Inc., a Palo Alto-based
+educational resource center for Web development.  "It's time for the
+browsers to start fully supporting W3C core standards - standards that
+Microsoft and Netscape helped develop and promised to support - so that
+people building Web sites can spend more time building better sites and
+less time fighting browsers over compatibility issues that create unneeded
+expenses for everyone, at every level of the Web."
+
+Currently, beta versions of both Netscape's Navigator 4.5 and Microsoft's
+Internet Explorer 5.0 are adding more proprietary enhancements without
+providing complete support for existing standards.  >>Because the 5.0
+browsers will likely become a new baseline for desktop >>browsers due to
+their support for XML, the WSP believes that resolving the current
+patchwork support for HTML, Cascading Style Sheets, Document Object Model
+and ECMAScript is crucial.
+
+"Because Web developers have to build multiple versions or perform
+time-consuming workarounds to accommodate visitors on different browsers,
+most shy away from using proprietary features because of the extra costs
+involved," says George Olsen, >>Design Director and Web Architect at 2-Lane
+Media in Los Angeles.  "While clients may want to see these features, few
+of them are willing to pay for having the site built more than once."
+
+In addition to increasing the cost of Web sites, the lack of common
+standards is breeding a sense of frustration among developers who face the
+progressively difficult task of performing workaround upon workaround.
+"Most of my design ideas are really simple, but executing them consistently
+across Internet Explorer 3 & 4, as well as Navigator 3 & 4 is anything
+but," says Jeffrey Zeldman, a New York Web publisher/designer.  "I have to
+engage in laborious workarounds, simply to end up with a very basic design
+that works."
+
+This lack of consistent support for sophisticated presentation standards,
+such as Cascading Style Sheets, has its long-term effects as well,
+according to the WSP.  As the difficulty of building new workarounds on top
+of older ones increases, developers will focus on simpler solutions rather
+than concentrate on longevity.  "In the absence of standards for these
+great technologies, we tend to create disposable content dismissively
+instead of sticking to a solid foundation for the long-term," says Martin
+Diekhoff, Web/Applications Developer for the Getty Information Institute.
+
+Todd Fahrner, Design Technologist for Studio Verso in San Francisco, adds,
+"browser makers should try to take the long view, and realize that
+surviving the 'browser war' won't matter much if the Web itself breaks
+apart.  Supporting the standards might sound like an altruistic goal in a
+competitive market, but developers and their clients are losing patience
+with compromised support for baseline standards like CSS1."
+
+"The current problem will only be further complicated with the rise of
+television-based and PDA-based Web browsers," said Ann Navarro, owner of
+WebGeek Communications in Carmel Valley, CA, and treasurer for the HTML
+Writers Guild.  Navarro said the WSP is also urging browser makers to
+participate in and support the efforts of the W3C's recently formed Mobile
+Access group, which will be developing standards for PDA and cell
+phone-based Web browsers.
+#  #  #  #
+
+About the Web Standards Project
+The WSP's primary objective is to advance the Web development industry.
+Its effort to bring attention to the existing and potential problems
+involved with browser incompatibility does not mean the WSP is opposed to
+innovations by browser manufacturers.  The coalition merely urges browser
+manufacturers to use open standards for enhancements and support existing
+ones before adding new features.
+
+

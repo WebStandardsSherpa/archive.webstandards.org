@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/winie/shame2/floatclear.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:15 GMT -->
+<HEAD>
+<TITLE>Float/Clear Troubles</TITLE>
+<STYLE type="text/css">
+IMG.floatr {float: right;}
+TABLE.side {float: right; clear: right;
+   background-color: yellow; width: 100px;}
+</STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+<H2>Does Your Browser Get This Right?</H2>
+<IMG SRC="fcimg1.html" class="floatr" ALT="A Floating Image to Test Your Browser">
+<TABLE class="side" border>
+<TR>
+<TD>
+test table text<BR>
+test table text<BR>
+test table text<BR>
+</TD>
+</TR>
+<TR>
+<TD>
+test table text<BR>
+test table text<BR>
+test table text<BR>
+</TD>
+</TR>
+</TABLE>
+
+<P>Odds are, the answer to that question is "no". However, we'll
+provide the markup to find out for sure.</P>
+
+<P>Here's how this should work: just before the beginning of the first
+paragraph are two tags: <CODE>IMG</CODE> and <CODE>TABLE</CODE>. The
+<CODE>IMG</CODE> has a class of <CODE>floatr</CODE>, and the
+<CODE>TABLE</CODE> a class of <CODE>side</CODE>. The document has an
+embedded style sheet which contains the following rules:</P>
+
+<PRE>   IMG.floatr {float: right;}
+   TABLE.side {float: right; clear: right;
+      background-color: yellow; width: 100px;}
+</PRE>
+
+<P>...and you can find, at the end of this document, a picture of
+roughly <A HREF="#refimg">how this page should be rendered</A>.</P>
+
+<P>Now, what should happen is that the image should float to the right
+side of the parent element-- in this case, the <CODE>BODY</CODE>. Most
+browsers get this part right. The next element in the document is the
+<CODE>TABLE</CODE>, which should float to the right, but appear below
+the image (because of the <CODE>clear</CODE>). This is where most
+browsers break down.</P>
+
+<P>MSIE4 for Win95, for example, will float the image and table
+correctly, but start the first paragraph just below the end of the
+table, as though the paragraph had been set to <CODE>clear:
+right</CODE>, which is most certainly not the case. MSIE4 for the
+Macintosh, on the other hand, will float the image and start the first
+paragraph right under it-- the table disappears completely!</P>
+
+<!--<P>
+Then there's Navigator.  Nav4 for the Macintosh floats the image right, but doesn't float the table, although at least we can see it.  However, the table starts after the end of the image&mdash;apparently the <CODE>clear: right</CODE> worked, although for all we know the correct behaviour could have been inadvertently achieved by another rendering bug.  Nav4 for Win95 doesn't do much better.  It doesn't do any worse, either, so at least there is consistency.
+</P>-->
+<P>
+MSIE5b1 for Win95 floats both image and table, and starts the first paragraph in the right place, but the table is floating to the left of the image, apparently ignoring the <CODE>clear: right</CODE> rule.
+</P>
+<!--<P>
+Opera 3.5b9, at last check, behaved the same as Navigator 4.
+</P>-->
+<P>
+<A NAME="refimg"><IMG SRC="refimg.html" ALT="A roughly correct rendering of this page"></A>
+</P>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/winie/shame2/floatclear.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:17 GMT -->
+</HTML>

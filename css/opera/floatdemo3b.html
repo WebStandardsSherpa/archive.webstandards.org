@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo3b.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:49 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Placement of Floats</TITLE>
+  <STYLE TYPE="text/css">
+   <!--
+BODY	{
+	color: black;
+	background-color: white;
+	}
+
+DIV.left {
+	float: left;
+	width: 20%;
+	height: 50em;
+	background-color: #CC6;
+	padding: 0.4em;
+	margin: 0.4em;
+	}
+
+DIV.left H1	{
+	width: 300%;
+	background-color: #6CF;
+	margin: 0.4em;
+	margin-bottom: 0;
+	padding: 0.2em;
+        float:left;
+	font-size: 1.8em;
+	line-height: 1;
+	color: inherit;
+	}
+
+DIV.left .first	{
+/*	margin-top: 4.24em;  - 1.8em * (1 + 0.4 + 0.4 (no bottom) ) = 3.24em  + 1em = 4.24em*/
+	clear: left;
+	margin-top: 0;
+	padding-top: 1em;
+	}
+
+DIV.main	{
+	margin-top: 6em;
+	}
+   -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<DIV CLASS="left">
+
+ <H1>XYZ Co. (Placement of Floats Demo)</H1>
+
+ <UL CLASS="first">
+  <LI>Home</LI>
+  <LI>Contents</LI>
+  <LI>Search</LI>
+  <LI>Store</LI>
+  <LI>People</LI>
+  <LI>Products</LI>
+ </UL>
+
+</DIV>
+
+<DIV CLASS="main">
+ <P>
+  This text should be the main body of the page.  It should be below
+  the blue stripe (which is an <code>H1</code> element) at the top
+  of the page (with a bit of space between).  The blue header should
+  run 60% of the way across the page.  The olive floating menu at the
+  left should only run 20% of the way across the page.  See the <A
+  HREF="floatdemo3.gif">reference rendering</A> for an example of a
+  correct rendering.
+ </P>
+
+ <P>
+  This is not what Opera does.  Opera moves the olive floating element
+  down to where the top of the text begins.  The main text has a
+  top-margin so that it starts below the blue heading.  Opera moves
+  the olive float and the blue heading down to be even with the text,
+  even though the float and the heading come before the text in the
+  HTML source.
+ </P>
+
+ <P>
+  <A HREF="floatdemo3a.html">Demo 3A</A> and <A
+  HREF="floatdemo3b.html">demo 3B</A> should appear to be identical.
+  The difference between demo 3A and demo 3B is that in demo 3B, the
+  blue <code>H1</code> element is floating, while in demo 3A, the blue H1
+  element does not float.  However, the two tests have been designed to
+  yield exactly the same results.  In demo 3A, Opera incorrectly reduces
+  the top margin of the <code>H1</code>.
+ </P>
+
+</DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo3b.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:49 GMT -->
+</HTML>
+

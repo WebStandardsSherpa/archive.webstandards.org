@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+
+<html lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:33 GMT -->
+<HEAD>
+  <TITLE>Web Standards Project: MacIE's Top 10 CSS Problems</TITLE>
+
+  <META name="author" content="Web Standards Project CSS Action Committee (Samurai)">
+  <META name="copyright" content="&copy; copyright 1998,1999 by the Web Standards Project CSS Action Committee (Samurai)">
+  <META name="keywords" content="">
+  <META name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+
+  <LINK title="Hive Mind" rel="stylesheet" type="text/css" href="../wasp_a.css">
+  <LINK title="Shogun" rel="alternate stylesheet" type="text/css" href="../samurai.css">
+  <LINK title="Acid Bath" rel="alternate stylesheet" type="text/css" href="../inside.css">
+
+</HEAD>
+
+<BODY><!--#include virtual="/outdated.inc" --> 
+<div id="body"> <!-- this is a hack -->
+
+<H1>MacIE's Top 10 <ACRONYM TITLE="Cascading Style Sheets">CSS</ACRONYM> Problems</H1>
+
+<P>
+ This is the third of <a href="../index.html">a series of
+ <ACRONYM TITLE="Web Standards Project">WSP</ACRONYM>
+ standards-compliance reviews</a>. As a matter of policy, the WSP
+ provides thorough coverage of and feedback on interim releases of
+ major browsers. The first was <A HREF="../winie/index.html">a review of Windows
+ Internet Explorer</A> released in early November 1998, and the second
+ was <A HREF="../opera/index.html">a review of Opera</A> released in early
+ February 1999.
+</P>
+
+<!--index-->
+<ul class="stb">
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#The_Top_5_Bugs">The Top 5 Bugs</a>
+    <ol>
+      <li><a href="#Float">Problems with <code>float</code></a></li>
+      <li><a href="#Block">Block Level Box Model</a></li>
+      <li><a href="#Inline">Inline Level Box Model</a></li>
+      <li><a href="#Parsing">Parsing and Error Handling</a></li>
+      <li><a href="#Link">Link Pseudo Classes</a></li>
+    </ol>
+  </li>
+  <li><a href="#The_Top_5_MIAs">The Top 5
+       <ACRONYM TITLE="Missing In Action">MIA</ACRONYM>s</a>
+    <ol>
+      <li><a href="#Display"><code>display</code></a></li>
+      <li><a href="#Alternate_stylesheet_UI">Alternate Stylesheet UI</a></li>
+      <li><a href="#Whitespace"><code>white-space</code></a></li>
+      <li><a href="#Pseudos">No <code>first-line</code> and <code>first-letter</code> pseudo elements</a></li>
+      <li><a href="#Important">The <code>important</code> Priority</a></li>
+    </ol>
+  </li>
+</ul>
+<!--/index-->
+
+<DIV TITLE="Introduction">
+ <H2><a name="Introduction">Introduction</a></H2>
+
+ <P>
+  Microsoft recently released Internet Explorer 4.5 for the
+  Mac. This release makes significant improvements in many
+  areas of CSS support.   In some areas (including some of the <A
+  HREF="../winie/index-2.html#The_Top_5_Bugs">problems we described</a>)
+  it is better than Internet Explorer 5.0 for Windows.
+ </P>
+
+ <P>
+  On the Macintosh, it offers by far the best support for CSS1 in a
+  publicly released browser. However, it still has significant
+  problems. Its support for the visual formatting model is weak in
+  some areas. Margins and widths are calculated incorrectly, and
+  floating elements cause strange side effects. Styles applied to
+  inline elements are interpreted incorrectly. It has serious problems
+  in parsing the CSS language (and the seriousness of these last
+  problems will only become fully apparent when they break new
+  features added to the CSS).
+ </P>
+
+ <P>
+  It also lacks important features of CSS1.  The <code>display</code>
+  property is only partially supported, and a few others are not
+  supported at all.   There is no user interface for the selection of
+  alternate stylesheets, an interesting and useful feature of CSS1 and
+  HTML 4.0.
+ </P>
+
+ <P>
+  The implementations of <ACRONYM TITLE="Cascading Style Sheets,
+  Level 1">CSS1</ACRONYM> in major Web browsers over the last three
+  have been buggy and incomplete.   These implementations have caused
+  great frustration and expense for Web authors, have won <ACRONYM
+  TITLE="Cascading Style Sheets">CSS</ACRONYM> an undeservedly obscure
+  and difficult reputation, and have left many of its features unusable.
+  <ACRONYM TITLE="Cascading Style Sheets">CSS</ACRONYM> is more than
+  just the small step above the <code>font</code> tag allowed by current
+  browsers.  It is a powerful language that combines different suggestions
+  for the presentation of semantic markup.
+ </P>
+
+ <P>
+  Now that Netscape promises to release a comprehensive and thoroughly
+  tested CSS1 implementation in the near future (which we will be
+  examining in depth in due course), the WSP calls upon Microsoft to
+  improve its implementation, letting Web designers, authors,
+  application developers, and users build upon a single, robust
+  foundation for Web presentation:
+  <ACRONYM TITLE="Cascading Style Sheets, Level 1">CSS1</ACRONYM>.
+ </P>
+
+</DIV>
+
+<DIV ID="top5bugs" TITLE="Top 5 Bugs">
+ <H2><a name="The_Top_5_Bugs">The Top 5 Bugs</a></H2>
+
+ <DIV TITLE="Problems with float">
+  <H3><a name="Float">1. Problems with <code>float</code></a></H3>
+
+  <P>
+   MacIE has some mysterious bugs related to the <code>float</code>
+   property. Adjacent floated paragraphs may overwrite each other or
+   text around them, floated elements may be placed in incorrect
+   positions, and floated images may overlap surrounding text. In
+   certain cases, text that is floated causes a line break in its
+   container. This bug makes floats within text very difficult to use.
+   Sometimes floating an image can even cause a link not to work.
+   Taken as a whole, these bugs change floating from a safe and easy
+   method for creating out-of-flow content to a risky and difficult
+   one.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="floatdemo1.html">Demonstration of problems with 
+    <code>float</code>.</A>
+    (Screenshot: Part 1:
+    <a href="screenshots/floatdemo1_a.html">GIF</a>;
+    Part 2:
+    <a href="screenshots/floatdemo1_b.html">GIF</a>)
+   </LI>
+   <LI>
+    <A HREF="floatdemo2.html">Demonstration of problems with
+    line breaks around <code>float</code>.</A>
+   </LI>
+   <LI>
+    <A HREF="floatdemo3.html">Demonstration of problems with
+    floating images and floating links</A>
+    (Screenshot:
+    <a href="screenshots/floatdemo3.gif">GIF</a>,
+    <a href="screenshots/floatdemo3.png">PNG</a>)
+   </LI>
+   <LI>
+    <A HREF="w3c-floater.html">Demonstration of overlapping and incorrect
+    layout of floats.</A>
+    (Screenshot:
+    <a href="screenshots/w3c-floater.gif">GIF</a>,
+    <a href="screenshots/w3c-floater.png">PNG</a>)
+   </LI>
+   <LI>
+    <A HREF="floatdemo4.html">Demonstration of strange horizontal
+    indents around floats</A>
+   </LI>
+
+  </OL>
+
+ </DIV>
+ 
+ <DIV TITLE="The block box model">
+  <H3><a name="Block">2. The Block Level Box Model</a></H3>
+
+   <P>MacIE does not follow the rules for for calculating margins and
+   widths of elements described in <a
+   href="http://www.w3.org/TR/REC-CSS1#horizontal-formatting">section
+   4.1.2</a> of CSS1. Problems appear particularly when one or more of
+   those values is set to <code>auto</code>. For example, when an
+   element's width is set bigger than its containing block, it should
+   be bigger than its containing block (and have a negative margin).
+   MacIE incorrectly widens the containing block instead. That is, it
+   incorrectly lets the contents of a block box affect its dimensions,
+   something that should only happen when <code>height</code> is
+   <code>auto</code>.
+   </P>
+
+   <P>MacIE also interprets the <code>margin</code> and
+   <code>padding</code> shorthand properties incorrectly, applying
+   them to the top and left only.
+   </P>
+
+   <P>Furthermore, MacIE does not support any of the box model properties
+   on the <code>body</code> or <code>html</code> elements. This deficiency
+   forces authors to create additional markup for the sole purpose of
+   styling that markup.
+   </P>
+
+  <OL>
+   <LI>
+    <A HREF="margindemo1.html">Containing block is widened by
+    contents.</A>
+   </LI>
+   <LI>
+    <A HREF="margindemo2.html">Margins set to <code>auto</code>
+    give incorrect layout.</A>
+    (Screenshot:
+    <a href="screenshots/margindemo2.gif">GIF</a>,
+    <a href="screenshots/margindemo2.png">PNG</a>)
+   </LI>
+   <LI>
+    <A HREF="margindemo3.html">Shorthand problems on
+    <code>margin</code> and <code>padding</code>.</A>
+    (Screenshot:
+    <a href="screenshots/margindemo3.gif">GIF</a>,
+    <a href="screenshots/margindemo3.png">PNG</a>)
+   </LI>
+   <LI>
+    <A HREF="bodyboxmodeldemo.html">Demonstration of problems with box
+    model properties on <code>body</code> and <code>html</code>.</A>
+   </LI>
+<!-- XXX REDUNDANT - - this shows the same problem as 5.1 (margindemo1)
+   <LI>
+    <A HREF="margindemo4.html">A width is a width</A> - containing blocks
+    should not be widened by their contents.
+   </LI>
+-->
+  </OL>
+
+ </DIV>
+
+ 
+ <DIV TITLE="The inline box model">
+  <H3><a name="Inline">3. The Inline Level Box Model</a></H3>
+
+   <P>The various <CODE>margin</CODE> and <CODE>padding</CODE> properties
+   have serious problems on inline elements.  Side margin and padding
+   should cause spaces at the beginning and end of an inline element.
+   MacIE instead puts the indents at the beginning and end of every line
+   but the first that the inline element occupies
+   (and in both cases these indents act like margin, never padding).
+   When the inline element begins a block box, the box properties of
+   the inline element affect the containing block box.
+   Top and bottom margin on inline elements correctly have no effect
+   in MacIE.  However, top and bottom padding, which should extend the
+   background of the inline element without changing the line-height,
+   also have no effect, except to increase the line-height.</P>
+
+   <P>Furthermore, the <code>vertical-align</code> and
+   <code>line-height</code> properties are only partially implemented,
+   which prevents complex text layout from being achieved, and the
+   <code>border</code> property appears to be ignored on inline
+   text.</P>
+
+   <P>Rather than basing calculations of the vertical alignment of
+   replaced elements on the size of the font of the parent element
+   (where applicable) calculations are based on the size of the font
+   of the tallest element in a line. While this is the correct basis
+   for values of <CODE>top</CODE> and <CODE>bottom</CODE>, it yields
+   incorrect results for the <CODE>vertical-align</CODE> values
+   <CODE>baseline</CODE>, <CODE>middle</CODE>, <CODE>text-top</CODE>
+   and <CODE>text-bottom</CODE>.</P>
+
+   <P>MacIE does not let the computed value of the
+   <code>line-height</code> property (when set by percentage) inherit.
+   Instead, it makes the specified value given by the stylesheet
+   author inherit. This is incorrect, as the specified value should
+   only inherit when given as a dimensionless factor. It misleads
+   authors by making them think that percentage and em units for line
+   height are equivalent to the much safer dimensionless factors.</P>
+
+  <OL>
+   <LI>
+    <A HREF="inlinedemo1.html">Demonstration of problems with margin
+    and padding on inline level elements.</A>
+    (Screenshot: Part 1:
+    <a href="screenshots/inlinedemo1_a.gif">GIF</a>,
+    <a href="screenshots/inlinedemo1_a.png">PNG</a>;
+    Part 2:
+    <a href="screenshots/inlinedemo1_b.gif">GIF</a>,
+    <a href="screenshots/inlinedemo1_b.png">PNG</a>)
+    See also the reference rendering
+    (<a href="reference/inlinedemo1.gif">GIF</a>,
+    <a href="reference/inlinedemo1.png">PNG</a>)
+    which corrects every problem except for extra spacing at the ends of lines.
+   </LI>
+   <LI>
+    <A HREF="http://www.people.fas.harvard.edu/~dbaron/csstest/inlinetest">
+    Demonstration of problems with <code>vertical-align</code>,
+    <code>line-height</code> and borders on inline level elements.</A>
+    (Screenshot:
+    <a href="screenshots/inlinetest.gif">GIF</a>,
+    <a href="screenshots/inlinetest.png">PNG</a>)
+   </LI>
+   <LI>
+    <A HREF="valigndemo1.html">Demonstration of problems with
+    <code>vertical-align</code>.</A>
+   </LI>
+   <LI>
+    <A HREF="lineheightdemo1.html">Demonstration of problems with
+    <code>line-height</code>.</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="Parsing and Error Handling">
+  <H3><a name="Parsing">4. Parsing and Error Handling</a></H3>
+
+   <P>MacIE's CSS parser has major faults in its error recovery
+   code. The CSS1 specification explains very clearly how unrecognized
+   CSS should be handled (i.e., what to ignore).  MacIE does not
+   follow this part of the recommendation. Documents designed
+   for future levels of the CSS specification will thus be displayed
+   incorrectly, and sometimes bizzarely.</P>
+
+   <P>Some of the problems include incorrectly interpreting escaped
+   braces ("<code>\{</code>"), accepting unknown or missing units (and
+   interpreting them as pixels), allowing quoted values, and treating
+   two consecutive slashes in a selector (<code>//</code>) as a
+   comment delimiter instead of as an unknown selector symbol.</P>
+
+  <OL>
+   <LI>
+    <A HREF="errorhandlingdemo1.html">Demonstration of problems with error handling.</A>
+   </LI>
+   <LI>
+    <A HREF="errorhandlingdemo2.html">Demonstration of parsing bugs.</A>
+   </LI>
+   <LI>
+    <A HREF="errorhandlingdemo3.html">Demonstration of parsing bugs with nested braces.</A>
+   </LI>
+   <LI>
+    <A HREF="errorhandlingdemo4.html">Demonstration of error handling bugs with unsupported selectors.</A>
+   </LI>
+   <LI>
+    <A HREF="errorhandlingdemo5.html">Demonstration of error handling bugs with unknown units.</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ <div title="Link Pseudo Classes">
+  <h3><a name="Link">5. Link Pseudo Classes</a></h3>
+
+  <p>
+   MacIE has problems handling the pseudo-classes used for selecting
+   links.  If multiple pseudo classes are given, it applies the style rule
+   as if only the last pseudo-class given were present.  It should either
+   ignore the rule completely (CSS1) or require that the elements match
+   all the pseudo-classes (CSS2).  Furthermore, while <code>:link</code>
+   and <code>:visited</code> should be mutually exclusive, it allows
+   elements that match <code>:visited</code> to match <code>:link</code>
+   as well.
+  </p>
+
+  <ol>
+   <li>
+    <a href="linkdemo1.html">Demonstration of link problems.</A> - <code>:link</code> and <code>:visited</code> should be mutually exclusive
+   </li>
+   <li>
+    <a href="linkdemo2.html">Demonstration of problems with multiple link pseudo-classes.</A>
+   </li>
+  </ol>
+
+ </div>
+ 
+</DIV> <!-- ID="top6bugs" -->
+
+<DIV TITLE="Top 5 Missing features" ID="top5mias">
+
+ <H2>
+  <a name="The_Top_5_MIAs">The Top 5
+  <ACRONYM TITLE="Missing In Action">MIA</ACRONYM>s</a>
+ </H2>
+
+ <DIV TITLE="display Property">
+  <H3><a name="Display">1. <CODE>display</CODE></a></H3>
+
+   <P>MacIE only supports one of the four values for the
+   <CODE>display</CODE> property: <code>none</code>. This leaves
+   <code>block</code>, <code>inline</code> and <code>list-item</code>
+   unsupported.</P>
+
+   <P><CODE>inline</CODE> is needed to allow a correct combination of
+   logical markup and display. For example, an unordered list should
+   by contained in a <CODE>UL</CODE> element, but the author may want
+   that list displayed on one line. The display value of
+   <CODE>inline</CODE> allows the correct combination of logical
+   markup with style. The <code>block</code> value allows the opposite
+   effect.</P>
+
+   <P>This document has manually numbered <CODE>H3</CODE> elements. If
+   the <CODE>list-item</CODE> display type were supported for
+   <CODE>H3</CODE>, the UA might generate the numbering as with any
+   other list, thus alleviating the burden on the document author to
+   have to keep the numbering in check.</P>
+
+   <P>CSS2 introduces a number of new values for the display property.
+   While these values will also be useful, we believe
+   designers would rather see them postponed in favor of complete
+   support for the CSS1 values.</P>
+
+  <OL>
+   <LI><A HREF="displaypropertydemo.html">Demonstration of <CODE>display</CODE>.</A></LI>
+  </OL>
+ </DIV> 
+
+ <DIV TITLE="Alternate stylesheet UI">
+
+  <H3><a name="Alternate_stylesheet_UI">2. Alternate stylesheet UI</a></H3>
+
+  <P>
+   CSS1 allows authors to associate multiple stylesheets with a
+   document, allowing users to choose the most appropriate or pleasing.
+  </P>
+
+  <P>
+   For example, a designer could create a default "public" stylesheet for
+   a body of documents, a second sheet suitable for intra-organizational
+   or -departmental access to the same documents, and a third suitable
+   for users who are visually impaired (using high-contrast colors,
+   for instance). The mechanism is extensible to include transparent
+   application of media-specific stylesheets: one for print, one for
+   WebTV, another for hand-held device browsers - all without content
+   redundancy. This document, for instance, written in HTML 4.0 Strict,
+   is associated with three distinct stylesheets. Unfortunately, due to
+   lack of support for this CSS1 feature, you are unlikely to have any
+   choice but the default, or no stylesheet at all.  
+  </P>
+
+  <P>
+   Among the primary design goals of CSS is to restore balance among
+   the responsibilities the author, the user, and the user agent (UA;
+   i.e., the browser) must share when negotiating the presentation of Web
+   content under varying conditions.  These goals require the ability to
+   specify a user stylesheet, the ability to disable author style sheets,
+   the exposure of alternate author style sheets, the ability to change
+   user stylesheets quickly, and the exposure of a UA default stylesheet
+   for each media type.
+  </P>
+
+  <P>
+   By not implementing a user interface for alternate
+   and user CSS, MacIE turns CSS from a language designed to balance
+   user and author needs into a fundamentally user-hostile instrument.
+   With users unable to interact with CSS easily, authors are not only
+   entertained with the promise of reckless authority in matters of style,
+   but are also tempted to create documents that lack structural markup
+   and are thus meaningless with any stylesheets other than their own.
+  </P>
+
+  <OL>
+   <LI><A HREF="altstyledemo.html">Simulation of Alternate Stylesheets.</A></LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="white-space Property">
+  <H3><a name="Whitespace">3. <CODE>white-space</CODE></a></H3>
+
+   <P>Support for CSS1's <CODE>nowrap</CODE> value of the
+   <code>white-space</code> property would permit
+   retirement of the nonstandard <CODE>NOBR</CODE> extension and the
+   deprecated <code>NOWRAP</code> markup attribute, as required by
+   HTML 4.0. Control over whitespace preservation with the
+   <CODE>pre</CODE> value would help further abstract presentational
+   considerations from markup.</P>
+
+  <OL>
+   <LI><A HREF="whitespacedemo.html">Demonstration of
+   <CODE>white-space</CODE>.</A></LI>
+  </OL>
+ </DIV> 
+
+ <DIV TITLE="No first-line and first-letter pseudo elements">
+  <H3><a name="Pseudos">4. No <code>first-line</code> and <code>first-letter</code> pseudo elements</a></H3>
+
+   <P>Internet Explorer for the Macintosh still does not support CSS1's
+   <code>first-line</code> and <code>first-letter</code> pseudo
+   elements.  Opera and the
+   pre-release version of Netscape's next browser both support
+   this property. This missing feature will result in pages looking
+   duller on Microsoft's browser.</P>
+
+  <OL>
+   <LI><A HREF="pseudosdemo.html">Demonstration of
+   <code>first-line</code> and <code>first-letter</code>.</A></LI>
+  </OL>
+ </DIV> 
+
+ <div title="The important Priority">
+  <h3><a name="Important">5. The <code>important</code> Priority</a></h3>
+
+  <p>
+   MacIE does not support the <code>! important</code> priority, which
+   can raise the level in the cascade of a declaration.  This is not
+   a serious omission now, since MacIE does not yet support user
+   stylesheets.  However, it is vital once user stylesheets are
+   implemented.
+  </p>
+
+  <ol>
+   <li>
+    <a href="importantdemo.html">Demonstration of important priority.</A>
+   </li>
+  </ol>
+
+ </div>
+
+</DIV> <!-- mias -->
+
+<!-- FOOTER FOLLOWS  -->
+ <div class="mtb" id=footer>
+  <hr id="enddivider" title="footer">
+  <P CLASS="maintainer">
+   This document was prepared by the <a href="../members.html">members</a>
+   of the <A HREF="../../../www.webstandards.org/index.html">Web Standards
+   Project</A> <acronym title="Cascading Style Sheets">CSS</acronym>
+   <a href="../../../www.webstandards.org/ac.html#technical">Action
+   Committee</a> (The <a href="../index.html"><acronym
+   title="Cascading Style Sheets">CSS</acronym> Samurai</a>).
+  </P>
+  <P CLASS="updated">
+   Last updated 1999-06-23.  <!-- ISO 8601 Date Standard -->
+  </P>
+ </div> <!-- id=footer -->
+
+</div> <!-- id=body -->
+</BODY>
+
+
+<!-- Mirrored from archive.webstandards.org/css/macie/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:31:22 GMT -->
+</HTML>

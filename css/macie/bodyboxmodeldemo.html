@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/bodyboxmodeldemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Box Model Properties on BODY</TITLE>
+  <STYLE type="text/css">
+
+    HTML { margin: 32px; border: solid lime 16px;
+           padding: 32px; background: green; color: white; }  
+
+    BODY { margin: 32px; border: solid blue 16px;
+           padding: 32px; background: navy; color: white; }  
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Box Model Properties on BODY</H1>
+
+<P>The following is the stylesheet for this document.</P>
+
+<PRE>
+    HTML { margin: 32px; border: solid lime 16px;
+           padding: 32px; background: green; color: white; }  
+
+    BODY { margin: 32px; border: solid blue 16px;
+           padding: 32px; background: navy; color: white; }  
+</PRE>
+
+<P>This document should have a green margin of 32px, followed by a
+16px lime border, followed by a 64px green area, a 16px blue border, a
+32px navy padding, and this text should be white on navy.</P>
+
+<P>Because MacIE treats the <code>body</code> and <code>html</code>
+elements in a special way, it fails to draw this page as described
+above.  It puts 128px of space around the edges of the document, so it
+seems to be ignoring both borders and the background color on the
+<code>html</code> element.</P>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/bodyboxmodeldemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+</HTML>

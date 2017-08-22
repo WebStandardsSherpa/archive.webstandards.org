@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<html lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/floatdemo3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:34 GMT -->
+<head>
+  <title>Web Standards Project: CSS: Bugs in MacIE: Problems with floating images</title>
+  <meta name="author" content="The Web Standards Project CSS Action Committee">
+  <meta name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <style type="text/css">
+  </style>
+</head>
+<body><!--#include virtual="/outdated.inc" -->
+
+<h1>Problems with floating images</h1>
+
+<p>
+	Here are four floating images that should all be links to the
+	<a href="../../index.html">WSP Homepage</a>.  MacIE will only display the image
+	floated in some situations.  Here, the floating is done by setting
+	the float property on the containing <code>p</code> ("0") or
+	<code>div</code> ("1") element or on the anchor ("2").
+</p>
+
+<p>
+	MacIE does correctly float the image in some cases, for example,
+	when the float property is set on the image itself ("3").
+	This erratic floating can cause serious problems even with
+	pages that degrade gracefully if a feature (in this case, the
+	<code>float</code> property) is not implemented.
+</p>
+
+<p>
+	Even more importantly, when it is a <code>p</code> element that
+	is floated ("0"), the image does not act like a link.  This
+	loss of the link information is a serious obstacle to the use
+	of this otherwise safe technique for placing content outside
+	of the normal flow.
+</p>
+
+<p style="float: right;">
+  <a href="../../index.html"><img src="images/num_0.gif" alt="0" height="80" width="80"></a>
+</p>
+
+<div style="float: right;">
+  <a href="../../index.html"><img src="images/num_1.gif" alt="1" height="80" width="80"></a>
+</div>
+
+<p>
+  <a style="float: right;" href="../../index.html"><img src="images/num_2.gif" alt="2" height="80" width="80"></a>
+</p>
+
+<p>
+  <a href="../../index.html"><img src="images/num_3.gif" style="float: right;" alt="3" height="80" width="80"></a>
+</p>
+
+</body>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/floatdemo3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:38 GMT -->
+</html>
+

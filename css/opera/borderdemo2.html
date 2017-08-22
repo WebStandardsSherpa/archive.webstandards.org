@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/borderdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:49 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Border Problems on Images</TITLE>
+  <STYLE TYPE="text/css">
+     BODY { background: #CCCCCC; color: black; }
+     IMG { border: solid lime 10px; }
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Problems setting <code>border</code> on Images</H1>
+
+<P>The <code>border</code> property causes the border to be drawn
+<em>under</em> images. This page contains the following
+stylesheet:</P>
+
+<PRE>
+     BODY { background: #CCCCCC; color: black; }
+     IMG { border: solid lime 10px; }
+</PRE>
+
+<P>Here is an image:</P>
+
+<P><IMG ALT="Of course, it would help if you used Opera with images
+enabled, otherwise there is no point in us trying to show problems in
+Opera, is there?!" src="samuraicoin.jpg"></P>
+
+<P>You can see the fact that the border is inside the image quite
+clearly when the picture is not displayed - for example, if it cannot
+find the file:</P>
+
+<P><IMG ALT="Note the two borders around this text. One is put there by Opera because it cannot find the file, the other is caused by CSS. The CSS border appears *inside* the 'no image' border. It should appear outside it." src="thisfiledoesnotexist.html"></P>
+
+<P>(There is actually another issue here. Technically speaking, the
+<code>alt</code> text of an <code>IMG</code> element should be
+rendered <em>in the flow of text</em>. It is a <em>replacement</em>
+for the image, not merely a textual description that should be
+rendered where the image would be.)</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/borderdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:51 GMT -->
+</HTML>
+

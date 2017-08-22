@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/specificitydemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:54 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Web Standards Project: CSS: Bugs in Opera: Specificity Base Test</TITLE>
+<STYLE TYPE="text/css">
+
+   DIV.a DIV.b DIV.c DIV.d DIV.e DIV.f DIV.g DIV.h DIV.i DIV.j DIV.k { color: red; }
+   #z { color: green; }
+
+</STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+<H1>Specificity Base Test</H1>
+
+<P>This is a test to make sure that CSS Specificity is being
+calculated in an arbitrarily large base, rather than base 10.</P>
+
+<P>The test line below is contained within 11 DIV elements, each of
+which has been assigned a class (a-k). The final DIV has also been
+given an id (z).</P>
+
+<P>The rules applied are as follows:</P>
+
+<PRE>
+   DIV.a DIV.b DIV.c DIV.d DIV.e DIV.f DIV.g DIV.h DIV.i DIV.j DIV.k { color: red; }
+   #z { color: green; }
+</PRE>
+
+<P>The first rule has a specificity of 11 elements, 11 classes and 0
+ids, which is (0)(11)(11) or 0AA in a base larger than 10.</P>
+
+<P>The second rule has 0 elements and 0 classes, but 1 id, so the
+specificity of <em>that</em> is (1)(0)(0), or 100.</P>
+
+<P>Since 100 is greater than 0AA, the test line below should have the
+second rule applied to it, and thus should be green.</P>
+
+<P>If a browser <em>incorrectly</em> takes the base of specificity to
+be base 10, then it might add up 11, 110 and 0 for the first rule,
+giving an overall specificity of 121, which it might then take as
+being greater than the id's specificity (100), thus making the line
+red. <strong>This is incorrect behaviour.</strong></P>
+
+<DIV CLASS="a">
+<DIV CLASS="b">
+<DIV CLASS="c">
+<DIV CLASS="d">
+<DIV CLASS="e">
+<DIV CLASS="f">
+<DIV CLASS="g">
+<DIV CLASS="h">
+<DIV CLASS="i">
+<DIV CLASS="j">
+<DIV CLASS="k" ID="z">
+Test Line: This text should be green.
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/specificitydemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:54 GMT -->
+</HTML>
+

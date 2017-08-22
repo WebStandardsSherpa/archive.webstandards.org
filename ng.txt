@@ -1,0 +1,82 @@
+WSP URGES NETSCAPE TO INCLUDE STANDARDS-FRIENDLY LAYOUT ENGINE INTO NAVIGATOR 5.0
+
+The Web Standards Project, an international coalition of leading Web
+developers and Web experts, today launched a public campaign to encourage
+Netscape to make sure its next version of Navigator includes software that
+would reportedly make the browser 100 percent compliant with two major Web standards.
+
+WSP is gathering signatures from Web developers and the Web-using public,
+via its site <http://www.webstandards.org>, urging Netscape to include its
+NGLayout engine, which is currently under development, in Navigator 5.0.
+
+The layout engine takes HTML and other code describing a Web page's
+appearance and converts it into what the user actually sees. Currently,
+layout engines in both Navigator and Microsoft's Internet Explorer fail to
+fully support standards created by the World Wide Web Consortium (W3C) and
+other standards bodies. The resulting incompatibilities among various
+browsers add at least 25 percent to the cost of building sites and threaten
+to fragment the Web.
+
+"With NGLayout, Netscape has the opportunity to take the lead in resolving
+many of the problems that have plagued Web development. We'd like to see
+that happen sooner rather than later," said George Olsen, WSP Project
+Leader, and Design Director/Web Architect at 2-Lane Media
+<http://www.2lm.com> in Los Angeles.
+
+Netscape officials have pledged NGLayout will fully support the standards
+for Document Object Model (DOM) and Cascading Style Sheets (CSS) level 1
+and also support features of the CSS level 2 standard.
+
+WSP has been urging browser makers to fully support these core standards -
+as well as others, such as XML - developed by the W3C and other standards
+bodies.
+
+CSS gives control over the appearance of many pages at once, from the
+typography to the behavior of links, as well as precise control over page
+layout. DOM lets developers use scripting languages, such as ECMAScript
+(née JavaScript), to manipulate text, images and other parts of Web pages;
+for instance, dynamically changing their appearance over time, or moving
+them around inside the browser window.
+
+However, Netscape officials have said that current plans won't include
+NGLayout in Navigator 5.0, scheduled for release later this year.
+
+"It's unfortunate, because the promise of a layout engine that complies
+with these key Web standards opens up exciting possibilities for developers
+being able to make more dynamic and compelling content without having to
+build multiple versions of a site," Olsen said.
+
+The "I Want My NGLayout!" campaign is intended to let Netscape know that
+Web developers and the Web-using public believe full support for these
+standards by browsers is crucial for the evolution of the Web.
+
+"We're hoping to build a groundswell of support, enough to make Netscape
+sit up and listen," said Jeffrey Zeldman, WSP Site Designer and New
+York-based Web designer <http://www.zeldman.com/>.
+
+Zeldman pointed out that Netscape has lagged behind in implementing
+standards, so it would be in their competitive interest to get NGLayout
+into Navigator 5.0.
+
+"Unfortunately, in the heat of competition, companies can lose sight of
+where their true interests lie," he said. "But if enough developers and
+users support this effort, then Netscape may realize they could regain the
+lead by doing the right thing."
+
+WSP Steering Committee member Dan Shafer has also publicly called on
+Netscape to include NGLayout.
+
+"Netscape must not ship a 5.0 browser without NGLayout," Shafer said in the
+Sept. 17 issue of his e-mail newsletter, "Dan Shafer: For What It's Worth.
+"My advice to Netscape: pull out all the stops. Put your entire engineering
+resource--or at least as much of it as can make a reasonable
+contribution--behind finishing and integrating NGLayout. Nothing else you
+can do will have the long-term impact on your company and its success."
+
+- 30 -
+
+George Olsen                                     mailto:golsen@2lm.com
+Design Director/Web Architect                       http://www.2lm.com
+2-Lane Media                                   tel: 310/473-3706 x2225
+
+

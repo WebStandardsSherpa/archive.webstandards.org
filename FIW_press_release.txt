@@ -1,0 +1,128 @@
+FOR IMMEDIATE RELEASE
+
+Contact:
+Chris Carrico
+Urge Public  Relations
+chris@urgepr.com
+213-848-8743
+
+Been a casualty of the browser  wars? The Web Standards Project wants to
+share  your "war story" with browser makers
+
+New York, NY - October 7, 1998 -  The Web Standards Project (WSP)
+http://www.webstandards.org, an  international coalition of leading Web
+developers, announced today that they're  collecting "war stories" about
+the effect of the current patchwork  support for standards by Web browsers.
+
+Web developers and Web users are invited to share their "war story" at
+http://www.webstandards.org/warstories. WSP will use these stories as case
+studies about the  real-world problems caused by the current patchwork
+support for Web  standards. WSP's first case study, of
+http://www.thevisitor.com, shows the typical frustrations of Web developers
+who try use advanced-but incompatible-features being promoted by Netscape
+and  Microsoft (see attached case study).
+
+"Web developers and Web users have become casualties in  the browser wars,"
+said George Olsen, WSP Project Leader and Design  Director/Web Architect at
+Los Angeles-based 2-Lane Media.
+
+"Browser  makers have asked us what problems are being caused by their lack
+of support for  standards-and we intend to tell them. Not only the specific
+technical problems,  but also the financial and human costs," he said. "For
+developers it's  frustrating to waste time working around incompatibilities
+when we could be  spending that time and effort making better content for
+those sites," Olsen continues. For people who are paying for sites,
+incompatibilities are costing  them extreme amounts of money for the extra
+development time. As for people  using the Web, these incompatibilities
+mean running into pages that won't work  on their particular browser, if
+the developer didn't know enough or wasn't  careful enough to do all the
+necessary workarounds.
+
+WSP, which is urging  browser makers to fully support standards created by
+the World Wide Web  Consortium, estimates compensating for the lack of
+consistent support for  standards adds about 25 percent to the cost of
+building a Web site. The lack of  standards also threatens to fragment the
+Web as browsers move the  desktop.
+
+This effort complements an effort, jointly announced by WSP and The Open
+Group, to document specific technical problems that plague our society.
+The two will be working together on a variety of activities intended to
+encourage browser makers to support Web standards. Among these efforts, WSP
+will  help The Open Group with its efforts to develop test suites that will
+check how  well browsers comply with Web standards, and WSP will be
+publicizing the results  of these tests.
+
+About The Web Standards  Project:
+WSP is an international coalition of Web developers and Web  experts who
+are urging browser makers to fully support Cascading Style Sheet  Level 1
+(CSS-1), the Document Object Model (DOM) and XML in their browsers. Its
+effort to bring attention to the existing and potential problems involved
+with  browser incompatibility does not mean that WSP is opposed to
+innovations by  browser manufacturers. The coalition merely urges browser
+manufacturers to use  open standards for enhancements and support existing
+ones before adding new  features.
+
+- ### -
+
+ For more information about The Web Standards Project contact, George
+Olsen golsen@2lm.com (310-473-3706 x2225), WSP Project Leader, and Design
+Director/Web Architect at 2-Lane Media.
+WSP Browser Incompatibilities Case Study: The Visitor.com
+
+The Visitor.com site uses "Dynamic HTML," which is  not a standard but
+rather a buzzword used by browser makers to refer to a  collection of
+techniques using Cascading Style Sheet Level 1 (CSS-1), the  Document
+Object Model (DOM) and scripting languages, such as JavaScript and
+JScript. Unfortunately, the incompatible support for the standards
+involved,  meant that <tag> media, now Razorfish Los Angeles, had to create
+four  versions of the site to avoid excluding potential visitors: Netscape
+Navigator  4.0, Microsoft Internet Explorer 4.0, a version for earlier
+browsers, and  another for WebTV. (The first three were produced by  <tag>.)
+
+Richard Titus, currently with Razorfish Los Angeles, estimates that
+multiple  versions increased the development costs by a third. "We tend to
+push the  envelope quite a bit both in terms of layout and in terms of
+functionality.  Which result in higher man-hour cost," he said. "I should
+also note  that we have a tendency to do a lot more graceful decomposition
+on our sites  than most developers and that requires a ton more work
+because you have to  support numerous browsers."
+
+Developer, Robert Smith, said that  multiple versions, meant extra
+developers were needed. "Two people handled  the primary version (for
+Netscape), one person adapted that to Internet Explorer  and another made
+the crippled version for earlier browsers," he  said.
+
+Programmer, Eric Canale, said that the development team's biggest  problems
+stemmed from the inconsistencies in the way different browsers handled
+DOM-issues and differences between Netscape's JavaScript and Microsoft's
+JScript. These differences were also inconsistent between different
+versions of  a particular browser and even among the same browser running
+on different  platforms, he said. "Sometimes Netscape 4.0 Javascript code
+that worked  fine on PCs would hang [on] a Mac," he said.
+
+These developers also  faced numerous challenges to due inconsistent
+handling of positioning elements  with Cascading Style Sheets. Canale said
+that the project convinced him that  using Dynamic HTML doesn't pay. "The
+three versions of the site we did  in-house doubled our production time,
+since a lot had to be recreated >from  scratch or seriously debugged," he
+said. "The site looked great but  cost a fortune to produce."
+
+- ### -
+
+About The Visitor.com case  study:
+For more information about the browser incompatibilities  experienced by
+the development team, contact:
+
+Richard Titus, Managing Director of Razorfish Los  Angeles
+rxdxt@razorfish.com
+310-581-3616
+
+Eric Canale, currently  Chief Technology Office for Centropolis Interactive
+ericc@centropolis.com
+310-244-3948
+
+Robert Smith, currently "Fixer" with the Hollywood Stock Exchange
+fixer@hsx.com
+310-458-1029
+
+

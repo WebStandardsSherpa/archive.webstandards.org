@@ -1,0 +1,90 @@
+
+For Immediate Release
+
+Contact --
+
+Jeffrey Zeldman Group Leader jeffrey@zeldman.com +1.212.725.0847
+
+Simon St. Laurent simonstl@simonstl.com +1.607.277.0167
+
+Dori Smith dori@chalcedony.com +1.707.473.0398
+
+
+WEB STANDARDS PROJECT BLASTS MICROSOFT'S "ARROGANT" BREAK WITH
+STANDARDS
+
+http://www.webstandards.org/ -- 10 April 2000 -- The Web
+Standards Project (WaSP) today denounced Internet Explorer 5.5
+Windows Edition for abandoning Web standards Microsoft has
+publicly committed to supporting, and focusing on proprietary
+technologies which are certain to fragment the already-troubled
+Web space.
+
+"We are incensed by Microsoft's arrogance, and perplexed by its
+schizophrenic decision to support standards on one platform while
+undercutting them on another," said Web Standards Project group
+leader Jeffrey Zeldman.
+
+The group is outraged by Microsoft's decision not to support key
+W3C standards, notably the DOM Level 1 core and portions of the
+CSS1 specification, in the market-leading Windows version of its
+Internet Explorer browser. Microsoft's reversal will make it
+nearly impossible for Web developers to create documents that
+adhere to Web standards. At the same time, the proprietary
+technology that Microsoft is providing may lure some developers
+deeper into functionality that is supported on only one browser
+and one operating system - Microsoft's.
+
+"This approach mocks the dream of 'code once, read anywhere' that
+has driven so much of the Web's success," said WaSP Steering
+Committee member Simon St.Laurent. "By 'innovating' ahead of the
+W3C (http://www.w3.org) in areas like Cascading Style Sheets
+behaviors while leaving large chunks of standardized processing
+and styling unsupported, Microsoft risks creating even more
+complicated browser incompatibilities than already exist."
+
+"The Web community has waited for more than four years for
+Microsoft to fulfill their long-standing pledge to fully adhere
+to W3C-issued Recommendations," said WaSP Steering Committee
+member Sally Khudairi. "The collective patience of both users and
+developers is running out: why should anyone settle for Web pages
+that work on only one browser, on one platform and on a limited
+set of devices?"
+
+The group pointed out that Microsoft itself helped create many of
+the standards it appears to be abandoning in IE5.5/Windows, and
+noted with bitter irony that Microsoft's newly released
+IE5/Macintosh Edition does a masterful job of supporting key Web
+standards. "Do they want us to code for the standards-compliant
+Macintosh version, or the incomplete - but dominant - Windows
+version?" Zeldman demanded.
+
+"By casting aside standards, Microsoft is making it more
+difficult, if not impossible, to create Web pages that would be
+accessible on a variety of devices and platforms," said WaSP
+steering committee member Dori Smith. "This hurts a wide variety
+of Web users, from the executive using a Web-enabled cell phone
+to a visually impaired senior citizen."
+
+Added Zeldman: "Coming on the heels of Netscape's preview
+release, it's hard not to view this as exactly the kind of
+'predatory' behavior the U.S. Justice Department laid at
+Microsoft's door. If Microsoft, as the dominant player, undercuts
+Web standards on its prevailing Windows platform, developers will
+be helplessly spun in Microsoft's direction, killing  the dream
+of a Web that is accessible to everyone."
+
+ABOUT THE WEB STANDARDS PROJECT [WaSP]
+
+The Web Standards Project is an international grassroots
+coalition of Web developers and users fighting for standards on
+the Web, by calling attention to browser incompatibilities that
+fragment the medium, prevent many people from using the Web, and
+add 25% to the cost of developing all sites. The WaSP urges all
+browser manufacturers to support existing standards before
+incorporating proprietary innovations, and is working to educate
+Web authors and Web-related software developers so that we may
+create a Web that works for everyone. For more information on
+WaSP, please see http://www.webstandards.org/
+
+###

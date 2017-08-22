@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<TITLE>The effect of floaters on the padding and border of the containing element</TITLE>
+<STYLE TYPE="text/css">
+HTML {
+	color: black;
+	background-color: white;
+}
+P {
+	background-color: rgb(100%, 95%, 80%);
+	border-style: ridge;
+	border-color: rgb(100%, 95%, 80%);
+	border-width: 15px;
+	padding: 0.5em;
+}
+IMG {
+	float: right;
+}
+</STYLE>
+
+<P><IMG SRC="images/mandrill_256.html" ALT="">A few problems here. First, the floated image is violating the top/right padding and border of the containing block element. Since it's floated right, it should reside <EM>inside</EM> the top and right padding. Second, the image has expanded the lower boundary of the containing element (if that doesn't appear to be the case, try widening your browser window). That shouldn't happen. You may notice a background problem here, too; but that would go away if the containing element was being sized properly.
+

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/margindemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:38 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Margin problems</TITLE>
+  <STYLE type="text/css">
+
+    BODY { margin: 0; padding: 0; }
+    DIV { border: 10px solid red;   
+	  padding: 10px;
+	  margin-left: 0;
+	  margin-right: auto; 
+	}
+    DIV.outer { width: 60%; margin-top: 10px; }
+    DIV.inner { width: 100%; }
+    DIV.correct { border-color: green; width: 60%; margin-top: 10px; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Margin problems (1)</H1>
+
+<P>The following is the stylesheet for this document.</P>
+
+<PRE>
+  BODY { margin: 0; padding: 0; }
+  DIV { border: 10px solid red;   
+        padding: 10px;
+        <strong>margin-left: 0; </strong>
+        <strong>margin-right: auto; </strong>
+      }
+  DIV.outer { <strong>width: 60%;</strong> margin-top: 10px; }
+  DIV.inner { <strong>width: 100%;</strong> }
+  DIV.correct { border-color: green; width: 60%; margin-top: 10px; }
+</PRE>
+
+<P>There now follow two red nested <code>DIV</code>s, the outer one
+having class <code>outer</code> and the inner one having class
+<code>inner</code>.</P>
+
+<DIV CLASS="outer">
+   <DIV CLASS="inner">
+      This inner DIV should stick out of the outer DIV!
+   </DIV>
+</DIV>
+
+<DIV CLASS="correct">
+   This should have the same width as the outer <code>DIV</code> above.
+</DIV>
+
+<P>The CSS1 specification says, in section 4.1.2:</P>
+
+<BLOCKQUOTE>
+<P>
+  The horizontal position and size of a non-floating, block-level
+  element is determined by seven properties: 'margin-left',
+  'border-left', 'padding-left', 'width', 'padding-right',
+  'border-right' and 'margin-right'. The sum of these seven is always
+  equal to the 'width' of the parent element.
+</P><P>
+  If <em>exactly one</em> of 'margin-left', 'width' or 'margin-right' is
+  'auto', the UA will assign that property a value that will make the
+  sum of the seven equal to the parent's width.
+</P>
+</BLOCKQUOTE>
+
+<P>Therefore the inner <code>DIV</code>'s margin-right computed value
+should be set to -20px, and the outer <code>DIV</code>'s width should
+be left at the 60% (meaning 60% of the containing block's width; that
+is 60% across the inner -- content -- width of the BODY). This should
+result in the right border of the inner <code>DIV</code> "sticking
+out" of the outer <code>DIV</code>'s by 20 pixels.</P>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/margindemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:38 GMT -->
+</HTML>

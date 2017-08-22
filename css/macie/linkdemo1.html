@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/linkdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE:  Link Pseudo-classes (1)</TITLE>
+  <STYLE type="text/css">
+
+:link { color: blue; background: yellow; }
+/* leave visited links as users default, however good an idea that may be */
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Link Pseudo-classes (1)</H1>
+
+<p>
+	The <code>:link</code> and <code>:visited</code> pseudo-classes
+	should be mutually exclusive.  An element can never match both at
+	the same time.  MacIE incorrectly has <em>all</em> links match
+	the <code>:link</code> pseudo-class, even if they also match
+	the <code>:visited</code> pseudo-class.  This can mislead authors
+	using MacIE to develop pages and lead to pages unusable on browsers
+	that handle this distinction correctly.
+</p>
+
+<p>
+	This page uses the following stylesheet:
+</p>
+
+<pre>
+:link { color: blue; background: yellow; }
+/* leave visited links as users default, however good an idea that may be */
+</pre>
+
+<p>
+	Now we have what is hopefully a <a href="index.html">visited link</a>,
+	which MacIE incorrectly gives the same background as <a
+	href="http://www.nowhere.oz/no.file">unvisited links</a>.
+	(However, its built in "UA stylesheet" rule for the foreground
+	color still wins, which shows it is not truly acting as though
+	the rules were given in a UA stylesheet.)
+</p>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/linkdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

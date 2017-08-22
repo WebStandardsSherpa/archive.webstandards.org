@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/pseudosdemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: First-Line and First-Letter Psuedo-Elements Demo</TITLE>
+  <STYLE TYPE="text/css">
+
+    #demo1, #demo2, #demo1simulation, #demo2simulation { font: 1em monospace; background: white none; color: black; }
+    #demo1 P:first-line, #demo1simulation PRE .firstline { background: white none; color: green; }
+    #demo2 P:first-letter, #demo2simulation PRE .firstletter { font: 3em monospace; line-height: 0em; }
+    P, PRE { font-size: 1em; /* get around ua stylesheet */ 
+             line-height: 1em; /* get around gap */ }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Demonstration for <CODE>first-letter</CODE> and
+<CODE>first-line</CODE></H1>
+
+<H2>Example 1</H2>
+
+<P>In the following paragraph, the first line should be green, the rest should be black.</P>
+
+<DIV ID=demo1><P>Once upon a time, there was a beautiful golden cat
+called Maximus. His one mission in life was to rest. He would wake up
+in the morning, ready to sleep all the way through the day. Then he
+would wake up at night, and have a nice lie in till the next morning.
+He thought his life could never have been better, and indeed, it
+couldn't. He lived happily ever after.</P></DIV>
+
+<P>This is what it <em>should</em> have looked like (but possibly
+wrapping in different places):
+
+<DIV ID=demo1simulation><PRE><SPAN CLASS=firstline
+>Once upon a time, there was a beautiful golden cat called Maximus.
+</SPAN>His one mission in life was to rest. He would wake up in the
+morning, ready to sleep all the way through the day. Then he would
+wake up at night, and have a nice lie in till the next morning. He
+thought his life could never have been better, and indeed, it
+couldn't. He lived happily ever after.</PRE></DIV>
+
+<H2>Example 2</H2>
+
+<P>In the following paragraph, the first character should be three
+times bigger than the rest.</P>
+
+<DIV ID=demo2><P>Once upon a time, there was a slick black cat called
+Charlie. His one mission in life was to eat. He would wake up in the
+morning, and immediately look to see what he could feast on. He ate
+chicken, and he ate mouse. He ate anything he could get his teeth
+into. He thought his life could never have been better, and indeed, it
+couldn't. He lived happily ever after.</P></DIV>
+
+<P>This is what it <em>should</em> have looked like (but possibly
+wrapping in different places):
+
+<DIV ID=demo2simulation><PRE><SPAN CLASS=firstletter>O</SPAN
+>nce upon a time, there was a slick black cat called Charlie. His one
+mission in life was to eat. He would wake up in the morning, and
+immediately look to see what he could feast on. He ate chicken, and he
+ate mouse. He ate anything he could get his teeth into. He thought his
+life could never have been better, and indeed, it couldn't. He lived
+happily ever after.</PRE></DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/pseudosdemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+</HTML>

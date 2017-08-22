@@ -1,0 +1,29 @@
+/* 'Natural' style alternative stylesheets demo
+ */
+
+BODY    { background: #DDFFDD none; color: #000000;
+          font: 1em "Times New Roman", "Times", "Roman", serif;
+          text-align: left; line-height: 1.3em;
+        }
+
+H1      { background: #009900 none; color: #EEEE00;
+          font: 900 2em "Verdana", "Arial", "Helvetica", sans-serif;
+          border: solid thick #FFFF00; padding: 0.1em 0.2em 0.2em 0.2em;
+          text-align: center; line-height: 1.2em; text-transform: capitalize;
+        }
+
+P       { text-indent: -4em; margin: 1em 5em 1em 5em; }
+
+OL      { margin: 1em 5em 1em 5em; }
+LI      { margin: 0.5em 0em 0.5em 2em; }
+
+.FOOTER { background: #009900 none; color: #EEEE00;
+          border: #00FF00 solid thin; font-style: italic; }
+.FOOTER P { margin: 0.1em; text-indent: 1em; }
+
+A:link, A:visited { color: green; }
+.FOOTER A:link, .FOOTER A:visited { color: yellow; }
+
+HR { display: none; }
+
+/* END */

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/winie/errorhandlingdemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:19 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="Ian Hickson">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998 by Ian Hickson">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <LINK title="Ian Hickson's e-mail Address" rev="made" href="mailto:py8ieh%40bath.ac.uk">
+  <TITLE>Web Standards Project: CSS: Bugs in Internet Explorer: Incorrect Error Handling</TITLE>
+  <STYLE type="text/css">
+  <!--
+     BODY { background: white none; color: black; }
+     P { text-indent: 0; }
+     H1 + P { text-indent: 3em; } /* Should only affect the first P */
+     @media tty {             /* Block should be ignored */
+       H1 { color: red; }
+       P  { color: red; }
+     }
+  -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+<!-- SYSTEM INFO END -->
+
+<H1><A NAME="top">Incorrect Error Handling</A></H1>
+
+<P>The error-handling in IE's CSS parser is dangerously lenient.
+The <a href="http://www.w3.org/TR/REC-CSS1">CSS1 specification</a>
+explains clearly how things should be
+handled (i.e., what to ignore), but IE fails to follow much of this
+<a href="http://www.w3.org/TR/REC-CSS1#forward-compatible-parsing">part of
+the standard</a>.</P>
+
+<P>To demonstrate this graphically, this page has the following stylesheet:</P>
+<PRE>
+     BODY { background: white none; color: black; }
+     P { text-indent: 0; }
+     H1 + P { text-indent: 3em; } /* Should only affect the first P */
+     @media tty {                 /* Block should be ignored by IE */
+       H1 { color: red; }
+       P  { color: red; }
+     }
+</PRE>
+
+<P>The effect of this sheet <em>should</em>, on graphical browsers, be
+a white background with black text. Any <em>red</em> text indicates an error. Also, CSS2-compliant browsers
+would indent <em>only</em> the first paragraph on this page while
+CSS1-compliant browsers that do not support CSS2 would not indent any
+paragraphs.</P>
+
+<H2>The Examples Described</H2>
+
+<P>The first rule which we'll focus on is the following:</P>
+
+<PRE>
+     H1 + P { text-indent: 3em; }
+</PRE>
+
+<P>
+IE should ignore this completely (since it doesn't yet recognise CSS2's
+<a href="http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors">adjacent
+sibling selectors</a>), but it doesn't. It indents all paragraphs when it
+should indent none of them.
+</P><P>
+The second part of the test causes an even more frequently found problem in IE's
+error handling code to appear, one related to unknown <img src="../../images/at-600-white-10x10.gif" width="10" height="10" alt="at">-rules:
+</P><PRE>
+     @media tty {
+       H1 { color: red; }
+       P  { color: red; }
+     }
+</PRE>
+
+<P>
+In IE, this code makes paragraphs red, although it should not have any
+effect on a graphical browser's rendition of this document at all
+(this construct actually signifies that text-only browsers, such as <A
+HREF="http://www.cs.indiana.edu/elisp/w3/docs.html">Emacs/W3</A>,
+should draw paragraphs and <CODE>H1</CODE> headers in red).  This is a
+serious problem for authors of stylesheets that are basing their work
+on future and not-yet-implemented standards.
+</P>
+
+<!-- FOOTER FOLLOWS    [removed for consistency]
+ <div class=footer>
+  <hr title="Footer" id=enddivider>
+  <p class=links>Up to the <a href="index.html#errorHandling"><cite>IE Top Five</cite></a>.</p>
+  <p class=maintainer>This page is maintained by the members of the <A HREF="http://www.webstandards.org/">Web Standards Project</A> CSS Action Committee (The CSS Samurai Seven).</p>
+  <p class=updated>Last updated in October 1998.</p>
+ </div>-->
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/winie/errorhandlingdemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:19 GMT -->
+</HTML>

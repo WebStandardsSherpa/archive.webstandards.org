@@ -1,0 +1,102 @@
+For Immediate Release
+
+More information:
+
+
+George Olsen                                     mailto:golsen@2lm.com         
+Design Director/Web Architect                       http://www.2lm.com
+2-Lane Media                                   tel: 310/473-3706 x2225
+
+
+WEB STANDARDS PROJECT CALLS ON MICROSOFT TO FULLY SUPPORT
+STANDARDS IN NEXT VERSION OF THEIR INTERNET EXPLORER BROWSER
+
+The Web Standards Project (WSP) today called on Microsoft to
+fully support key Web standards in its next release of Internet
+Explorer -- and presented Microsoft with a petition signed by
+more than 1,000 Web developers from Fortune 500 companies and
+major educational and government institutions.
+
+"In the past, Internet Explorer was the leader in standards
+support," said WSP Project Leader George Olsen. "Unfortunately
+Microsoft now appears noncommittal about implementing key Web
+standards: those forming the foundation for the future of the
+Web."
+
+"In contrast, Netscape has promised full support for these
+standards in their upcoming Navigator 5.0 browsers, and so far
+appears headed toward fulfilling that commitment -- although
+they've yet to get their browser out the door," Olsen said.
+
+Unfortunately, unless both browsers support these standards, some
+of which are well over two years old, they will remain a missed
+opportunity for eliminating browser incompatibilities that are
+plaguing those who own, build and visit Web sites -- similar to
+the problems posed by the current dispute over instant messaging
+standards.
+
+These problems include: 
+
+* adding 25 percent to the cost of building sites due to
+workarounds and extra debugging
+
+* preventing sites from using advanced features that would
+provide a richer and more useful experience for site visitors
+
+* threatening to fragment the Web, especially as browsers move
+beyond the desktop
+
+"The current fight between AOL and Microsoft over instant
+messaging shows how the public loses when companies produce
+similar but incompatible products," Olsen said. "The same
+ridiculous situation exists for browsing the Web because browser
+makers have failed to implement the common set of standards. If
+Microsoft wants to argue that common standards are needed for
+instant messaging, they should be prepared to implement existing
+Web standards in their browser."
+
+To stress how eager Web professionals are for standards support,
+WSP presented Microsoft with a Web standards petition signed by
+more than 1,000 Web developers from Fortune 500 companies and
+major educational and government institutions.
+
+The petition drive took place at two recent Web development
+conferences: Web Design '99 in Atlanta and Web Design World '99
+in Seattle, both produced by Thunder Lizard Productions.
+
+"Our attendees are sick and tired of jumping through
+compatibility hoops," said Conference Chair Jim Heid, who helped
+spearhead the drive. "They want to know when browser vendors are
+going to support standards."
+
+The petitions are the first step in a campaign by WSP asking Web
+site owners, developers and visitors to call Microsoft to fully
+support key Web standards in its next release of Internet
+Explorer. (See related press release: "Web Standards Project
+calls on public to pressure Microsoft to fully support Web
+standards in their browser.")
+
+"If Microsoft intends to not implement these standards, then they
+have a responsibility to make the public aware of that fact.
+Developers need to let their clients and site visitors know that
+standards-compliant sites may not display properly on Internet
+Explorer," Olsen said.
+
+
+ABOUT THE WEB STANDARDS PROJECT WSP <http://www.webstandards.org>
+is an international coalition of Web developers and Web experts
+who are urging browser makers to fully support HTML 4.0,
+Cascading Style Sheet Level 1 (CSS-1), the Document Object Model
+(DOM) and XML in their browsers. Its effort to bring attention to
+the existing and potential problems involved with browser
+incompatibility doesn't mean that WSP is opposed to innovations
+by browser makers. The coalition merely urges browser makers to
+use open standards for enhancements and support existing ones
+before adding new features.
+
+ABOUT WEB DESIGN '99 AND WEB DESIGN WORLD '99 These conferences
+for Web design and development professionals encompass several
+days of intensive, how-to sessions on all aspects of Web design
+and development. For more information contact Jim Heid,
+Conference Chair, (707) 937-1747, <mailto:jim@heidsite.com>
+

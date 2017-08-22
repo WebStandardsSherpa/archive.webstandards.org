@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Error Handling Bugs (4)</TITLE>
+  <STYLE type="text/css">
+
+.test>.subhead { color: green; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Error Handling and Parsing Bugs (4)</H1>
+
+<p>
+	MacIE does not follow the forward compatible parsing rules
+	correctly.  It should ignore selectors it cannot understand.
+	This document contains the following stylesheet:
+</p>
+
+<pre>
+.test>.subhead { color: green; }
+</pre>
+
+<p>
+	This is a CSS2 stylesheet saying that any element with
+	<code>class="subhead"</code> that is a <em>child</em> of
+	an element with <code>class="test</code> should be green.
+	The following paragraph has <code>class="subhead"</code>
+	but it is not a child of an element with <code>class="test</code>.
+	MacIE incorrectly makes it green:
+</p>
+
+<p class="subhead">
+	This paragraph should <em>not</em> be green.
+</p>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

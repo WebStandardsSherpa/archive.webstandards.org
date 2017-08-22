@@ -1,0 +1,246 @@
+
+"For Managers of World Wide Web Sites" at
+<http://webserver.cpg.com/>
+
+PATRICK T. COLEMAN,  Staff Editor
+
+
+Developers of the World Unite
+
+Frustrated by having to design different Web sites to  be viewed
+with incompatible browsers, thousands of developers are now
+fighting  back to collectively promote standards for the World
+Wide Web.
+
+What started out as 12 angry developers bemoaning browser
+incompatibility has  ballooned--in little more than one
+month--into a group of 4,200 Web  professionals collectively
+promoting the emerging Web standards recommended by  the
+<http://www.w3.org/World Wide Web Consortium (W3C). The group, 
+calling itself <http://www.webstandards.org/the Web Standards 
+Project (WSP), says the problem is so serious that up to one
+quarter of the  time and expense that goes into developing a Web
+site is allocated toward  ensuring it will be viewable with both
+Microsoft Corp. and Netscape Communications Corp. browsers in 
+their various versions. "We estimate that [browser
+incompatibility] adds  about 25% of the time and money involved
+in development," says George  Olsen, WSP Project Leader. "That's
+time better spent making better  content."
+
+
+
+The main push from the WSP is to get both Microsoft and Netscape
+to fully  support the W3C's recommendations in upcoming releases
+(5.0) of Internet  Explorer (IE) and Navigator. Specifically, the
+group hopes to persuade the  browser vendors to fully support
+Cascading Style Sheets 1 (CSS1), Document  Object Model (DOM) and
+eXtensible Markup Language (XML).
+
+In general, the Microsoft and Netscape browsers have received
+good marks for  their support of W3C specifications. Both
+companies are active members of the  W3C and offer a great deal
+of input toward what should be included in the  organization's
+working groups. "Every organization that contributes toward  our
+specifications does, in fact, do their best to implement what has
+been  worked out in a W3C group," says Josef Dietl, head of
+communications for  the W3C. "But, as a matter of fact, life in a
+company is not always  dictated by the W3C."
+
+
+
+The problem is, in some cases, when a specification has been
+recommended by  the W3C, it comes at a point in the browser's
+production cycle that prohibits  the inclusion of the
+recommendation. For example, CSS1 became a formal W3C 
+recommendation in December 1996, two-thirds of the way through
+Internet  Explorer's 18-month production schedule. Despite this
+poor timing, Microsoft was  able to include 94% of the
+recommendation in Internet Explorer 4.0 when it was  released six
+months later.
+
+
+
+A similar situation is developing around the DOM specification,
+which became  a proposed recommendation on August 18 after the
+first beta of Internet Explorer  5.0 had already shipped. "It
+looks like it's not going to be a  recommendation before we get
+beta two or maybe even get the final release of IE  5 out the
+door," says David Wascha, product manager for the platforms 
+marketing group at Microsoft.
+
+
+
+Even when a specification has been proposed by a W3C working
+group, it  doesn't guarantee it will become a formal
+recommendation. When XML's working  group released the proposed
+specifications to Tim Berners-Lee, W3C Director, he  sent back
+the specs, requiring that certain changes be made. "This was a 
+draft that everyone in the industry thought was going to be
+final, and all the  different vendors started to implement it,
+and then there were changes made at  the last minute," Wascha
+says. "This is why standards can't hold up  our product cycle. We
+do the best job that we can to implement the standards in 
+whatever state they happen to be in that coincide with our
+product  cycle."
+
+
+
+The fact of the matter is it's not the lack of specification
+support that  causes major headaches for developers, but the
+unique bells and whistles  associated with each browser. A common
+complaint among Web site designers is  that each vendor supports
+a different scripting language. Microsoft supports  JScript,
+while Netscape supports JavaScript. Another difficulty for
+developers  comes in trying to add unique functionality to a site
+using proprietary features  such as Dynamic HTML (DHTML). When
+Dan Livingston, Web architect for Clear Ink  Corp., a Web site
+development company based in Walnut Creek, CA, and a member of 
+the WSP, tried to design a site called Palette Man, which uses a
+feature known as  "layers," he quickly learned of the
+browser-compatibility issue.  "If I wrote it for Netscape, it
+wouldn't work in IE, and if I wrote it for  IE, it wouldn't work
+in Netscape," Livingston says.
+
+
+
+Livingston describes Palette Man as an online experiment in
+color. Visitors  to the site can test how different colors look
+in contrast to one another. By  moving a mouse over a small color
+field containing combinations of red, green  and blue, the user
+can choose to highlight different colors. Each successive  color
+chosen by the user is displayed along side the previous choice,
+offering a  quick and easy contrast. As many as four colors, or
+layers, can be viewed at the  same time and the hexadecimal
+number of each is given for reference. "I  wanted a lot of things
+to happen on one page and the only way to do that was to  use
+DHTML," Livingston says.
+
+
+
+He didn't want to have to code separate sites for each browser,
+so instead,  he added a JavaScript method, called eval, which
+triggers a  prespecified command according to whichever browser
+accesses the site. The extra  coding it would have taken to
+homogenize the site without the help of  eval could have easily
+cost Clear Ink a 25% increase in manpower and  money, Livingston
+says. Even if the WSP had been successful in getting browser 
+vendors to fully comply with the W3C's specifications, however,
+this problem  would still have occurred because Palette Man was
+created using DHTML, which is  not yet a W3C specification.
+
+
+
+Gartner Group Inc., a research firm based in Stamford, CT,
+recommends  developers looking to design applications for both
+Internet Explorer and  Navigator use JavaScript 1.1 because it is
+roughly equivalent to the  implementations supported in Internet
+Explorer 4.0, Navigator 3.0 and  ECMAscript, the standardization
+of JavaScript/JScript recommended by the European Computer
+Manufacturer's Association  (ECMA). "What we are suggesting to
+our clients is don't standardize on  one particular browser,"
+says Dan Barnick, industry analyst with the  Gartner Group. "Keep
+an open mind to the idea of supporting both browsers  when
+developing and develop with the least common dominator in mind so
+that  there are no support issues."
+
+
+
+Today, developers are left having to test each site individually
+to determine  what works with the major browsers. Not only do
+they test for incompatibilities  between Internet Explorer and
+Navigator, they also test for problems between  different
+versions and platforms. Two major concerns are monitor and color 
+matching systems. For example, a Web page tends to look darker
+when viewed using  a machine running Windows versus, say, an
+<http://www.apple.com/Apple  Computer Inc. Macintosh computer.
+So, an image that looks fine on a Mac  could be difficult to see
+on a PC running Windows. This forces Web site  designers to
+constantly test and adjust their work. Typically, this is done 
+through trial and error, testing each page on different platforms
+with different  browsers. "I have five different browsers on my
+Mac and another three on my  PC," the WSP's Olsen says. "Someone
+has to sit down and fire up each  browser and fire up each page
+and go through each page to make sure it displays  and functions
+properly."
+
+
+
+One alternative is to use the free online testing software that
+is currently  available, such as the Center for Applied Special
+Technology (CAST)'s Bobby 3.0 and AtWeb Inc.'s Web Site Garage.
+Bobby 3.0's main  purpose is to test the accessibility of Web
+sites for people with disabilities,  but a browser-compatibility
+test feature was added to lure developers who  wouldn't
+necessarily consider accessibility issues. "Bobby checks the HTML
+ and highlights tags that may not be recognized in a different
+browser,"  says David Clark, technical lead for Bobby 3.0 and
+CAST's Webmaster.  "Browser compatibility is a way to draw people
+in that would never  ordinarily think about accessibility."
+
+
+
+AtWeb offers two services designed to overcome compatibility
+problems. The  first is Web Site Garage, a free online service
+that performs seven diagnostic  tests on the design of a Web
+site, including browser compatibility. The company  says it
+checks for compatibility with Internet Explorer 3.0 and 4.0,
+Navigator  2.0, 3.0 and 4.0, and America Online 3.0. The
+evaluator identifies each tag and  attribute and includes a
+warning in the line of the code where it finds a  compatibility
+problem.
+
+
+
+The second service is Browser Snapshot. "You can just cycle
+through and  look at what your site would actually look like
+[using different  browsers]," says Lark Dunham, director of
+product marketing for AtWeb's Web  Site Garage. This alleviates
+another headache faced by developers. If they need  to test for
+browser and version compatibility, then they want to do it from
+one  machine rather than a series of Macs and PCs. This is an
+area in which Internet  Explorer does not perform well. Whenever
+the latest version of Internet Explorer  is loaded onto a
+desktop, the previous version is automatically removed. There  is
+no way to run Internet Explorer 3.0 and 4.0 on the same machine.
+In effect,  this means developers must test different browser
+versions using different  desktops. "Microsoft has forced you to
+upgrade so you can't have 3.0 and  4.0 running on the same
+machine," Dunham says. But, according to AtWeb,  Browser Snapshot
+allows a site to be viewed in 18 different formats based on 
+screen size and platform--including Internet Explorer 3.0 and
+4.0. The company  charges $9.99 per onetime use or $99 per year.
+
+
+
+In response, Microsoft's Wascha says, "We are well aware that
+people are  upset with that and we are taking steps to alleviate
+that problem. I can't speak  to anything specific right now."
+
+
+
+On the Bright Side
+
+
+
+Clearly, Web developers are frustrated with having to design
+specifically for  the two major browsers. They continue to be the
+true casualties in the browser  war. However, the struggle for
+browser compatibility does have a silver lining.  Competition
+between Microsoft and Netscape will undoubtedly push innovation
+in  browser functionality faster than if only one standard
+browser were available.  Steve Nelson, vice president of Clear
+Ink, says, "I don't think it's ever  going to end, and in a way I
+hope not. It's a hassle for us, but this is how  standards
+evolve. We are no longer worried like we were two and half years
+ago  about the support of tables. This is the way you get
+innovations."
+
+
+
+In terms of the W3C recommendations, it appears that Microsoft
+and Netscape  will continue to work toward supporting the
+specifications at their own pace.  The WSP will try to help speed
+up the process as well. "We're not here to  spank browser makers
+for making innovations," Olsen says. "Our point  is they should
+be supporting core standards and then they are free to add 
+whatever else on top of it."

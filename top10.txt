@@ -1,0 +1,115 @@
+
+WSP RELEASES LIST OF INTERNET EXPLORER'S TOP 10 PROBLEMS WITH KEY
+WEB STANDARD
+
+With the launch of The Web Standards Project's "IE Top 10 CSS
+Problems" <http://www.webstandards.org/ie/>, WSP today revealed
+continuing flaws in Microsoft's support for the Cascading Style
+Sheets standard, and challenged the company to improve its
+browser's handling of the crucial standard.
+
+Created in response to a challenge from Microsoft, the "IE Top 10
+CSS Problems" was developed by WSP's "CSS Samurai," an ad hoc
+committee of Cascading Style Sheets experts. The list vividly
+demonstrates how far the Redmond company must go if it intends to
+claim superior web standards support in its upcoming release of
+the Internet Explorer 5.0 browser.
+
+WSP's "CSS Samurai" group includes Invited Experts to the World
+Wide Web Consortium and contributors to the CSS standard. This
+W3C-created standard gives developers precise control over the
+appearance of Web pages. However, the document at
+<http://www.webstandards.org/ie/> reveals that many critical
+features of CSS-1 remain either incorrectly implemented;
+implemented for only an undocumented selection of eligible HTML
+elements; or entirely neglected in Microsoft's browser.
+
+"While we commend Microsoft for leading the way in implementing
+Cascading Style Sheets, first in Internet Explorer 3.0,
+unfortunately there've been significant parts of the standard
+that have been neglected or incorrectly implemented in their
+browser up to now," said George Olsen, WSP Project Leader and
+Design Director/Web Architect at 2-Lane Media
+<http://www.2lm.com> in Los Angeles.
+
+"We realize the next version of Internet Explorer is still in
+beta and hope that these problems will be fixed by the final
+release so that Explorer will be 100 percent compliant with CSS-1
+-- especially since Microsoft has been spending development time
+adding non-standard extensions to CSS in their beta releases so
+far," he said.
+
+Last week, in response to a WSP lobbying campaign, Netscape said
+its Navigator 5.0 will include software intended to make the
+browser 100 percent compliant with CSS-1 and will also support
+parts of the CSS-2 standard.
+
+The current browser bugs and omissions in CSS-1 can render pages
+impossible to read and make it nearly impossible for developers
+to use CSS-1 without workarounds, said Todd Fahrner, leader of
+WSP's "CSS Samurai" committee and Design Technologist for San
+Francisco-based Studio Verso <http://www.verso.com>.
+
+"Now that Netscape shows every sign of achieving 100 percent
+CSS-1 conformance in its 5.0 browser, we challenge Microsoft to
+keep pace in both its Windows and Macintosh offerings, to
+evacuate rendering issues once and for all from the browser-war
+battlefield," Fahrner said.
+
+Many of the specific problems that Internet Explorer needs to
+address involve  laying out elements of a Web page and handling
+styles correctly.
+
+[The bullet list used for more technical press, otherwise use
+summary list.]
+
+Areas that need to be addressed for Internet Explorer to fully
+support CSS-1 include:
+
+* Proper handling of CSS-1's Web page layout features, so that
+Web developers no longer need to work around the problem by using
+HTML tables or other inappropriate code for layout.
+
+* Fixing problems that prevent CSS-1 typographic styles from
+working properly within HTML tables -- a problem that's
+particularly frustrating to Web developers because they've had to
+use HTML tables as a workaround to the previously mentioned CSS-1
+layout problems.
+
+* Supporting the ability to switch stylesheets, which would
+redefine the appearance of a Web page to fit the needs of
+particular users (for example, those needing high-contrast colors
+to help them read) or the needs of particular platforms (such as
+changing a page so that it works better on a television- or
+PDA-based browser).
+
+Many of the specific problems that Internet Explorer needs to
+address involve the problems laying out elements of a Web page
+and handling styles correctly.
+
+These examples are the first of a series of WSP
+standards-compliance reviews to provide feedback on interim
+releases of major browsers. WSP is also working with The Open
+Group http://www.opengroup.org, which is developing a full test
+suite for CSS-1, expected to be completed in a few months.
+
+About The Web Standards Project: WSP is an international
+coalition of Web developers and Web experts who are urging
+browser makers to fully support Cascading Style Sheet Level 1
+(CSS-1), the Document Object Model (DOM) and XML in their
+browsers. Its effort to bring attention to the existing and
+potential problems involved with browser incompatibility does not
+mean that WSP is opposed to innovations by browser manufacturers.
+The coalition merely urges browser manufacturers to use open
+standards for enhancements and support existing ones before
+adding new features.
+
+
+George Olsen      mailto:golsen@2lm.com 
+Design Director/Web Architect   
+2-Lane Media           
+http://www.2lm.com                     
+tel: 310/473-3706 x2225
+
+
+

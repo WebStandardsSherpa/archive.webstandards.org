@@ -1,0 +1,466 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:47 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Vertical Alignment of Floats</TITLE>
+  <STYLE TYPE="text/css">
+   <!--
+/*	BODY	{
+		font-size: 0.8em;
+		} */
+
+	H1	{
+		font-size: 2em;
+		}
+
+	DIV.board	{
+		border-style: solid;
+		border-width: thick;
+		border-color: green;
+		padding: 1em;
+		background-color: white;
+		}
+
+	DIV.boardtail	{
+		clear: left;
+		}
+
+	DIV.card	{
+		font-family: "Times New Roman", Times, serif;
+		font-size: 0.8em;
+		border-style: solid;
+		border-width: medium;
+		border-color: black;
+		float: left;
+		width: 12em;
+		padding: 0.8em;
+		margin: 0.5em;
+		height: 20em;  /* total content size is 16.45em + a thin
+			border, plus 1em for each line break */
+		}
+
+	DIV.card H2	{
+		color: black;
+		border-style: none none solid none;
+		border-width: thin;
+		border-color: red;
+		margin: 0.2em 0 0.2em 0;
+		text-align: center;
+		padding: 0 0 0.1em 0;
+		font-size: 1.5em;
+		background-color: inherit;
+		}
+
+	DIV.card DL	{
+		font: inherit;
+		margin: 0.5em 0;
+		padding: 0;
+		background-color: inherit;
+		}
+
+	DIV.card DT	{
+		font: inherit;
+		color: #630;
+		margin: 0.2em 0 0 0;
+		padding: 0
+		background-color: inherit;
+		}
+
+	DIV.card DD	{
+		font: inherit;
+		color: #666;
+		margin: 0 0 0 2em;
+		padding: 0;
+		background-color: inherit;
+		}
+
+	P.footnote	{
+		font-size: smaller;
+		}
+
+   -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Web Standards Project: CSS: Bugs in Opera: Vertical Alignment of Floats</H1>
+
+<P>
+ Let's say we were displaying a board game that allowed the players to
+ take over the world, one country at a time (the mechanism is irrelevant).
+ We would want to show these cards to the user in the most efficient
+ way, without knowing how wide the user's browser window was.  So we
+ could have each card in a floating <code>DIV</code>, and then have all
+ the <code>DIV</code>s float left, so that they would fill the width of
+ their parent element, and then carry over to the next line.  Or at least
+ that is what they would do according to the CSS spec.  Not so in Opera.
+ The cards are simply accumulated, and are allowed to widen their parent
+ element, forcing a horizontal scrollbar.  Also, somehow, Opera gets
+ either the height of the card or the height of its contents wrong,
+ so the contents are sometimes too big.  They shouldn't be unless they
+ are printed in a very wide font.  Since it doesn't quite work in Opera,
+ we have an example of a <A HREF="floatdemo2.gif">correct rendering</A>.
+</P>
+
+<DIV CLASS="board">
+
+ <DIV CLASS="card">
+  <H2>
+   Algeria
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Algiers
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    2,381,740 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    29,830,370
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    68.62 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Arabic, French, Berber
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $4,000
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Brazil
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Bras&iacute;lia
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    8,456,510 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    164,511,366
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    61.42 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Portuguese, Spanish, English, French
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $6,300
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Croatia
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Zagreb
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    56,410 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    4,664,710
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    73.49 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Serbo-Croatian
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $4,300
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Dominica
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Roseau
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    750 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    66,633
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    77.6 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    English, French patois
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $2,500
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Ireland
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Dublin
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    68,890 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    3,606,952
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    75.98 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    English, Irish (Gaelic)
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $16,800
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Kuwait
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Kuwait
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    17,820 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    1,834,269
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    76.44 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Arabic, English
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $16,700
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Mozambique
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Maputo
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    784,090 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    18,165,476
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    44.85 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Portuguese, indigenous dialects
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $670
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Singapore
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Singapore
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    637.5 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    3,440,693
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    78.15 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Chinese, Malay, Tamil, English
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $21,200
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   Turkmenistan
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Ashgabat
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    48,100 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    4,229,249
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    61.51 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    Turkmen, Russian, Uzbek
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $2,840
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="card">
+  <H2>
+   United States
+  </H2>
+  <DL>
+   <DT>Capital city</DT>
+   <DD>
+    Washington
+   </DD>
+   <DT>Land Area</DT>
+   <DD>
+    9,158,960 km<SUP>2</SUP>
+   </DD>
+   <DT>Population</DT>
+   <DD>
+    267,954,764
+   </DD>
+   <DT>Life expectancy at birth</DT>
+   <DD>
+    76.04 years
+   </DD>
+   <DT>Languages</DT>
+   <DD>
+    English, Spanish
+   </DD>
+   <DT>GDP Per capita</DT>
+   <DD>
+    $28,600
+   </DD>
+
+  </DL>
+ </DIV>
+
+ <DIV CLASS="boardtail">You currently have 10 countries.</DIV>
+
+</DIV>
+
+<P CLASS="footnote">
+ Source: <A HREF="http://geography.miningco.com/science/geography/library/cia/blcindex.htm">CIA World Factbook, 1997</A>.
+</P>
+
+<HR title="Note">
+
+<P>Note. Technically speaking, the rule tested here is not part of
+CSS1. This was an omission in the original rules for floating
+elements, which was corrected with the publication of CSS2. The rule
+in question is #7 of CSS2's <a
+href="http://www.w3.org/TR/REC-CSS2/visuren.html#float-position">section
+9.5.1</a>, which is missing from CSS1's <a
+href="http://www.w3.org/TR/REC-CSS1#floating-elements">section
+4.1.4</a>.</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:48 GMT -->
+</HTML>
+

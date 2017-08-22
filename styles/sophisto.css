@@ -1,0 +1,25 @@
+body, td, th { /* redundant rules for bad browsers  */
+	font-size:    x-small;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	font-size:    small
+	}
+html>body, html>body td, html>body th {
+	font-size:    small;
+	}
+.datafirst {
+	font: 12px palatino, georgia, serif; 
+	margin: 5px 0 2px 0; 
+	padding: 0;
+	}
+.data {
+	font: 12px palatino, georgia, serif; 
+	margin: 10px 0 2px 0; 
+	padding: 0;<br>
+	}
+.inme {
+	font: 12px palatino, georgia, serif; 
+	color: #000; 
+	background: #ffe; 
+	border: 1px dotted black;
+	}

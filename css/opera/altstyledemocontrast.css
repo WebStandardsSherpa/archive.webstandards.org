@@ -1,0 +1,23 @@
+/* Contrasting style alternative stylesheets demo
+ */
+
+BODY    { background: #FFFFFF none; color: #000000;
+          font: 600 1em/1.2 "Verdana", "Arial", "Helvetica", sans-serif;
+          text-align: left; 
+        }
+
+H1      { font: 900 2em "Verdana", "Arial", "Helvetica", sans-serif;
+          border: solid medium #FFFFFF; padding: 0em 1em;
+          text-align: center; text-transform: uppercase;
+        }
+
+P       { margin: 1em; }
+
+OL      { margin: 1em; }
+LI      { margin: 1em 0em 1em 3em; }
+
+A:link, A:visited { color: black; }
+
+.FOOTER { background: #FFFFFF none; color: #000000; }
+
+/* END */

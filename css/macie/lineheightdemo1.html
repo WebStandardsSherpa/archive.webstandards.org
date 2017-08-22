@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/lineheightdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Line-height Inheritance</TITLE>
+  <STYLE type="text/css">
+
+    .test { margin-left: 4em; padding-left: 1em; background: #eeeeee
+            color: black; border-left: double 4px black; 
+            font-size: 10px; line-height: 130%; }
+
+    .bigwords { font-size: 300%; vertical-align: bottom; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Line-height Inheritance</H1>
+
+<P>When <code>line-height</code> is set by percentage, MacIE does not
+make the <em>calculated</em> value of the property inherit, rather it
+makes the percentage value itself inherit. This causes lines to change
+height when they should not.</P>
+
+<H2>1. Line-Height at 130%</H2>
+
+<P>The following paragraph contains two sizes of text. However,
+because the <code>line-height</code> is set by using
+<em>percentages</em>, <strong>the height of every line should be
+exactly the same</strong>, that is, 13px.</P>
+
+<PRE>
+   .test       { font-size: 10px; line-height: 130%; }
+   .bigwords {font-size: 300%; vertical-align: bottom; }
+</PRE>
+
+<P class="test">
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  <SPAN class="bigwords">(should not affect line height)</SPAN>
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+
+  Calculated line height here should be 13 pixels.
+</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/lineheightdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

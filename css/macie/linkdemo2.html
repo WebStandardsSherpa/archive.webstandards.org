@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/linkdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE:  Link Pseudo-classes (2)</TITLE>
+  <STYLE type="text/css">
+
+:link { color: blue; background: white; }
+:visited { color: purple; background: white; }
+
+p.one :hover:link, p.one :hover:visited { background: yellow; }
+
+p.two :link:hover { background: yellow; }
+p.two :visited:hover { background: aqua; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Link Pseudo-classes (2)</H1>
+
+<p>
+	MacIE does not parse pseudo-classes correctly.  It uses only
+	the last pseudo-class specified, and it treats all the others
+	as if they weren't there.  (It doesn't treat multiple pseudo 
+	classes as an error, though.)  Multiple pseudo classes are
+	necessary to write sensible rules for CSS2 browsers that support
+	the concept of <code>:hover</code> on all elements (not just
+	link elements).  Fortunately, this problem can be worked around
+	by using <code>:link:hover, :visited:hover</code>  (as opposed
+	to <code>:hover:link, :hover:visited</code> which should work
+	just as well).
+</p>
+
+<p>
+	This page has the following stylesheet:
+</p>
+
+<pre>
+:link { color: blue; background: white; }
+:visited { color: purple; background: white; }
+
+p.one :hover:link, p.one :hover:visited { background: yellow; }
+
+p.two :link:hover { background: yellow; }
+p.two :visited:hover { background: aqua; }
+</pre>
+
+<p class="one">
+	This paragraph has class <code>one</code>.  Any link in this
+	paragraph should have a yellow background (instead of white)
+	only when it is in the hover state, which is probably when
+	the mouse pointer hovers over the link.  Instead, MacIE gives
+	both <a href="index.html">visited links</a> and <a
+	href="http://www.nowhere.oz/no.file">unvisited links</a>
+	yellow backgrounds all the time.
+</p>
+
+<p class="two">
+	This paragraph has class <code>two</code>.  In this paragraph,
+	the background color for <a href="index.html">visited links</a> in the
+	hover state should be aqua, but the background color for <a
+	href="http://www.nowhere.oz/no.file">unvisited links</a> in the
+	hover state should be yellow.  MacIE makes both of them aqua,
+	since it only uses the last pseudo-class in the selector.
+</p>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/linkdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

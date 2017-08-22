@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<TITLE>Box model horizontal formatting</TITLE>
+<STYLE TYPE="text/css">
+
+HTML {
+	background-color: white;
+}
+
+DIV, IMG {
+	padding: 0px;
+	margin: 0px;
+	border-width: 0px;
+}
+#test {
+	background-color: gray;
+	width: 400px;
+	border-style: solid;
+	border-color: silver;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 40px;
+	border-right-width: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+</STYLE>
+
+<DIV><IMG SRC="images/horiz_pixel_ruler.gif" ALT="" WIDTH="641" HEIGHT="20"></DIV>
+
+<P ID="test">This text is inside a <CODE>P</CODE> element. The border, padding, and margins for this paragraph should line up with the boundaries denoted in the image below. There should be no top or bottom margin; the images above and below should be flush with this paragraph. Internet Explorer&nbsp;4.0 appears to ignore the <CODE>width</CODE> property on this element. Internet Explorer&nbsp;5.0&nbsp;beta&nbsp;1 detects the <CODE>width</CODE>, but applies it <STRONG>incorrectly</STRONG>.
+
+<DIV><IMG SRC="images/horiz_description.html" ALT="" WIDTH="640" HEIGHT="64"></DIV>
+

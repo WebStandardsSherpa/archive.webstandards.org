@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/widthdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Width Problems on Tables</TITLE>
+  <STYLE TYPE="text/css">
+     BODY { background: #CCCCCC; color: black; }
+     .margin { margin: 50px; }
+     .padding { padding: 50px; }
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Opera's Internal Table Width Algorithm</H1>
+
+<P>Opera has an internal table width algorithm that is supposed to make
+the table fit its contents. It is this algorithm that, in version 3.50,
+<A HREF="widthdemo4.html">overrides the CSS-set width</A>.  However,
+this algorithm still fails when there is margin on the
+<code>TABLE</code>, as the algorithm is applied <em>before</em> taking
+the margin into account!  It would also have problems with padding, except
+that in Opera 3.51, padding on tables does not work at all.</P>
+
+<H3>Example 1 - Margin</H3>
+
+<P>The following table has a 50px margin set using CSS. It should be
+completely visible <em>within</em> the viewport.</P>
+
+<TABLE class="margin" border=1><TR><TD>This is a table, with a 50px
+margin. This is a table, with a 50px margin. This is a table, with a
+50px margin. This is a table, with a 50px margin. This is a table,
+with a 50px margin. This is a table, with a 50px margin. This is a
+table, with a 50px margin. This is a table, with a 50px margin. This
+is a table, with a 50px margin. This is a table, with a 50px margin.
+This is a table, with a 50px margin. </TD></TR></TABLE>
+
+<H3>Example 2 - Padding</H3>
+
+<P>The following table has 50px padding set using CSS.  Opera 3.51 does
+not support padding on tables.  (In Opera 3.50, the padding appears on
+the top and left sides, but not the bottom and right, and this causes
+the same problem seen in Example 1.)  In Opera 3.51, the padding does
+<em>nothing</em>, so the problem doesn't really show up.</P>
+
+<TABLE class="padding" border=1><TR><TD>This is a table, with a 50px
+padding. This is a table, with a 50px padding. This is a table, with a
+50px padding. This is a table, with a 50px padding. This is a table,
+with a 50px padding. This is a table, with a 50px padding. This is a
+table, with a 50px padding. This is a table, with a 50px padding. This
+is a table, with a 50px padding. This is a table, with a 50px padding.
+This is a table, with a 50px padding. </TD></TR></TABLE>
+
+<H3>Example 3 - Margin and Padding</H3>
+
+<P>The following table has both 50px padding and 50px margin set using
+CSS. It should also be completely visible <em>within</em> the
+viewport.</P>
+
+<TABLE class="margin padding" border=1><TR><TD>This is a table, with a
+50px padding and 50px margin. This is a table, with a 50px padding and
+50px margin. This is a table, with a 50px padding and 50px margin. This
+is a table, with a 50px padding and 50px margin. This is a table,
+with a 50px padding and 50px margin. This is a table, with a 50px
+padding and 50px margin. This is a table, with a 50px padding and 50px
+margin. This is a table, with a 50px padding and 50px margin. This is
+a table, with a 50px padding and 50px margin. This is a table, with a
+50px padding and 50px margin.  This is a table, with a 50px padding and
+50px margin. </TD></TR></TABLE>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/widthdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+</HTML>
+

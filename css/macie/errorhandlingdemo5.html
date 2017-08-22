@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Error Handling Bugs (5)</TITLE>
+  <STYLE type="text/css">
+
+.one { width: 100px; background: green; color: white; }
+
+.two, .pxtwo, .untwo { background: purple; color: white; }
+.three, .pxthree, .unthree { background: blue; color: white; }
+.four, .pxfour, .unfour { background: navy; color: white; }
+
+.two { width: 10eu; }
+.three { width: 15eu; }
+.four { width: 3eu; }
+
+.pxtwo { width: 10px; }
+.pxthree { width: 15px; }
+.pxfour { width: 3px; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Error Handling and Parsing Bugs (5)</H1>
+
+<p>This is a table with some of the cell widths given in <code>eu</code>,
+which are invalid units.  MacIE should ignore these declarations.  (Note
+that the statements inside the table are only true in the first table.)</p>
+
+<table>
+	<tr>
+		<td class="one">
+			This cell has a width of <code>100px</code>.
+		</td>
+		<td class="two">
+			This cell has a width of <code>10eu</code> (equal
+			units), a width that could possibly be valid
+			in a future version of CSS.
+		</td>
+		<td class="three">
+			This cell has a width of <code>15eu</code> (equal
+			units), a width that could possibly be valid
+			in a future version of CSS.
+		</td>
+		<td class="four">
+			<code>3eu</code> here
+		</td>
+	</tr>
+</table>
+
+<p>This is the same table, with the widths given in <code>px</code>
+instead of <code>eu</code>.</p>
+
+<table>
+	<tr>
+		<td class="one">
+			This cell has a width of <code>100px</code>.
+		</td>
+		<td class="pxtwo">
+			This cell has a width of <code>10eu</code> (equal
+			units), a width that could possibly be valid
+			in a future version of CSS.
+		</td>
+		<td class="pxthree">
+			This cell has a width of <code>15eu</code> (equal
+			units), a width that could possibly be valid
+			in a future version of CSS.
+		</td>
+		<td class="pxfour">
+			<code>3eu</code> here
+		</td>
+	</tr>
+</table>
+
+<p>This is the same table, with the widths that should be ignored left
+unspecified.  The much more sensible table layout here shows that
+MacIE is treating the <code>eu</code> units in the first table as
+if they were <code>px</code>, rather than ignoring them as it should.</p>
+
+<table>
+	<tr>
+		<td class="one">
+			This cell has a width of <code>100px</code>.
+		</td>
+		<td class="untwo">
+			This cell has a width of <code>10eu</code> (equal
+			units), a width that could possibly be valid
+			in a future version of CSS.
+		</td>
+		<td class="unthree">
+			This cell has a width of <code>15eu</code> (equal
+			units), a width that could possibly be valid
+			in a future version of CSS.
+		</td>
+		<td class="unfour">
+			<code>3eu</code> here
+		</td>
+	</tr>
+</table>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

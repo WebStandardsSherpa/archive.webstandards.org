@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/displaypropertydemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Display Property Demos</TITLE>
+  <STYLE TYPE="text/css">
+
+     HR { clear: both; }
+     div.demo { margin-left: 3em; }
+     #demo1 UL, #demo1simulation P { display: block; margin: 0; padding: 0; }
+     #demo1 LI, #demo1simulation SPAN { display: inline; margin: 0; padding: 0; }
+     #demo2 DIV, #demo2simulation OL { margin: 0em; padding: 0 0 0 2.5em; display: block; }
+     #demo2 P, #demo2simulation LI { margin: 0.1em 0.1em 0.1em 0.5em; display: list-item; list-style: decimal inside; }
+     #demo3simulation P,
+     #demo3 P { margin: 0em; padding: 0em; }
+     #demo3 CITE { display: block; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Display Property Demonstrations</H1>
+
+<H2>Example 1</H2>
+
+<P>In the following example, we see a <CODE>UL</CODE> element used to
+depict a brief links list. This would typically be used to give a list
+of contents at the top of a page.</P>
+
+<DIV class=demo id="demo1" title="Demo 1">
+<HR title="Start of Demo 1">
+<UL>
+   <LI><A HREF="http://www.w3.org/">W3C</A></LI>
+   <LI><A HREF="../../../www.webstandards.org/index.html">WSP</A></LI>
+   <LI><A HREF="http://www.gnu.org/">GNU</A></LI>
+   <LI><A HREF="http://www.fsf.org/">FSF</A></LI>
+   <LI><A HREF="http://www.fhf.org/">FHF</A></LI>
+</UL>
+<HR title="End of Demo 1">
+</DIV>
+
+<P>In case the above renders as a list instead of a line, or in case
+the above has bullets, here is what <em>should</em> have been
+shown:</P>
+
+<DIV class=demo id="demo1simulation" title="Demo 1: Simulation">
+<HR title="Start of Demo 1: Simulation">
+<P>
+   <SPAN><A HREF="http://www.w3.org/">W3C</A></SPAN>
+   <SPAN><A HREF="../../../www.webstandards.org/index.html">WSP</A></SPAN>
+   <SPAN><A HREF="http://www.gnu.org/">GNU</A></SPAN>
+   <SPAN><A HREF="http://www.fsf.org/">FSF</A></SPAN>
+   <SPAN><A HREF="http://www.fhf.org/">FHF</A></SPAN>
+</P>
+<HR title="End of Demo 1: Simulation">
+</DIV>
+
+<P>Using a list element, instead of a paragraph element (as was used
+in the second instance to simulate the effect), means that styling is
+much more dynamic. Furthermore, a paragraph doesn't actually describe
+the <em>structure</em> of the links: they are, after all, a list, and
+not a paragraph.</P>
+
+<H2>Example 2</H2>
+
+<P>In the following example, we see five paragraphs. They should be numbered.</P>
+
+<DIV class=demo id="demo2" title="Demo 2">
+<HR title="Start of Demo 2">
+<DIV>
+   <P><A HREF="http://www.w3.org/">W3C</A></P>
+   <P><A HREF="../../../www.webstandards.org/index.html">WSP</A></P>
+   <P><A HREF="http://www.gnu.org/">GNU</A></P>
+   <P><A HREF="http://www.fsf.org/">FSF</A></P>
+   <P><A HREF="http://www.fhf.org/">FHF</A></P>
+</DIV>
+<HR title="End of Demo 2">
+</DIV>
+
+<P>The above probably renders as five simple paragraphs, but here is what should happen:</P>
+
+<DIV class=demo id="demo2simulation" title="Demo 2: Simulation">
+<HR title="Start of Demo 2: Simulation">
+<OL>
+   <LI><A HREF="http://www.w3.org/">W3C</A></LI>
+   <LI><A HREF="../../../www.webstandards.org/index.html">WSP</A></LI>
+   <LI><A HREF="http://www.gnu.org/">GNU</A></LI>
+   <LI><A HREF="http://www.fsf.org/">FSF</A></LI>
+   <LI><A HREF="http://www.fhf.org/">FHF</A></LI>
+</OL>
+<HR title="End of Demo 2: Simulation">
+</DIV>
+
+<P>An example of where this would be very useful is the main index
+page of this set of documents: the headers are numbered, but the
+numbering had to be added manually! If only this property was
+supported properly, then authors would not need to do this.</P>
+
+<H2>Example 3</H2>
+
+<P>This now works completely in IE5 betas.</P>
+
+<P>In this demo, the <CODE>CITE</CODE> elements have been given a
+<code>display</code> value of <code>block</code>. Here is what
+happens:</P>
+
+<DIV class=demo ID="demo3" TITLE="Demo 3">
+<HR title="Start of Demo 3">
+<P>the standards are made by the
+<cite>W3C</cite> and are supported by the
+<cite>WaSP</cite> </P>
+<HR title="End of Demo 3">
+</DIV>
+
+<P>This is what it should look like:</P>
+
+<DIV class=demo ID="demo3simulation" TITLE="Demo 3">
+<HR title="Start of Demo 3: Simulation">
+<P>the standards are made by the</p>
+<p><cite>W3C</cite></p><p> and are supported by the</p><p>
+<cite>WaSP</cite> </P>
+<HR title="End of Demo 3: Simulation">
+</DIV>
+
+<H2>Conclusion</H2>
+
+<P>The <code>display</code> property is a powerful feature -- indeed,
+with XML, it will be the only way of telling the browser how to render
+the document at its most basic level. <!--While the support shown so far
+is a good effort, it is still not complete.--></P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/displaypropertydemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

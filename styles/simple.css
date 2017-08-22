@@ -1,0 +1,119 @@
+body	{
+	margin:	0;
+	padding:	0;
+	font-family: georgia, palatino, serif;
+	color:	#000;
+	background : #f90 url(../css/wasp_top_right.gif) top right no-repeat fixed ; 
+	}
+div, p, th, td, li, dd, dl, dt    {
+             /* redundant selectors to help NS4 not forget */
+    font-family:  palatino, georgia, serif;
+    }
+dt 	{
+	font-weight: bold;
+	}
+ol, li, dl, dt, dd {
+	line-height: 1.5em;
+	}
+.content {
+	padding: 10px 20px;
+	margin: 5% 15%;
+	border: 1px dotted #333;
+	color: #000;
+	background: #fff;
+	}
+p {
+	margin-top: 0; padding-top: 0;
+	line-height: 1.5em;
+	}
+blockquote {
+	font: 12px/1.5em palatino, georgia, serif;
+	}	
+h1	{
+	font-size:	2em;
+	}
+h2	{
+	font-size:	1.75em;
+	}
+h3	{
+	font-size:	1.5em;
+	}
+h4	{
+	font-size:	1.25em;
+	}
+h5	{
+	font-size:	1em;
+	}
+h6	{
+	font-size:	0.8em;
+	}	
+.first 	{
+	margin-top: 0; 
+	padding-top: 0;
+	}	
+h1, h2, h3, h4, h5, h6	{
+	margin:	1.25em 0 0 0;
+	font-family:	impact, arial, helvetica, sans-serif;
+	font-weight: normal;
+	}
+img	{
+		/* turns off gaps around images */
+	border:	0
+	}
+.vs0	{
+	margin-top:	0;
+	padding-top: 0;
+	}
+a	{
+	text-decoration:	none;
+	font-weight:	bold;
+	}
+a:link	{
+	color:	#f30;
+	background-color: transparent;
+	}
+a:visited	{
+	color:	#c30;
+	background-color: transparent;
+	}
+a:active	{
+	color:	#cc0;
+	background-color: transparent;
+	}
+a:hover	{
+	color:	#f60;
+	background-color: transparent;
+	text-decoration:	underline;
+	}
+.ahem	{
+	display:	none;
+	}
+code, tt, pre	{
+	font: 12px "andale mono", monaco, courier, "courier new", monospace;
+	color: #06c;
+	background: transparent;
+	}
+#footer, .marginalia {
+	font: 10px geneva, verdana, arial, helvetica, sans-serif;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px dotted #333333;
+	}
+.slacker {
+	margin-top: 25px; 
+	padding-top: 25px; 
+	border-top: 1px dotted #000;
+	}
+.wacker {
+	margin-top: 10px; 
+	padding-top: 10px; 
+	border-top: 1px dotted #000;
+	}
+.butt {
+   font-size : 12px; 
+   font-family : chicago, verdana, arial, sans-serif;
+   color : #000; 
+   background-color : #ffe; 
+}
+
+	

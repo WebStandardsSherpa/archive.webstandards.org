@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/whitespacedemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: White-Space Demo</TITLE>
+  <STYLE TYPE="text/css">
+
+     .poem { white-space: pre; font-style: italic; }
+     .dontwrap { white-space: nowrap; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>White-Space Demonstration</H1>
+
+<H2>Example 1</H2>
+
+<P>Here is a poem, where the layout of the text is important. The
+<code>white-space</code> property has been set to <code>pre</code> to
+preserve the lie of the lines.</P>
+
+<div class=poem>
+
+<h3>A Poem.</H3>
+<p>
+A Poem, A Poem --
+   he wanted a poem!
+A Poem, A Poem --
+   but why a poem?
+</p><P>
+A poem was needed,
+   to show what I. E. did
+upon encountering 'white-space',
+   a property of css!
+</p><P>
+It was to be --
+   at least; so said he --
+a great work of art...
+   one with liver, and heart.
+</p><P>
+Liver? Heart? Yes, one may well ask,
+   for how would organs help, a poem, in its task?
+"Metaphors!" Cries the scholar --
+   who had no idea.
+</p><P>
+But why, he is right!
+   For out of the night
+Came a poem -- with liver, and heart!
+   (Although no work of art).
+</p><P>
+                           -- Anonymous <!-- (well, it's by me, actually.
+                              I just didn't want to own up to it. - ieh) -->
+</p>
+</div>
+
+<H2>Example 2</H2>
+
+<p>Another case where <code>white-space</code> could be used is with
+the prevention of wrapping -- namely in the use of its
+<code>nowrap</code> value. Authors currently use a Netscape extension,
+<code>NOBR</code>, to achieve this effect. However, <code>NOBR</code>
+is non-standard and forces authors to include presentational
+information inside their documents, instead of keeping presentation
+and structure separate. This next line should not wrap (as you may
+have guessed).</p>
+
+<p class=dontwrap>This line should not wrap, however slim the browser window may be. It should go on, and on, and on horizontally, never splitting or wrapping. This is very important. Is that understood? Hey! I'm speaking to you! I said, do you understand? No wrapping! This line should go on, and on, and on! Nothing should be allowed to wrap this line! Wrapping this line is a clear breach of the CSS1 specification! Do you hear me!?</p>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/whitespacedemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+</HTML>

@@ -1,0 +1,79 @@
+
+
+BODY {font-family: palatino, georgia, serif; margin: 0; padding: 0; color: #000; background-color: #f90;}
+
+td {font-family: verdana, arial, geneva, helvetica, sans-serif;}
+
+a:link, a:visited, a:active { text-decoration: none; font-weight: bold; }
+
+a:hover { color: #ffffcc; text-decoration: underline; font-weight: bold; }
+
+.label { font: 10px geneva, arial, helvetica, sans-serif; }
+
+b { font-weight: bold; }
+
+strong { font-weight: bold; }
+
+.bordeaux {border: 2px solid black; margin-bottom: 50px;}
+
+.dotscrazy {border: 1px dotted black; margin-bottom: 50px;}
+
+.menu {font: bold 12px verdana, arial, sans-serif; padding-top: 3px; padding-bottom: 3px; border-top: none; border-bottom: 1px solid black; border-right: 1px dotted black; border-left: 1px dotted black;}
+
+.buzzlist {font: 11px/18px palatino, georgia, serif; margin-left: 75px;}
+
+.announcement {font: 12px/18px palatino, georgia, serif; margin-bottom: 1em;}
+
+.vs0 {margin-top: 0; padding-top: 0;}
+
+h1  { font: bold 2em arial, helvetica, sans-serif; color: #ff9933; margin-top: 20px; margin-left: 20px; margin-bottom: 0; }
+
+h2 { font: bold italic 1.5em arial, helvetica, sans-serif; color: #cc9933; margin-left: 40px; margin-top: -5px; margin-right: 0px; margin-bottom: 10px; padding: 6px; }
+
+h2.old { font: bold italic 1.5em arial, helvetica, sans-serif; color: #cc9933; margin-left: 40px; margin-top: 10px; margin-right: 0px; margin-bottom: 10px; padding: 6px; }
+
+p { font: small palatino, georgia, serif; line-height: 150%; margin-left: 40px; margin-top: 15px; margin-right: 20px; margin-bottom: 10px; }
+
+li { font: 12px/1.5em palatino, georgia, serif; list-style: none; margin-bottom: 1em;}
+
+code { font: 11px/15px  monaco, courier, "courier new", monospace; color: #663300; margin-top: 0; padding-top: 0; margin-bottom: 10px; }
+
+.text, .main { font: 11px verdana, geneva, arial, sans-serif; line-height: 150%; margin-left: 40px; margin-top: 15px; margin-right: 20px; margin-bottom: 10px; }
+
+.deco { font: 24px arial, helvetica, sans-serif; color: #cc9933; margin-left: 40px; margin-top: 10px; margin-right: 0px; margin-bottom:10px; padding: 10px; }
+
+h3 {font: bold 18px arial, helvetica, sans-serif; margin-left: 40px; margin-right: 20px; margin-top: 10px; margin-bottom: 0; padding-bottom: 0;} 
+
+.sub { font: bold 14px/20px arial, helvetica, sans-serif; margin-left: 40px; margin-bottom: 10px;} 
+
+h4 {font: bold italic 16px arial, helvetica, sans-serif; margin-top: 10px; margin-bottom: 0; margin-left: 10px;}
+
+h4.imago {font: bold italic 18px arial, helvetica, sans-serif; margin-left: 10px; margin-bottom: 0; margin-top: 0;}
+
+h4.neglected { font: bold 12px arial, helvetica, sans-serif; margin-left: 40px; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; } 
+
+h5 {font: 12px bold arial, helvetica, sans-serif; margin-top: 5px; margin-bottom: 5px;}
+
+p.buzz { font: 11px verdana, geneva, arial, helvetica, sans-serif; margin-left: 20px; margin-top: 15px; margin-right: 20px; margin-bottom: 10px; }
+
+p.contact { font: 11px/16px verdana, arial, geneva, helvetica, sans-serif; margin-left: 40px; margin-top: 0; margin-bottom: 0;}
+
+p.small { font: small palatino, georgia, serif; line-height: 150%; margin-left: 40px; margin-top: 15px; margin-right: 20px; margin-bottom: 10px; }
+
+p.indent { font: .8em verdana, geneva, arial, sans-serif; line-height: 150%; margin-left: 60px; margin-top: 15px; margin-right: 20px; margin-bottom: 10px; }
+
+.thanks {font: 11px/18px palatino, georgia, serif; margin-top: 25px; margin-left: 25px; padding: 6px; background-color: #fda; border: 1px dotted #c60; }
+
+.pinky {font: 11px monaco, "andale mono", courier, "courier new"; margin-top: 10px; margin-left: 40px; margin-right: 20px; padding: 5px; background-color: #fda; border: 1px dotted #c60; }
+
+.smooth {margin-top: 0; padding-top: 0;}
+
+.smoother {margin-top: 0; padding-top: 0; font-size: 11px;}
+
+.bigdeal {font: bold 14px/18px arial, helvetica, sans-serif; }
+
+.footer { font: 10px geneva, sans-serif; margin-top: 20px; margin-bottom: 20px; margin-left: 40px; margin-right: 20px; }
+
+.shorty { margin-left: 40px; margin-top: 10px; margin-right: 20px; margin-bottom: 10px; }
+.trans {font: 12pt arial, geneva, sans-serif; background: #cc9966; padding: 4px;}
+

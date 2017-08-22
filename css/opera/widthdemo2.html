@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/widthdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:01 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Width Problems on Floating Elements</TITLE>
+  <STYLE TYPE="text/css">
+     H2 { clear: both; }
+     .width { width: 398px; }
+     .float { float: left; border: 1px solid black; }
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Problems setting <code>width</code> on Floating Elements</H1>
+
+<H2>Example 1 - Floating Widths Shorten to Fit Contents</H2>
+
+<P>The first problem here deals with floating elements. On floating
+elements, the width is being interpreted as a maximum width, but the
+float is being made smaller when the text contents do not span the
+width.</P>
+
+<P>The following element is floated left and should be 400px wide, including
+its border (the width was set to 398px, and the border is 1px). If
+you have images enabled, you will see a ruler has been placed to allow
+you to measure the size of the table. The ruler is in pixels.</P>
+
+<DIV><IMG src=horiz_pixel_ruler.gif alt=""></DIV>
+<DIV class="float width">400px Floated DIV</DIV>
+
+<H2>Example 2 - Floating Widths Shorten to Fit Wrapped Contents</H2>
+
+<P>Even when the text does span the width, the width is too small,
+because Opera reduces the width to the length of the longest line
+after line-breaking has been performed. This is a serious problem:
+float widths are often used to generate a <!--<A
+HREF="../winie/shame2/floatclear.html">-->consistent layout<!--</A>--> or
+are used for <!--<A
+HREF="../winie/tiledbackgroundsdemo.html">-->backgrounds<!--</A>--><!--(these
+two tests are test cases describing problems in MS Internet
+Explorer)-->.
+</P>
+
+<P>The following element is floated left and should be <em>exactly</em>
+400px wide, including its borders (see above). If you have images enabled,
+you will see a ruler has been placed to allow you to measure the size
+of the table.  The ruler is in pixels.</P>
+
+<DIV><IMG src=horiz_pixel_ruler.gif alt=""></DIV>
+<DIV CLASS="float width">
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+</DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/widthdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:01 GMT -->
+</HTML>
+

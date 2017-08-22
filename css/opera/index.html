@@ -1,0 +1,674 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<html lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:31:22 GMT -->
+<HEAD>
+  <TITLE>Web Standards Project: Opera's Top 10 CSS Problems</TITLE>
+
+  <META name="author" content="Web Standards Project CSS Action Committee (Samurai)">
+  <META name="copyright" content="&copy; copyright 1998,1999 by the Web Standards Project CSS Action Committee (Samurai)">
+  <META name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+
+  <LINK title="Hive Mind" rel="stylesheet" type="text/css" href="../wasp_a.css">
+  <LINK title="Acid Bath" rel="alternate stylesheet" type="text/css" href="../inside.css">
+  <LINK title="Shogun" rel="alternate stylesheet" type="text/css" href="../samurai.css">
+
+</HEAD>
+
+<BODY><!--#include virtual="/outdated.inc" --> 
+<div id="body"> <!-- this is a hack -->
+
+<H1>Opera's Top 10 <ACRONYM TITLE="Cascading Style Sheets">CSS</ACRONYM> Problems</H1>
+
+<P>
+ This is the second of <a href="../index.html">a series of
+ <ACRONYM TITLE="Web Standards Project">WSP</ACRONYM>
+ standards-compliance reviews</a>. As a matter of policy, the WSP
+ provides thorough coverage of and feedback on interim releases of
+ major browsers. The first was <A HREF="../winie/index.html">a review of
+ Internet Explorer</A> released in early November, 1998.
+</P>
+
+<!--index-->
+<ul class="stb">
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#The_Top_7_Bugs">The Top 7 Bugs</a>
+    <ol>
+      <li><a href="#width">Problems with <code>width</code></a></li>
+      <li><a href="#floaters">Floating Element Problems</a></li>
+      <li><a href="#border">Border Problems</a></li>
+      <li><a href="#background">Background Problems</a></li>
+      <li><a href="#Incorrect_Error_Handling">Parsing</a></li>
+      <li><a href="#valign">Vertical Formatting Problems</a></li>
+      <li><a href="#selectors">Selector, Specificity and Cascade Problems</a></li>
+    </ol>
+  </li>
+  <li><a href="#The_Top_3_MIAs">The Top 3
+       <ACRONYM TITLE="Missing In Action">MIA</ACRONYM>s</a>
+    <ol>
+      <li><a href="#Displayprops">Display Property</a></li>
+      <li><a href="#Alternate_stylesheet_UI">Alternate Stylesheet UI</a></li>
+      <li><a href="#white-space"><CODE>white-space</CODE></a></li>
+    </ol>
+  </li>
+  <li><a href="#fixed">Bugs Fixed in 3.51</a>
+    <ol>
+      <li><a href="#widthfixed">Problems with <code>width</code></a></li>
+      <li><a href="#floaters_fixed">Floating Element Problems</a></li>
+      <li><a href="#border_fixed">Border Problems</a></li>
+      <li><a href="#parsing_fixed">Parsing</a></li>
+      <li><a href="#valign_fixed">Vertical Formatting Problems</a></li>
+      <li><a href="#linksh">Problems Importing Linked Stylesheets</a></li>
+    </ol>
+  </li>
+</ul>
+<!--/index-->
+
+<DIV TITLE="Introduction">
+ <H2><a name="Introduction">Introduction</a></H2>
+
+ <P>
+  Opera Software has made a late but commendable attempt at implementing
+  the <acronym title="Cascading Style Sheets Level 1">CSS1</acronym>
+  specification in the latest releases of their browser (Opera 3.50 and 3.51).
+  Opera 3.50 is so far the best <em>first</em> implementation of CSS1 by any
+  company and arguably the best implementation <em>released</em> today.
+  However, Opera's implementation is in no way perfect, having a few
+  mistakes of varying importance. This document presents the most glaring
+  of these problems.
+ </P>
+
+ <P>
+  The uneven deployment of 
+  <ACRONYM TITLE="Cascading Style Sheets, Level 1">CSS1</ACRONYM> in
+  major Web browsers over the last two years has caused Web authors
+  great frustration and expense, and has won
+  <ACRONYM TITLE="Cascading Style Sheets">CSS</ACRONYM> an
+  undeservedly obscure and difficult reputation. As unfortunate as
+  this failure has been for HTML in the recent past, the implications
+  for XML in the near future are even more disturbing: lacking
+  adequately mature CSS implementations, XML will generally be
+  converted first to non-reusable HTML for display. This will retard
+  the deployment of distributed XML applications, as the richest data
+  will tend to remain on servers or decay quickly on clients.
+ </P>
+
+ <P>
+  Now that Netscape promises to release a comprehensive and
+  thoroughly tested CSS1 implementation in the near future (which
+  we will be examining in depth in due course), the WSP calls upon
+  Opera Software to improve its implementation, letting Web designers,
+  authors, application developers, and users build upon a single, robust
+  foundation for Web presentation:
+  <ACRONYM TITLE="Cascading Style Sheets, Level 1">CSS1</ACRONYM>.
+ </P>
+
+</DIV>
+
+<DIV ID="top7bugs" TITLE="Top 7 Bugs">
+ <H2><a name="The_Top_7_Bugs">The Top 7 Bugs</a></H2>
+
+ <DIV TITLE="width Problems">
+  <H3><a name="width">1. Problems with <code>width</code></a></H3>
+
+  <P>
+   Opera 3.51 has a number of major problems with the CSS box model.
+   The most serious of these involve <CODE>width</CODE>. Opera
+   incorrectly handles over-constrained box properties (i.e., when the
+   width, padding, border, and margins don't add up to the available
+   space). This is a serious obstacle to the use of
+   <code>width</code>. Both versions also misinterpret
+   <code>auto</code> margins on replaced elements, causing small
+   images that should have been centered or justified to instead be
+   enlarged to the size of the window.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="widthdemo3a.html">Demonstration showing incorrect
+    handling of margin-right</A> when box properties are
+    over-constrained, and a <A HREF="widthdemo3b.html">version
+    that shows what should happen</A>
+   </LI>
+   <LI>
+    <A HREF="widthdemo1.html">Demonstration of problems with Opera's
+    internal table width algorithm</A>
+   </LI>
+   <LI>
+    <a href="http://www.w3.org/Style/CSS/Test/current/sec43.htm">Section
+    4.3 of the W3C's CSS Test Suite</a>, showing the dramatic results of the
+    misinterpretation of <code>auto</code> values on the margins of
+    replaced elements
+   </LI>
+
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Floating Element Problems">
+  <H3><a name="floaters">2. Floating Element Bugs</a></H3>
+
+  <P>
+   Opera 3.51's handling of floating elements threatens to make
+   floating elements harder for web designers to use and to encourage
+   the use of HTML tables for layout. Furthermore, Opera does not
+   follow the rules defined in the CSS1 specification for the vertical
+   alignment of floating elements and text surrounding them. It also
+   produces extraneous line breaks around floating <CODE>DIV</CODE>s.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="floatdemo1.html">Floating Element Demonstration 1</A> -
+    extraneous line breaks around floats
+   </LI>
+   <LI>
+    <A HREF="floatdemo2.html">Floating Element Demonstration 2</A> -
+    vertical alignment of floating elements
+   </LI>
+   <LI>Floating Element Demonstration 3 -
+    incorrect vertical alignment of floats
+    <UL>
+     <LI>
+      <A HREF="floatdemo3a.html">Demonstration 3A</A>
+     </LI>
+     <LI>
+      <A HREF="floatdemo3b.html">Demonstration 3B</A>
+     </LI>
+    </UL>
+   </LI>
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Border Problems">
+  <H3><a name="border">3. Border Problems</a></H3>
+
+  <P>
+   Opera also has a number of problems with borders.  Borders expressed
+   in CSS are not supported on tables; the only support for table borders
+   is with presentational HTML.  Image borders and padding also do
+   not work. 
+  </P>
+
+  <P>
+   Opera also handles background and borders on inline elements
+   incorrectly.  It considers the inline element to include the
+   line-height, and thus padding and borders of inline elements invade
+   the inter-line spacing.  This is incorrect.  This problem is visible
+   on the links in this page, where the background has extra padding
+   above and below the link.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="borderdemo1.html">Demonstration of problems setting
+    the border of tables</A>
+   </LI>
+   <LI>
+    <A HREF="borderdemo2.html">Demonstration of problems setting
+    the border of images</A>
+   </LI>
+   <LI>
+    <A HREF="borderdemo5.html">Demonstration of partial lack of support
+    for the <code>border-color</code> property</A>
+   </LI>
+   <LI>
+    <A HREF="borderdemo6.html">Demonstration of problems with borders
+    and padding on inline elements</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="Background Problems">
+  <H3><a name="background">4. Background Problems</a></H3>
+  <P>
+   There are also two problems with background images.  Tiling of
+   background images should begin at the padding edge, but it begins
+   at the border edge.  Also, the top row and the left column of
+   background images are repeated at the bottom and the right edges,
+   causing background overflow.  This can in fact be seen on this page.
+  </P>
+  <OL>
+   <LI>
+    <A HREF="borderdemo4.html">Demonstration of background
+    image problems</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="Incorrect Parsing">
+  <H3><a name="Incorrect_Error_Handling">5. Parsing</a></H3>
+
+  <P>
+   Opera's CSS parser has a major fault in the error recovery code. The
+   CSS1 specification explains very clearly how unrecognized CSS should
+   be handled (i.e., what to ignore), but Opera does not follow this part
+   of the standard.  This causes documents designed for levels of the CSS
+   specification not yet supported by the browser to render incorrectly.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="errorhandlingdemo1.html">Demonstration of problems with
+    error handling</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ 
+
+ <DIV TITLE="Vertical Formatting Bugs">
+  <H3><a name="valign">6. Vertical Formatting Bugs</a></H3>
+
+  <P>
+   Opera has problems with vertical formatting that cause web pages
+   to display incorrectly.  The <code>middle</code> value of the
+   <code>vertical-align</code> property should center the middle of
+   elements with the middle of the parent element's text, not the parent
+   element's baseline (as it does in Opera 3.50) or the top of the parent
+   element's text (as it does in Opera 3.51).
+  </P>
+
+  <P>
+   Opera also handles line height incorrectly because it misinterprets
+   the definition of font size.  The font size is the height from the
+   bottom of the lowest letter to the top of the highest letter, and
+   therefore characters should never overlap if they are in a paragraph
+   with the line height set to one.  This does not happen in Opera.
+   There is slight overlap between descenders and accent marks.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="valign1.html">Demonstration of <CODE>vertical-align</CODE>
+    problems</A>
+   </LI>
+   <LI>
+    <A HREF="lineheightdemo1.html">Demonstration of
+    <code>line-height</code> problems with overlap</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="Selectors, Specificity and Cascade Problems">
+  <H3><a name="selectors">7. Selector, Specificity and Cascade Problems</a></H3>
+
+  <P>
+   There are a few different problems with the interpretation of the
+   selector syntax, the assignment of specificity and the sorting of
+   the cascade.  This set of problems is less visible than the others,
+   but that does not imply that they are any less important.
+  </P>
+
+  <P>
+   The first problem is that descendent selectors in which elements
+   are selected as a descendent of BODY do not work if a class or id
+   selector is used to select body (possibly in combination with BODY).
+   That is, the following selectors do not work: <code>BODY#home H1</code>,
+   <code>BODY.home H1</code>, <code>.home H1</code>, <code>#home H1</code>.
+   However, the following do work: <code>BODY#home</code>, <code>DIV#home
+   H1</code>.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="bodyselector.html">Demonstration of incorrect handling of
+    id and class on <code>BODY</code></A>
+   </LI>
+  </OL>
+
+  <P>
+   Secondly, the specificity of rules is calculated in base 10, rather
+   than an arbitrarily large base, as required by the CSS specification.
+   This causes the more complicated rules to be applied incorrectly.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="specificitydemo1.html">Demonstration of using the wrong
+    base for specificity assignment</A>
+   </LI>
+  </OL>
+
+  <P>
+   Finally, Opera sometimes incorrectly overrides author stylesheets 
+   when the <code>text-decoration</code> property is used on links.
+   This is a difficulty with the cascade.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="linkdemo1.html">Demonstration of link underlining difficulty</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+</DIV> <!-- ID="top7bugs" -->
+
+<DIV TITLE="Top 3 Missing features" ID="top3mias">
+
+ <H2>
+  <a name="The_Top_3_MIAs">The Top 3
+  <ACRONYM TITLE="Missing In Action">MIA</ACRONYM>s</a>
+ </H2>
+
+ <DIV TITLE="Display: block, inline, list-item, and none everywhere">
+  <H3><a name="Displayprops">1. Display property</a></H3>
+
+  <P>
+   Opera 3.50 only supports two of the four values for the
+   <CODE>display</CODE> property.  It supports <CODE>none</CODE> and
+   <CODE>block</CODE>, but it does not support <CODE>inline</CODE>
+   or <CODE>list-item</CODE>.
+  </P>
+
+  <P>
+   <CODE>inline</CODE> is needed to allow a correct combination of
+   logical markup and display.  For example, an unordered list should by
+   contained in a <CODE>UL</CODE> element, but the author may want that
+   list displayed on one line.  The display value of <CODE>inline</CODE>
+   allows the correct combination of logical markup with style.
+  </P>
+
+  <P>
+   This document has manually numbered <CODE>H3</CODE> elements. If the
+   <CODE>list-item</CODE> display type were supported for <CODE>H3</CODE>,
+   the UA might generate the numbering as with any other list, resetting
+   the counter at each occurrence of <CODE>H2</CODE>.
+  </P>
+
+  <P>
+   CSS2 introduces a number of new values for the display property; and
+   as nice as it would be to see those implemented, we believe designers
+   would rather see them postponed in favor of complete support for the
+   CSS1 values.
+  </P>
+
+  <OL>
+   <LI><A HREF="displaypropertydemo1.html">Display Property Demos</A></LI>
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Alternate stylesheet UI">
+
+  <H3><a name="Alternate_stylesheet_UI">2. Alternate stylesheet UI</a></H3>
+
+  <P>
+   CSS1 allows authors to associate multiple stylesheets with a
+   document, allowing users to choose the most appropriate or pleasing.
+  </P>
+
+  <P>
+   For example, a designer could create a default "public" stylesheet for
+   a body of documents, a second sheet suitable for intra-organizational
+   or -departmental access to the same documents, and a third suitable
+   for users who are visually impaired (using high-contrast colors,
+   for instance). The mechanism is extensible to include transparent
+   application of media-specific stylesheets: one for print, one for
+   WebTV, another for hand-held device browsers - all without content
+   redundancy. This document, for instance, written in HTML 4.0 Strict,
+   is associated with three distinct stylesheets. Unfortunately, due to
+   lack of support for this CSS1 feature, you are unlikely to have any
+   choice but the default, or no stylesheet at all.  
+  </P>
+
+  <P>
+   Among the primary design goals of CSS is to restore balance among
+   the responsibilities the author, the user, and the user agent (UA;
+   i.e., the browser) must share when negotiating the presentation of
+   Web content under varying conditions.  Opera has implemented two
+   parts of this balance:  it allows the user to turn off stylesheets
+   with a convenient button and it allows the user to specify a user
+   stylesheet (within the "Document Appearance" dialog box).  However,
+   these goals also require the exposure of alternate author style
+   sheets, the ability to change user stylesheets quickly, and the
+   exposure of a UA default stylesheet for each media type.
+  </P>
+
+  <P>
+   By not implementing a more extensive user interface for alternate
+   and user CSS, Opera turns CSS from a language designed to balance
+   user and author needs into a fundamentally user-hostile instrument.
+   With users unable to interact with CSS easily, authors are not only
+   entertained with the promise of reckless authority in matters of style,
+   but are also tempted to create documents that lack structural markup
+   and are thus meaningless with any stylesheets other than their own.
+  </P>
+
+  <OL>
+   <LI><A HREF="altstyledemo.html">Simulation of Alternate Stylesheets</A></LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="white-space">
+  <H3><a name="white-space">3. <CODE>white-space</CODE></a></H3>
+
+  <P>
+   Support for CSS1's <CODE>nowrap</CODE> property would permit
+   retirement of the nonstandard <CODE>NOBR</CODE> extension and the
+   deprecated <CODE>NOWRAP</CODE> attribute, as required by HTML 4.0.
+   Control over whitespace preservation with the <CODE>pre</CODE> value
+   would help further abstract presentational considerations from markup.
+  </P>
+
+  <OL>
+   <LI><A HREF="whitespacedemo.html">Demonstration of <CODE>white-space</CODE></A></LI>
+  </OL>
+ </DIV> <!-- mia 3 -->
+
+</DIV> <!-- mias -->
+
+<DIV TITLE="Bugs Fixed in Opera 3.51" ID="fixed_bugs">
+
+ <H2>
+  <a name="fixed">Bugs Fixed in Opera 3.51</a>
+ </H2>
+
+ <P>
+  The problems described above all show problems in the latest version
+  of Opera Software's browser, Opera 3.51. Some problems we had
+  initially discovered in Opera Software's first CSS implementation,
+  Opera 3.50, were fixed between Opera 3.50 and 3.51. We present them
+  here as a testament to the dangers of releasing a browser without
+  complete testing, since Opera 3.50 will continue to be used by many
+  users who do not find any reason to upgrade. If this user base is
+  large enough (it probably will not be), web authors will be forced
+  to accommodate the bugs of Opera 3.50 in their work.
+ </P>
+
+ <DIV TITLE="width Problems">
+  <H3><a name="widthfixed">1. Problems with <code>width</code></a></H3>
+
+  <P>
+   Two of the most glaring <code>width</code>
+   bugs were fixed in 3.51.  In version 3.50, the <CODE>width</CODE>
+   property is <em>not supported</em> on tables.  Also in version 3.50,
+   the <CODE>width</CODE> of floats is treated as a maximum width rather
+   than a width, so the width is reduced to fit the contents. This
+   reduction is done after line-breaking, so the float is almost always
+   at least slightly too small.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="widthdemo4.html">Demonstration of problems setting
+    the width of tables</A>
+   </LI>
+   <LI>
+    <A HREF="widthdemo2.html">Demonstration of problems setting
+    the width of floated elements</A>
+   </LI>
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Floating Element Problems">
+  <H3><a name="floaters_fixed">2. Floating Element Bugs</a></H3>
+
+  <P>
+   Opera 3.50 does not support background images on floating elements.
+   It also does not follow the rules for assigning widths (see <A
+   HREF="#width_fixed">above</A>).  Opera 3.50 also sometimes hides text
+   behind floating elements.
+  </P>
+
+  <OL>
+   <LI>Floating Element Demonstration 3 -
+    incorrect width of floats and incorrect vertical alignment  (Note:  only
+    the width bugs were fixed in Opera 3.51.  Revised versions of these tests
+    appear <A HREF="#floaters">above</A>.)
+    <UL>
+     <LI>
+      <A HREF="oldfloatdemo3a.html">Demonstration 3A</A>
+     </LI>
+     <LI>
+      <A HREF="oldfloatdemo3b.html">Demonstration 3B</A>
+     </LI>
+     <LI>
+      <A HREF="oldfloatdemo3c.html">Demonstration 3C</A>
+     </LI>
+    </UL>
+   </LI>
+   <LI>
+    <A HREF="floatdemo4.html">Floating Element Demonstration 4</A> -
+    background images on floating elements
+   </LI>
+   <LI>
+    <A HREF="floatdemo5.html">Floating Element Demonstration 5</A> -
+    floats hiding text that should be wrapped
+   </LI>
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Border Problems">
+  <H3><a name="border_fixed">3. Border Problems</a></H3>
+
+  <P>
+   Opera 3.50 has a strange bug which causes serious display problems
+   when images aren't loaded.  Fortunately, this was fixed in 3.51.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="borderdemo3.html">Demonstration of problems setting
+    the padding of images</A>
+   </LI>
+  </OL>
+
+ </DIV>
+
+ <DIV TITLE="Incorrect Parsing">
+  <H3><a name="parsing_fixed">4. Parsing</a></H3>
+
+  <P>
+   Another problem in Opera 3.50 that was fixed in 3.51 is the
+   handling of whitespace in the stylesheet. Opera 3.50 has trouble
+   handling tabs before selectors that contain pseudo-selectors (i.e.,
+   <code>A:link</code> or <code>A:visited</code>) because it uses
+   strange &quot;logic&quot; to replace the standard error handling
+   procedures. This &quot;logic&quot; determines that the A:link is
+   a misplaced property and value, so it treats a correct selector as
+   an error.
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="errorhandlingdemo2a.html">Demonstration of incorrect
+    handling of whitespace</A> - This demo fails because Opera chokes on tabs
+    before an A:link selector. 
+    See also the <A HREF="errorhandlingdemo2b.html">version that shows how
+    it should be shown</A>. (fixed in 3.51)
+   </LI>
+   <LI>
+    <A HREF="errorhandlingdemo3.html">Demonstration of related problems with
+    error handling</A>
+   </LI>
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Vertical Formatting Bugs">
+  <H3><a name="valign_fixed">5. Vertical Formatting Bugs</a></H3>
+
+  <P>
+   In Opera 3.50, in addition to the <code>middle</code> value
+   not working correctly, the <code>text-top</code> value of the
+   <code>vertical-align</code> property causes alignment with the the
+   highest text in the line instead of the text of the parent element.
+  </P>
+
+  <P>
+   Another, even more serious problem occurs with Opera 3.50's handling
+   of numeric values with the <code>line-height</code> property. Opera
+   makes the <em>calculated values</em> inherit, not the factor itself,
+   as is required by the CSS1 specification. This can cause text to
+   be totally illegible. 
+  </P>
+
+  <OL>
+   <LI>
+    <A HREF="valign2.html">Demonstration of <CODE>vertical-align</CODE>
+    problems</A>
+   </LI>
+   <LI>
+    <A HREF="lineheightdemo2.html">Demonstration of
+    <code>line-height</code> problems</A>
+   </LI>
+  </OL>
+ </DIV>
+
+ <DIV TITLE="Problems with Linked Stylesheets">
+  <H3><a name="linksh">6. Problems Importing Linked Stylesheets</a></H3>
+
+  <P>
+   As <A HREF="http://www.bath.ac.uk/~py8ieh/internet/importtest/">Ian
+   Hickson's import test</A> demonstrates, Opera 3.50 has various problems
+   importing stylesheets when they are linked across folders. It
+   also appears to totally ignore the <CODE>media</CODE> attribute
+   of the <code>LINK</code> element in
+   <ACRONYM title="Hypertext Markup Language">HTML</ACRONYM>,
+   thus causing stylesheets that are destined to be read only by text
+   browsers (such as <a href="http://lynx.browser.org/">Lynx</a>) to
+   be acted upon. (Admittedly, this is part of HTML 4.0, which Opera
+   does not claim to support, but it is an important part of CSS.)
+   This can cause havoc with the layout of pages.
+  </P>
+
+  <P>
+   Although there are still a few problems with importing in Opera 3.51,
+   most problems have been fixed.  The remaining problems relate to very
+   complex issues.  It would be good to correct them, but they are not so
+   high a priority.
+  </P>
+
+ </DIV>
+
+</DIV> <!-- fixed_bugs -->
+
+<!-- FOOTER FOLLOWS  -->
+ <div class="mtb" id=footer>
+  <hr id="enddivider" title="footer">
+  <P CLASS="maintainer">
+   This document was prepared by the <a href="../members.html">members</a>
+   of the <A HREF="../../../www.webstandards.org/index.html">Web Standards
+   Project</A> <acronym title="Cascading Style Sheets">CSS</acronym>
+   <a href="../../../www.webstandards.org/ac.html#technical">Action
+   Committee</a> (The <a href="../index.html"><acronym title="Cascading Style Sheets">CSS</acronym> Samurai</a>).
+  </P>
+  <P CLASS="updated">
+   Last updated 1999-02-03.  <!-- ISO 8601 Date Standard -->
+  </P>
+ </div> <!-- id=footer -->
+
+</div> <!-- id=body -->
+</BODY>
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:31:56 GMT -->
+</HTML>

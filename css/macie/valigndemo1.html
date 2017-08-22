@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/valigndemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:39 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Vertical Alignment</TITLE>
+  <STYLE type="text/css">
+
+     P         { font-size: 12pt; }
+     .top      { vertical-align: top; }
+     .ttop     { vertical-align: text-top; }
+     .middle   { vertical-align: middle; }
+     .bottom   { vertical-align: bottom; font-size: 12pt; }
+     .tbottom  { vertical-align: text-bottom; font-size: 12pt; }
+     .baseline { vertical-align: baseline; font-size: 12pt; }
+     .fifty    { vertical-align: 50%; line-height: 16px; }
+
+     P.example { font-size: 14pt; }
+     BIG       { font-size: 16pt; }
+     SMALL     { font-size: 12pt; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Vertical Alignment</H1>
+
+<P><IMG SRC="valign.gif" alt="[Image]" height="50"><SPAN
+style="font-size: 200%;"><SPAN class="bottom">The first eight words
+(eight has a descender)</SPAN> in this sentence should be 12pt in size
+and bottom-aligned, which should align their bottom with the bottom of
+the lowest element in the line (including descenders). MacIE 4.5
+aligns with baseline of the text.</SPAN></P>
+
+<P><IMG SRC="valign.gif" alt="[Image]" height="50"><SPAN
+class="fifty">The first four words</SPAN> in this sentence should have
+a font-size of 12px and a line-height of 16px; they are also
+50%-aligned, which should raise them 8px relative to the natural
+baseline.</P>
+
+<P>In the following paragraph, all images should be aligned with the
+top of the 14-point text, which is identical to the first section of
+text, whereas any size text should be aligned with the text baseline
+(which is the default value).</P>
+
+<P class=example>
+This paragraph
+<IMG SRC="valign.gif" alt="[Image]" height="30" class="ttop">
+<SPAN style="font-size: 250%;">contains many images</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="ttop">
+<BIG>of varying heights</BIG>
+<IMG SRC="valign.gif" alt="[Image]" height="10" class="ttop">
+<SMALL>and widths</SMALL>
+<IMG SRC="valign.gif" alt="[Image]" height="20" class="ttop">
+all of which
+<IMG SRC="valign.gif" alt="[Image]" height="65" class="ttop">
+<SPAN style="font-size: 2em;">should be aligned</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="35" class="ttop">
+with the top of
+<IMG SRC="valign.gif" alt="[Image]" height="30" class="ttop">
+<SPAN style="font-size: 150%;">a <SPAN style="font-size: 250%;">14-point</SPAN> text element</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="ttop">
+<SMALL>regardless of the line in which</SMALL>
+<IMG SRC="valign.gif" alt="[Image]" height="15" class="ttop">
+<BIG>the images appear.</BIG>
+<IMG SRC="valign.gif" alt="[Image]" height="90" class="ttop">
+</P>
+
+<P>In the following paragraph, all images should be aligned with the
+middle of the default text, whereas any text should be aligned with
+the text baseline (which is the default value).</P>
+
+<P class=example>
+This paragraph
+<IMG SRC="valign.gif" alt="[Image]" height="30" class="middle">
+<SPAN style="font-size: 250%;">contains many images</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="middle">
+of varying heights
+<IMG SRC="valign.gif" alt="[Image]" height="10" class="middle">
+<SMALL>and widths</SMALL>
+<IMG SRC="valign.gif" alt="[Image]" height="20" class="middle">
+all of which
+<IMG SRC="valign.gif" alt="[Image]" height="65" class="middle">
+should be aligned
+<IMG SRC="valign.gif" alt="[Image]" height="35" class="middle">
+<SPAN style="font-size: 2em;">with the middle of</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="middle">
+<SPAN style="font-size: 150%;">a <SPAN style="font-size: 250%;">14-point</SPAN> text element</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="middle">
+<SMALL>regardless of the line in which</SMALL>
+<IMG SRC="valign.gif" alt="[Image]" height="15" class="middle">
+<BIG>the images appear.</BIG>
+<IMG SRC="valign.gif" alt="[Image]" height="90" class="middle">
+</P>
+
+<P>In the following paragraph, all images should be aligned with the
+bottom of the 14-point text, which is identical to the first and last
+sections of text. All remaining text in the sentence should also be
+aligned with the bottom of the 14pt text. <strong>Note that this
+should be the BOTTOM, <em>including descenders</em>, not the baseline
+of the text.</strong> MacIE 4.5 is aligning to the baseline.</P>
+
+<P class=example>
+This paragraph
+<IMG SRC="valign.gif" alt="[Image]" height="30" class="tbottom">
+<SPAN style="font-size: 250%;" class="tbottom">contains many images</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="tbottom">
+<BIG class="tbottom">of varying heights</BIG>
+<IMG SRC="valign.gif" alt="[Image]" height="10" class="tbottom">
+<SMALL class="tbottom">and widths</SMALL>
+<IMG SRC="valign.gif" alt="[Image]" height="20" class="tbottom">
+<SPAN class="tbottom">all of which</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="65" class="tbottom">
+<SPAN class="tbottom" style="font-size: 2em;">should be aligned</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="35" class="tbottom">
+<SPAN class="tbottom">along with all the text</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="30" class="tbottom">
+<SPAN class="tbottom">with the bottom of</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="30" class="tbottom">
+<SPAN class="tbottom" style="font-size: 150%;">a 14-point text element</SPAN>
+<IMG SRC="valign.gif" alt="[Image]" height="50" class="tbottom">
+<SMALL class="tbottom">regardless of the line in which</SMALL>
+<IMG SRC="valign.gif" alt="[Image]" height="15" class="tbottom">
+<BIG class="tbottom">the images</BIG>
+<IMG SRC="valign.gif" alt="[Image]" height="90" class="tbottom">
+and text appear.
+</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/valigndemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

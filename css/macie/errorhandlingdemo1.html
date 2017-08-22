@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Error Handling Bugs</TITLE>
+  <STYLE type="text/css">
+
+     .test         { margin-left: 4em; background: #ffffcc; color: #000000; }
+
+     DIV.nounits   { border: 4px green solid; }
+     DIV.nounits   { border: 4   red   solid; }
+
+     DIV.badunits  { border: 4px green solid; }
+     DIV.badunits  { border: 4nm red   solid; }
+
+     DIV.quoted    { color: green; }
+     DIV.quoted    { color: "red"; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Error Handling Bugs (1)</H1>
+
+<P>MacIE's parser is over lenient, a misfeature that leads stylesheet
+authors who rely on MacIE to highlight mistakes into a false sense of
+security.</P>
+
+<H2>Not ignoring the lack of units</H2>
+
+<P>For example, MacIE incorrectly assumes that if the units are
+omitted from a property value then "pixels" was meant. This document
+contains the following stylesheet:</P>
+
+<PRE>
+    DIV.nounits { border: 4px green solid; }
+    DIV.nounits { border: 4   red   solid; } /* Invalid */
+</PRE>
+
+<P>Because of CSS1's error handling rules, the second declaration
+above should be ignored, thus only leaving the first rule's
+declaration, giving the following <code>DIV</codE> a green border.</P>
+
+<DIV class="test"><DIV class="nounits"> This block should have a green border. </DIV></DIV>
+
+<H2>Not ignoring invalid units</H2>
+
+<P>MacIE also incorrectly interprets unknown units as pixels. This is
+dangerous as with future releases of CSS, new units may be introduced,
+and the legacy of misinterpreting lengths will cause documents using
+the new format to look uglier than expected. This will reflect badly
+on authors, while in fact it is Microsoft that is at fault.</P>
+
+<P>This document contains the following stylesheet:</P>
+
+<PRE>
+    DIV.badunits { border: 4px green solid; }
+    DIV.badunits { border: 4nm red   solid; } /* Invalid */
+</PRE>
+
+<P>Because <code>nm</code> are not valid units, the second declaration
+above should be ignored, thus only leaving the first rule's
+declaration, giving the following <code>DIV</codE> a green border.</P>
+
+<DIV class="test"><DIV class="badunits"> This block should have a green border. </DIV></DIV>
+
+<H2>Not ignoring quoted property values</H2>
+
+<P>When coming across a quoted property value, conforming CSS1
+browsers should ignore the entire property declaration if they do not
+expect quotes. This is to allow for future extensions of the
+specification. To demonstrate the problem, this document contains the
+following stylesheet:</P>
+
+<PRE>
+    DIV.quoted    { color: green; }
+    DIV.quoted    { color: "red"; }
+</PRE>
+
+<P>Because <code>"red"</code> is quoted, and in CSS2
+<code>color</code> does not take quoted values, the second declaration
+above should be ignored, thus only leaving the first rule's
+declaration, giving the following <code>DIV</codE> green text:</P>
+
+<DIV class="test"><DIV class="quoted"> This text should be green. </DIV></DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

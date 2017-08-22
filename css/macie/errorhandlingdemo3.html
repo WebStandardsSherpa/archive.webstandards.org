@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Error Handling Bugs (3)</TITLE>
+  <STYLE type="text/css">
+
+P.one {
+	transform-code: { duplicate ( color: blue ) };
+	color: purple;
+	}
+
+p.two { color: green; }
+p.three { color: maroon; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Error Handling and Parsing Bugs (3)</H1>
+
+<p>The styles applied here are the following:</p>
+
+<pre>
+P.one {
+	transform-code: { duplicate ( color: blue ) };
+	color: purple;
+	}
+
+p.two { color: green; }
+p.three { color: maroon; }
+</pre>
+
+<p class="one">
+	This paragraph, with class <code>one</code>,
+	should be purple.  However, MacIE's parser
+	chokes on the use of braces in a value.  CSS1's <a
+	href="http://www.w3.org/TR/REC-CSS1#forward-compatible-parsing">forward
+	compatible parsing rules</a> say that braces ("{" and "}")
+	can be nested.	(CSS2 is even clearer that they can be in a
+	declaration's value.) Thus, According to CSS1 (but not CSS2),
+	it is possible to argue that this paragraph might not be purple.
+	However, there should definitely be no problems recovering for
+	the next paragraph.
+</p>
+
+<p class="two">
+	This paragraph, with class <code>two</code>, should be green.
+	MacIE's parser has trouble recovering, so it isn't.
+</p>
+
+<p class="three">
+	This paragraph, with class <code>three</code>, should be maroon.
+	It is.	So MacIE only takes one extra ruleset to recover from
+	nested braces.
+</p>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>

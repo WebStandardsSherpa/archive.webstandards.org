@@ -1,0 +1,105 @@
+
+FOR IMMEDIATE RELEASE:
+
+Contact: Chris Carrico                                       
+George Olsen Urge Public Relations                               
+2-Lane Media chris@urgepr.com                                    
+golsen@2lm.com 213-848-8743                                      
+  310-473-3706 x2225
+
+WEB STANDARDS PROJECT CALLS FOR CLARIFICATION OF WHETHER PATENT
+GIVES MICROSOFT CONTROL OVER TWO KEY WEB STANDARDS
+
+February 4, 1999 -- The Web Standards Project, an international
+coalition of Web developers, today called on Microsoft Corp. and
+the World Wide Web Consortium to clarify whether a recent
+Microsoft patent gives the company control over two key Web
+standards developed by W3C.
+
+U.S. Patent No. 5860073 appears to include key concepts used in
+W3C's Cascading Style Sheets (CSS) and eXtensible Style Language
+(XSL) standards, which could potentially require these
+currently-open standards to be licensed from Microsoft.
+
+If the CSS and XSL standards are in fact covered by the patent,
+WaSP believes Microsoft, which participated in W3C's development
+of these standards, should immediately take legal steps to ensure
+these Web standards remain openly available on a
+nondiscriminatory basis, assuming that it has not already done
+so.
+
+This could include turning over the patent to W3C, or other legal
+licensing agreements that irrevocably protect these open
+standards, WaSP also called on any other companies that may be
+pursuing other patents that affect W3C standards to take similar
+measures.
+
+The patent application was filed in 1995 as the W3C deliberations
+on the CSS standards began. While Microsoft representatives to
+W3C may have been unaware of the patent effort, the patent
+application itself refers to W3C's efforts, which WaSP believes
+means that Microsoft as an applicant was aware of the issue and
+should have disclosed its patent effort to W3C.
+
+"W3C's standards committees should be able to make an informed
+decision about whether to include something in a standard that
+may be covered by a patent - particularly if the patent is held
+by one of W3C members helping develop that standard," said WSP
+Project Leader George Olsen said.
+
+By contrast, Intermind Corp, which also is a W3C member,
+reportedly kept W3C informed about its effort to patent a
+technology it believed affected a Web standard under development.
+(Intermind claims its U.S. Patent No. 5862325, granted last
+month, covers W3C's proposed Platform for Privacy Preferences
+(P3P) standard.)
+
+WaSP also questioned whether Microsoft's patent on "style sheets"
+should have been granted because are a number of prior examples
+of similar technology, including the original proposal for CSS.
+
+Microsoft's patent claims its innovation is to apply style sheets
+to text on-the-fly when the document is displayed on a user's
+computer. However, that same technology has been used on several
+different batch pagination systems, dating back to the 1960s,
+which have been used for book, directory and database publishing.
+
+WaSP Steering Committee member Tim Bray himself helped build an
+application that used technology that is similar to what
+Microsoft's patent describes.
+
+"Back in 1987-88 I helped build a style sheet-driven browser (the
+chief author was Darrell Raymond) that became a commercial
+product of Open Text Corporation in 1989," Bray said.  "It did
+several things that the Microsoft patent seems to cover.  I'm
+confident that Microsoft will do the right thing and simply
+ignore the existence of this patent."
+
+
+About U.S. Patent No. 5860073: U.S. Patent No. 5860073 is
+available from the U.S. Patent Office at
+
+http://164.195.100.11/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=/netahtml/srchnum.htm&r=1&f=G&l=50&s1='5,860,073'.WKU.&OS=PN/5,860,073&RS=PN/5,860,073
+
+Or via IBM's Intellectual Property Network at
+
+http://www.patents.ibm.com/patlist?icnt=US&patent_number=5860073
+
+
+About The Web Standards Project: WaSP is an international
+coalition of Web developers and Web experts who are urging
+browser makers to fully support Cascading Style Sheet Level 1
+(CSS-1), the Document Object Model (DOM) and XML in their
+browsers. Its effort to bring attention to the existing and
+potential problems involved with browser incompatibility does not
+mean that WaSP is opposed to innovations  by browser
+manufacturers. The coalition merely urges browser manufacturers
+to use open standards for enhancements and support existing ones
+before adding new features.
+
+
+George Olsen                                    
+mailto:golsen@2lm.com Design Director                            
+        http://www.2lm.com 2-Lane Media                          
+        tel: 310/473-3706 x2225
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<TITLE>The effect of floaters on the containing element background</TITLE>
+<STYLE TYPE="text/css">
+HTML {
+	color: black;
+	background-color: white;
+}
+P {
+	background-color: rgb(100%, 95%, 80%);
+	border-style: ridge;
+	border-color: rgb(100%, 95%, 80%);
+	border-width: 15px;
+	padding: 0.5em;
+}
+IMG {
+	float: right;
+}
+</STYLE>
+
+<P><IMG SRC="images/mandrill_64.html" ALT="">Here we have two problems. First, the image is violating the padding and borders of the containing block. Second, the background below the floated image is not being rendered properly. (If you don't notice this, try making your browser window more narrow.)
+

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/opera/widthdemo3b.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Margin-Right Problems </TITLE>
+<STYLE type="text/css">
+
+  DIV { border: 10px solid red;   
+        padding: 10px 5%;
+        margin-left: 0;
+        margin-right: auto; 
+      }
+  DIV.outer { width: 60%; margin-top: 10px; }
+  DIV.inner { width: 100%; }
+  DIV.correct { border-color: green; width: 60%; margin-top: 10px; }
+  BODY { margin: 0; padding: 0; }
+
+</STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1><code>margin-right</code> problems</H1>
+
+<P>The following is the stylesheet for this document.</P>
+
+<PRE>
+  DIV { border: 10px solid red;   
+        padding: 10px 5%;
+        margin-left: 0;
+        margin-right: auto; 
+      }
+  DIV.outer { width: 60%; margin-top: 10px; }
+  DIV.inner { width: 100%; }
+  DIV.correct { border-color: green; width: 60%; margin-top: 10px; }
+  BODY { margin: 0; padding: 0; }
+</PRE>
+
+<P>There now follow two red nested <code>DIV</code>s, correctly rendered.</P>
+
+<DIV CLASS="outer">
+   <DIV CLASS="inner">
+      This is the text in a <code>DIV</code> in a <code>DIV</code>!
+   </DIV>
+</DIV>
+
+<DIV CLASS="correct">
+   This should have the same width as the outer <code>DIV</code> above.
+</DIV>
+
+<P>
+The CSS1 specification says, in section 4.1.2:
+</P>
+
+<BLOCKQUOTE>
+<P>
+  The horizontal position and size of a non-floating, block-level
+  element is determined by seven properties: 'margin-left',
+  'border-left', 'padding-left', 'width', 'padding-right',
+  'border-right' and 'margin-right'. The sum of these seven is always
+  equal to the 'width' of the parent element.
+</P><P>
+  If <em>exactly one</em> of 'margin-left', 'width' or 'margin-right' is
+  'auto', the UA will assign that property a value that will make the
+  sum of the seven equal to the parent's width.
+</P><P>
+  <strong>If <em>none</em> of the properties are 'auto', the value of 'margin-right'
+  will be assigned 'auto'.</strong>
+</P>
+</BLOCKQUOTE>
+
+<P>Therefore, in the example above, whether <code>margin-right</code>
+is set to <code>0</code> or to <code>auto</code> should make no
+difference, as if it is <code>0</code>, Opera should <em>set it</em>
+to <code>auto</code> automatically (no pun intended).</P>
+
+<P>It doesn't.  Instead, it somehow increases the width of the outer
+<code>DIV</code>.  On this test Opera acts correctly, by setting
+margin-right to a negative value, and thus moving the right border off
+the side of the BODY.</P>
+
+<P>There is <a href="widthdemo3a.html">the main version of this
+test</a> with <code>margin-right: 0</code>, showing that Opera does
+not follow the specification in this respect.</P>
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/opera/widthdemo3b.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:46 GMT -->
+</HTML>

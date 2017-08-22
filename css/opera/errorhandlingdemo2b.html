@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/errorhandlingdemo2b.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:03 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Problems in Handling of Whitespace</TITLE>
+  <STYLE TYPE="text/css">
+BODY    {
+        background-color: #006;
+        color:  #F5F5F5;
+        }       
+
+A:link  {       
+        color:  #F63;
+        background:     #006;
+        }       
+
+A:visited       {       
+        color:  #6F6;
+        background:     #006;
+        }       
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Web Standards Project: CSS: Bugs in Opera: Problems in Handling of Whitespace</H1>
+
+<P>The following code is in the stylesheet for this page:
+<PRE>
+BODY    {
+        background-color: #006;
+        color:  #F5F5F5;
+        }       
+
+A:link  {       
+        color:  #F63;
+        background:     #006;
+        }       
+
+A:visited       {       
+        color:  #6F6;
+        background:     #006;
+        }       
+</PRE>
+
+<P>
+ This paragraph has <A HREF="../../index.html">a link to the main webstandards
+ page</A> and <A HREF="http://www.nowhere.org/">a link to
+ nowhere.org</A>. Unvisited links should be orange, and they are. Visited links
+ should be light green, and they are.  This works because there aren't
+ any tabs anymore.
+</P>
+
+<P>Note. For this test to show the problem, it is important that the
+"Link Presentation" settings do not specify that you want
+<samp>framed</samp> links. For some reason, setting
+<samp>Framed</samp> links causes the colours to be overrideen.</P>
+
+<P>To turn link frames back off from within Opera, select
+<SAMP>Preferences</SAMP>, <SAMP>Link Presentation</SAMP> and then
+<em><strong>un</strong>check</em> the checkbox labeled
+<samp>Framed</samp> in the panel labelled <samp>Common</samp>.</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/errorhandlingdemo2b.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:03 GMT -->
+</HTML>
+

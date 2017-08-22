@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:02 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998 by The Web Standards Project">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Floater Background Demo</TITLE>
+  <STYLE TYPE="text/css">
+   <!--
+     .demo { width: 210px; height: 207px; border: thin solid black;
+      margin: 3px; font: bold 1em "Monotype.com", monospace; }
+     #one { background: white url(meowmeow.html) repeat 0% 0%; float: left; color: black; }
+     .two { background: white url(meowmeow.html) repeat 0% 0%; color: black; }
+   -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1><A NAME="top">Floater Background Demonstration</A></H1>
+
+<P class=note>Make sure images are enabled for this demonstration.</P>
+
+<DIV class="demo" id="one">floating</DIV>
+
+<P STYLE="clear: none">
+ In the box at left there should be nine cats.  The box should be the
+ same size as the samples shown below.  This is clearly not what happens.
+ First, the widths of the floating <code>DIV</code> is too small.
+ (This was described <A HREF="index.html#boxmodpr">earlier</A>.)  Second, the
+ cats don't appear.  Background images do not work in floating elements.
+</P>
+
+<p STYLE="clear: left">Just to satisfy all you cat lovers, this is what <em>should</em> happen in each of the three boxes:</p>
+
+<DIV class="demo two"></DIV>
+
+<P>Well... that should show what should happen... but for some reason
+Opera doesn't display an empty <code>DIV</code>.  According to the HTML
+4.0 specs, that should only be done for an empty P.  Let's try that again,
+with an &amp;nbsp; stuck in as a kludge:</P>
+
+<DIV class="demo two">&nbsp;</DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/floatdemo4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:58:03 GMT -->
+</HTML>

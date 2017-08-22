@@ -1,0 +1,92 @@
+
+WEB STANDARDS PROJECT PRAISES MICROSOFT DECISION TO FOCUS ON
+STANDARDS IN MAC INTERNET EXPLORER 5.0
+
+The Web Standards Project today praised Microsoft's decision to
+focus on implementing key Web Standards in its upcoming release
+of the Macintosh version of Internet Explorer 5.0.
+
+In discussions with WSP and in a recently published article
+[http://macweek.zdnet.com/1999/09/05/explorer.html], Microsoft
+has said its new rendering engine, "Tasman," is intended to allow
+Mac Internet Explorer 5.0 to provide 100 percent support for two
+key Web standards, developed by the World Wide Web Consortium,
+and nearly full support for a third.
+
+"We're delighted to see Microsoft make a commitment to help lay a
+solid foundation for Web site development that's free from many
+of the browser incompatibilities that have plagued developers for
+years," said WSP Project Leader George Olsen.
+
+According to Microsoft, the company plans to provide 100 percent
+support for HTML 4.0 and Cascading Style Sheets (CSS) 1.0, which
+allows precise control over the appearance of Web pages.
+Microsoft officials have said they're planning on supporting more
+than 90 percent for the Document Object Model (DOM) 1.0, which
+allows scripting languages to manipulate Web pages.
+
+"While we'll be waiting to see how well Microsoft fulfills this
+commitment--just as we're waiting to see how Netscape fulfills a
+similar promise made last year--it's the first step in the right
+direction, and a step Web developers have been asking for," Olsen
+said.
+
+Last month, several thousand Web developers voiced their support
+for a WSP petition drive that asked Microsoft to focus on
+compliance with W3C standards in the next release of their
+browsers.
+
+WSP has been urging browser makers to fully implement these
+standards because current browser incompatibilities add at least
+25 percent to the cost of developing sites, inconvenience site
+visitors, and threaten to fragment the Web.
+
+According to Microsoft, Mac Internet Explorer 5.0 is also slated
+to support what the company calls "experimental implementations"
+of using CSS to display XML, as well as parts of the CSS-2, DOM
+2.0 and XSL (Extensible Stylesheet Language).
+
+"We're pleased to see Microsoft working on using CSS to display
+XML, since without a way to present it, XML data itself is of
+limited use in the browser," Olsen said.
+
+But WSP urged Microsoft to be careful about trying to implement
+DOM 2.0 and XSL, standards, which haven't been finished by W3C
+yet.
+
+"Microsoft risks ending up with incompatibilities later, if the
+final version of these standards are different from what
+Microsoft tries to implement now," Olsen said.
+
+In addition to supporting the W3C DOM, Microsoft said it would
+also be offering nearly full support for its proprietary Win32
+DOM, which will allow common scripting between the Mac and
+Windows version of Internet Explorer.
+
+"WSP doesn't object to these sorts of extensions to W3C
+standards, but we believe Microsoft should give first priority to
+implementing the W3C DOM, since the W3C DOM is intended to
+provide compability among all browsers."
+
+
+About The Web Standards Project: WSP is an international
+coalition of Web developers and Web experts who are urging
+browser makers to fully support Cascading Style Sheet Level 1
+(CSS-1), the Document Object Model (DOM) and XML in their
+browsers. Its effort to bring attention to the existing and
+potential problems involved with browser incompatibility does not
+mean that WSP is opposed to innovations by browser manufacturers.
+The coalition merely urges browser manufacturers to use open
+standards for enhancements and support existing ones before
+adding new features.
+
+# # # #
+
+
+
+George Olsen
+
+Design Director/Web Architect - 2-Lane Media - http://www.2lm.com
+
+Project Leader - The Web Standards Project -
+http://www.webstandards.org

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+<HEAD>
+  <META name="author" content="The Web Standards Project CSS Action Committee">
+  <META name="copyright" content="&copy; copyright 1998,1999, The Web Standards Project">
+  <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in MacIE: Error Handling Bugs</TITLE>
+  <STYLE type="text/css">
+
+     .test         { margin-left: 4em; background: #ffffcc; color: #000000; }
+
+     DIV.part1     { color: red; }
+     DIV.part2     { color: red; }
+     DIV.part1     { content: \}; color: green; }
+     DIV.part2     { color: green; }
+
+     DIV.slashed   { color: green; }
+     // THIS IS *NOT* A COMMENT!
+     DIV.slashed   { color: red; }
+
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Error Handling Bugs (2)</H1>
+
+<P>MacIE's parser is over lenient, a misfeature that leads stylesheet
+authors who rely on MacIE to highlight mistakes into a false sense of
+security.</P>
+
+<H2>Incorrectly Interpreting Escaped Braces</H2>
+
+<P>This is quite a serious error, that potentially makes future
+stylesheets including escaped content to fail in MacIE. This document
+contains the following stylesheet:</P>
+
+<PRE>
+    DIV.part1     { color: red; }
+    DIV.part2     { color: red; }
+    DIV.part1     { content: \}; color: green; }
+    DIV.part2     { color: green; }
+</PRE>
+
+<P>The third and fourth rules above should overrule the first and
+second rules, causing the next two <code>DIV</code>s to have green
+text. However, MacIE is interpreting the escaped closing brace
+(<code>\}</code>) as the end of the third rule's declaration block,
+and is then confused by the <code>color</code> declaration that, to
+the parser, appears to run into the fourth rule. It therefore ignores
+the third rule's <code>color</code> declaration and the fourth rule
+altogether. </P>
+
+<DIV class="test"><DIV class="part1"> This text should be green. </DIV></DIV>
+<DIV class="test"><DIV class="part2"> This text should be green. </DIV></DIV>
+
+<H2>Incorrectly Interpreting Two Consecutive Slashes</H2>
+
+<P>This is another case of MacIE not following the CSS grammar. This
+document contains the following stylesheet:</P>
+
+<PRE>
+     DIV.slashed   { color: green; }
+
+     // THIS IS *NOT* A COMMENT!
+     DIV.slashed   { color: red; }
+</PRE>
+
+<P>Since "<code>//</code>" is invalid inside a CSS selector, the
+entire second rule should be skipped, leaving only the first.
+Therefore the following <code>DIV</code> should be green.</P>
+
+<DIV class="test"><DIV class="slashed"> This text should be green. </DIV></DIV>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/macie/errorhandlingdemo2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:40 GMT -->
+</HTML>
+
+<!-- 
+
+<H2>Incorrectly Interpreting Quoted Braces</H2>
+
+<P>This is quite a serious error. This document
+contains the following stylesheet:</P>
+
+<PRE>
+    DIV.part1     { color: red; }
+    DIV.part2     { color: red; }
+    DIV.part1     { content: "}"; color: green; }
+    DIV.part2     { color: green; }
+</PRE>
+
+<P>The third and fourth rules above should overrule the first and
+second rules, causing the next two <code>DIV</code>s to have green
+text. However, MacIE is interpreting the quoted closing brace
+(<code>"}"</code>) as the end of the third rule's declaration block,
+and is then confused by the <code>color</code> declaration that, to
+the parser, appears to run into the fourth rule. It therefore ignores
+the third rule's <code>color</code> declaration and the fourth rule
+altogether. </P>
+
+<DIV class="test"><DIV class="part1"> This text should be green. </DIV></DIV>
+<DIV class="test"><DIV class="part2"> This text should be green. </DIV></DIV>
+
+<H2>Not ignoring unknown keywords</H2>
+
+<P>Here, MacIE is preventing the future proof use of CSS - stylesheets
+using future specifications will look horrible in MacIE because MacIE
+does not ignore the parts that cannot fully understand. This document
+contains the following stylesheet:</P>
+
+<PRE>
+     DIV.keyword   { text-align: right ragged; }
+</PRE>
+
+<P>Since "<code>ragged</code>" is invalid as a value for the CSS
+<code>text-align</code> property, the entire declaration should be
+skipped. Therefore the following <code>DIV</code> should <em>not</em>
+be right aligned.</P>
+
+<DIV class="test"><DIV class="keyword"> This text should <em>not</em> be right aligned. </DIV></DIV>
+
+-->

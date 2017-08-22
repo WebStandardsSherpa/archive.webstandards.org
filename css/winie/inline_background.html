@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<TITLE>Using background properties on inline elements</TITLE>
+<STYLE TYPE="text/css">
+HTML {
+	color: black;
+	background-color: white;
+}
+P {
+	background-color: rgb(100%, 95%, 80%);
+	border-style: ridge;
+	border-color: rgb(100%, 95%, 80%);
+	border-width: 10px;
+	padding: 0.5em;
+}
+SPAN {
+	background-color: rgb(90%, 100%, 100%);
+}
+
+</STYLE>
+
+<P>The background color of <SPAN>an element with inline display</SPAN> will violate the padding and border of a containing block element.
+

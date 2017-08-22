@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/borderdemo4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:52 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <TITLE>Web Standards Project: CSS: Bugs in Opera: Background Image Problems</TITLE>
+<STYLE TYPE="text/css">
+DIV.demo  {
+  width: 100px; height: 100px; margin: 5px; padding: 0;
+  background: #222222 url(logo.html) 100% 0% no-repeat; }
+DIV.a  { border: 0px solid red; }
+DIV.b  { border: 20px dotted red; }
+DIV.c  { border: none;  width: 20px ! important; height: 20px ! important; }
+</STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+
+<H1>Background Image Problems</H1>
+
+<P>
+ According to the <A HREF="http://www.w3.org/TR/REC-CSS1">CSS1 Spec</A>,
+ <A HREF="http://www.w3.org/TR/REC-CSS1#background-position">Section
+ 5.3.6</A>, if an element has a background image, a background
+ position of <code>100% 0%</code> places the upper right
+ corner of the background image in the upper right corner
+ of the content edge of the element, not the border edge.
+ (According to the <A HREF="http://www.w3.org/TR/REC-CSS2/">CSS2
+ spec</A>, which Opera does not claim to implement, <A
+ HREF="http://www.w3.org/TR/REC-CSS2/colors.html#background-properties">section
+ 14.2.1</A>, background-position specifies the position of
+ a background image relative to the padding edge of a box,
+ and tiling should cover only the content and padding areas of
+ a box.  This makes more sense than CSS1.)  <!-- However, according to <A
+ HREF="http://www.w3.org/TR/REC-CSS2/box.html#border-style-properties">section
+ 8.5.3</A>, borders are drawn on top of a box's background.  This means
+ the background <EM>color</EM> should be underneath the border, but not
+ the background <EM>image</EM>. -->
+</P>
+
+<P>This page contains the following stylesheet:</P>
+
+<PRE>
+DIV.demo  {
+  width: 100px; height: 100px; margin: 5px; padding: 0;
+  background: #222222 url(logo.jpg) 100% 0% no-repeat; }
+DIV.a  { border: 0px solid red; }
+DIV.b  { border: 20px dotted red; }
+DIV.c  { border: none;  width: 20px ! important; height: 20px ! important; }
+</PRE>
+
+<P>Below this paragraph there are three <code>DIV</code>s with class
+<code>demo</code> and with classes <code>a</code>, <code>b</code>, and
+<code>c</code>, respectively.  Each contains just one &amp;nbsp; entity
+(to get around another bug in Opera, that empty elements get collapsed
+even though only empty <code>P</code> elements should).
+</P>
+
+<H2>Example A</H2>
+
+<DIV class="demo a">&nbsp;</DIV>
+
+<P>
+ Each of the <code>DIV</code>s should contain an image (of a samurai
+ logo over top of a background that is white in the upper right half
+ and gray in the lower left half) in its upper right corner, with
+ the rest of the <code>DIV</code> filled with a dark gray background.
+ In all three of the <code>DIV</code>s, the leftmost 1 pixel column
+ of the samurai logo gets added to the right edge, outside the border,
+ and the topmost row is added to the bottom.
+</P>
+
+<H2>Example B</H2>
+
+<DIV class="demo b">&nbsp;</DIV>
+
+<P>
+ Here, the whole <code>DIV</code> should be surrounded by a red
+ dotted border, 20px wide.  The image should <em>not</em> be partially
+ underneath the border.  (According to CSS2, the background <em>color</em>
+ should be.)
+</P>
+
+<H2>Example C</H2>
+
+<DIV class="demo c">&nbsp;</DIV>
+
+<P>
+ Here, only the upper right part of the image should show since the
+ <code>DIV</code> is smaller than the image.
+ The bottom and left parts of the image should be clipped.
+</P>
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/opera/borderdemo4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:53 GMT -->
+</HTML>
+

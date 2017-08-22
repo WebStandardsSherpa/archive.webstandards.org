@@ -1,0 +1,43 @@
+WEB STANDARDS PROJECT PRAISES IE5/MAC,
+URGES MICROSOFT TO "FINISH THE JOB"
+
+Mar 27, 2000: The Web Standards Project (WaSP) today praised
+Microsoft's thorough implementation of HTML 4 and CSS 1 in the
+Macintosh version of Internet Explorer 5. However, the WaSP
+cautioned that no browser can be considered fully
+standards-compliant until it supports XML and the DOM, and the
+group urged Microsoft to take IE5/Mac to the next level.
+
+"IE5/Mac offers the highest real-world standards compliance of
+any browser yet shipped," said group leader Jeffrey Zeldman, who
+also praised the browser for focusing on accessibility. "An
+innovative Text Zoom feature allows the visually impaired to
+increase the size of type on a Web page," Zeldman noted. "Web
+users will no longer be penalized for the poor authoring
+practices of some developers."
+
+The WaSP had further praise for the browser's novel
+"DOCTYPE"-sensitive rendering strategy, which  delivers
+outstanding HTML4/CSS1 compliance or emulation of many  older,
+nonstandard behaviors at the Web designer's discretion. But along
+with the applause, the group reminded Microsoft that meaningfully
+complete standards compliance must include support for XML and
+the DOM.
+
+"XML 1.0 has been stable since  February 1998; it is long past
+time for browser makers to finish the job of supporting it," said
+WaSP steering committee member Tim Bray, co-editor of XML 1.0. 
+Noting that full XML support will enable a new generation of Web
+applications to offload interactive application logic to the
+browser, making the whole Web faster, cheaper to build, and more
+productive for users, Bray added: "Today's browsers, however
+sophisticated, are still more or less FTP with pictures.  The way
+to change that is to implement XML and the DOM (neither by itself
+is sufficient), and we're still waiting for that to happen."
+
+The Web Standards Project is a grassroots coalition of Web
+developers and users fighting for standards on the WWW. More
+information is available at http://www.webstandards.org/.
+
+
+

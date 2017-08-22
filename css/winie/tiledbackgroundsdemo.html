@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" --"http://www.w3.org/TR/REC-html40/strict.dtd"-->
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/winie/tiledbackgroundsdemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:19 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="Ian Hickson">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998 by Ian Hickson">
+  <META http-equiv="keywords" name="keywords" content="">
+  <META http-equiv="robots" name="robots" content="ALL">   <!-- ALL, INDEX, NOFOLLOW, NOINDEX -->
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+  <LINK title="Ian Hickson's e-mail Address" rev="made" href="mailto:py8ieh%40bath.ac.uk">
+  <TITLE>Web Standards Project: CSS: Bugs in Internet Explorer: Tiled Backgrounds Demo</TITLE>
+  <STYLE TYPE="text/css">
+   <!--
+     p { clear: left; }
+     .demo { width: 210px; height: 207px; border: thin solid black;
+      margin: 3px; font: 1em "Monotype.com", monospace; }
+     #one { background: white url(meowmeow.html) repeat 50% 50%; float: left; color: black; }
+     #two { background: white url(meowmeow.html) repeat 100% 50%; float: left; color: black;  }
+     #three { background: white url(meowmeow.html) repeat 50% 100%; float: left; color: black; }
+     #four { background: white url(meowmeow.html) repeat 100% 100%; float: left; color: black; }
+     #five { background: white url(meowmeow.html) repeat 0% 0%; color: black; }
+     #six { background: white url(samuraicoin.html) repeat-x 50% 50%; color: black; }
+     #seven { background: white url(samuraicoin.html) repeat-y 50% 50%; color: black; }
+     #eight { background: white url(samuraicoin.html) repeat-x 50% 0%; padding: 56px 4px 4px 4px; font: 13px "Verdana", sans-serif; color: black; }
+     #eight h1 { font: 900 18px "Verdana", sans-serif; padding: 0px; margin: 0px 0px 2px 0px; }
+     #eight p { padding: 0px; margin: 0px 0px 2px 0px; }
+   -->
+  </STYLE>
+</HEAD>
+<BODY><!--#include virtual="/outdated.inc" -->
+<!-- SYSTEM INFO END -->
+
+<DIV CLASS=HEADING>
+<H1><A NAME="top">Tiled Backgrounds Demonstration</A></H1>
+</DIV>
+
+<H2>Introduction</H2>
+
+<P>
+IE4 supports <code>background-repeat</code> and
+<code>background-position</code> incompletely. It repeats tiled background images down and to the
+right, no matter where the initial image is positioned. If
+an author positions an image in the center of an element and then sets
+it to repeat, it will fill only the lower right corner of the element.
+The specification, however, requires that in this case the image
+be tiled in all four directions: up, down, right, and left. A similar problem holds with <code>repeat-x</code> and
+<code>repeat-y</code>, which should repeat in both directions either
+horizontally or vertically.
+</P>
+
+<P class=note>Make sure images are enabled for these demonstrations.</P>
+
+<H2>Example 1</H2>
+
+<P>In each of the boxes below, there should be nine cats. Written in
+each box is the value which was given for
+<code>background-position</code>. Since <code>background-repeat</code>
+is set to <code>repeat</code>, the <code>background-position</code>
+should just be taken as a starting position, letting the tiling spread
+in all directions.</P>
+
+<DIV class=demo id=one>50% 50%</DIV>
+<DIV class=demo id=two>100% 50%</DIV>
+<DIV class=demo id=three>50% 100%</DIV>
+<DIV class=demo id=four>100% 100%</DIV>
+
+<p>Just to satisfy all you cat lovers, this is what <em>should</em> happen:</p>
+
+<DIV class=demo id=five></DIV>
+
+<H2>Example 2</H2>
+
+<P>In the next box, there should be a row of Samurai logos going from
+the left to the right of the box, across its vertical center.</P>
+
+<DIV class=demo id=six>repeat-x 50% 50%</DIV>
+
+<H2>Example 3</H2>
+
+<P>In the next box, there should be a vertical line of Samurai logos,
+centered horizontally.</P>
+
+<DIV class=demo id=seven>repeat-y 50% 50%</DIV>
+
+<H2>Example 4</H2>
+
+<P>Here, we have tried to put a horizontal row of these Samurai logos,
+making sure the middle logo is horizontally centered, and letting the
+UA center from there.</P>
+
+<DIV class=demo id=eight><H1>Samurai</H1><P>Home of the Web Standards
+Project CSS Action Committee -- dedicated to improving the level of
+standards conformity across the board.</P></DIV>
+
+<P>Unfortunately, IE doesn't do this correctly, leaving the left hand
+side unfilled.</P>
+
+<!-- FOOTER FOLLOWS    [removed for consistency]
+ <div class=footer>
+  <hr title="Footer" id=enddivider>
+  <p class=links>Up to the <a href="index.html#background"><cite>IE Top Five</cite></a>.</p>
+  <p class=maintainer>This page is maintained by the members of the <A HREF="http://www.webstandards.org/">Web Standards Project</A> CSS Action Committee (The CSS Samurai Seven).</p>
+  <p class=updated>Last updated in October 1998.</p>
+ </div>-->
+
+</BODY>
+<!-- Mirrored from archive.webstandards.org/css/winie/tiledbackgroundsdemo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:30:21 GMT -->
+</HTML>
+

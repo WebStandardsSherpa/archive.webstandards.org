@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang="en">
+
+
+<!-- Mirrored from archive.webstandards.org/css/opera/bodyselector.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:54 GMT -->
+<HEAD>
+  <META http-equiv="author" name="author" content="The Web Standards Project CSS Action Committee">
+  <META http-equiv="copyright" name="copyright" content="&copy; copyright 1998, The Web Standards Project">
+  <META http-equiv="Content-Type" name="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Web Standards Project: CSS: Bugs in Opera: Problems with Selectors</TITLE>
+
+<STYLE type="text/css">
+
+OL { color: red; }
+
+BODY#body LI,
+BODY.body LI,
+.body LI,
+#body LI { color: green; }
+
+</STYLE>
+</HEAD>
+<BODY id=body class=body><!--#include virtual="/outdated.inc" -->
+
+<H1>Problems with Selectors </H1>
+
+<P>In Opera, descendent selectors in which elements are selected as a
+descendent of BODY do not work if a class or id selector is used to
+select body (possibly in combination with BODY).</P>
+
+<P>To demonstrate this, the <code>BODY</code> element on this page has
+been given an id of <code>body</code> and a class of
+<code>body</code>. Each of the following lines should be green.</P>
+
+<OL>
+
+  <LI>BODY#body LI { color: green; }</LI>
+  <LI>BODY.body LI { color: green; }</LI>
+  <LI>.body LI { color: green; }</LI>
+  <LI>#body LI { color: green; }</LI>
+
+</OL>
+
+<!-- However, the following do work: <code>BODY#body</code>,
+<code>DIV#body H1</code>. -->
+
+</BODY>
+
+<!-- Mirrored from archive.webstandards.org/css/opera/bodyselector.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Aug 2017 18:57:54 GMT -->
+</HTML>
